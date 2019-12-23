@@ -35,6 +35,7 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \Framework\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \Xinax\LaravelGettext\Middleware\GettextMiddleware::class,
         ],
         'api' => [
             'throttle:60,1',
