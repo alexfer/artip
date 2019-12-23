@@ -22,8 +22,7 @@ return [
     /**
      * Supported locales: An array containing all allowed languages
      */
-    'supported-locales' => [
-        'en_US',
+    'supported-locales' => [        
         'uk_UA'
     ],
     /**
@@ -75,10 +74,10 @@ return [
     'source-paths' => [
         '../app/Exceptions',
         '../app/Domains',
-        '../app/Sevices/Admin/Features',
-        '../app/Sevices/Web/Features',
-        '../app/Sevices/Admin/resources/views',
-        '../app/Sevices/Web/resources/views',
+        '../app/Services/Admin/Features',
+        '../app/Services/Web/Features',
+        '../app/Services/Admin/resources/views',
+        '../app/Services/Web/resources/views',
         '../resources/views',
         'Console',
     ],

@@ -1,0 +1,108 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MultilanguageLaravelApplication\n"
+"POT-Creation-Date: 2019-12-23 14:17+0200\n"
+"PO-Revision-Date: 2019-12-23 14:19+0200\n"
+"Last-Translator: Alexander Sh <alexandershtyher@gmail.com>\n"
+"Language-Team: Alexander Sh <alexandershtyher@gmail.com>\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-KeywordsList: _;__;_i;_s;gettext;_n:1,2;ngettext:1,2;dgettext:2\n"
+"X-Poedit-Basepath: ../../../../../app\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ../app/Exceptions\n"
+"X-Poedit-SearchPath-1: ../app/Domains\n"
+"X-Poedit-SearchPath-2: ../app/Services/Admin/Features\n"
+"X-Poedit-SearchPath-3: ../app/Services/Web/Features\n"
+"X-Poedit-SearchPath-4: ../app/Services/Admin/resources/views\n"
+"X-Poedit-SearchPath-5: ../app/Services/Web/resources/views\n"
+"X-Poedit-SearchPath-6: ../resources/views\n"
+"X-Poedit-SearchPath-7: Console\n"
+"X-Poedit-SearchPath-8: ../storage/framework/messages\n"
+
+#: ../storage/framework/messages/1bfa2149701bf1fce20194797a2af9e97cfa1f53.php.php:6
+#: ../storage/framework/messages/1bfa2149701bf1fce20194797a2af9e97cfa1f53.php.php:81
+#: ../storage/framework/messages/ce6b39faa4807e40f971c385d60779b6c7a5ed25.php.php:6
+msgid "Reset Password"
+msgstr "Скинути пароль"
+
+#: ../storage/framework/messages/1bfa2149701bf1fce20194797a2af9e97cfa1f53.php.php:15
+#: ../storage/framework/messages/bcd3a151df3c91683aecc2e81f7c9f742b3afa79.php.php:12
+#: ../storage/framework/messages/ce6b39faa4807e40f971c385d60779b6c7a5ed25.php.php:20
+#: ../storage/framework/messages/da21463345aeae22a78ebae1b5c5f91da2c7b711.php.php:41
+msgid "E-Mail Address"
+msgstr "E-Mail адреса"
+
+#: ../storage/framework/messages/1bfa2149701bf1fce20194797a2af9e97cfa1f53.php.php:43
+#: ../storage/framework/messages/bcd3a151df3c91683aecc2e81f7c9f742b3afa79.php.php:37
+#: ../storage/framework/messages/d7dc7c6ddef5f8d431d08f71f79b57f8b6c38036.php.php:16
+#: ../storage/framework/messages/da21463345aeae22a78ebae1b5c5f91da2c7b711.php.php:69
+msgid "Password"
+msgstr "Пароль"
+
+#: ../storage/framework/messages/1bfa2149701bf1fce20194797a2af9e97cfa1f53.php.php:71
+#: ../storage/framework/messages/d7dc7c6ddef5f8d431d08f71f79b57f8b6c38036.php.php:6
+#: ../storage/framework/messages/d7dc7c6ddef5f8d431d08f71f79b57f8b6c38036.php.php:46
+#: ../storage/framework/messages/da21463345aeae22a78ebae1b5c5f91da2c7b711.php.php:97
+msgid "Confirm Password"
+msgstr "Підтвердити пароль"
+
+#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:18
+#: ../storage/framework/messages/7854e343e3573001c5d3e03890b18ebe99479a85.php.php:49
+msgid "Logout"
+msgstr "Вихід"
+
+#: ../storage/framework/messages/7854e343e3573001c5d3e03890b18ebe99479a85.php.php:38
+#: ../storage/framework/messages/bcd3a151df3c91683aecc2e81f7c9f742b3afa79.php.php:6
+#: ../storage/framework/messages/bcd3a151df3c91683aecc2e81f7c9f742b3afa79.php.php:77
+msgid "Login"
+msgstr "Вхід"
+
+#: ../storage/framework/messages/8e4d7e810cff02eb6877924d0c6f5e60e3b1655c.php.php:6
+msgid "Verify Your Email Address"
+msgstr "Верифікувати E-Mail адресу"
+
+#: ../storage/framework/messages/8e4d7e810cff02eb6877924d0c6f5e60e3b1655c.php.php:11
+msgid "A fresh verification link has been sent to your email address."
+msgstr ""
+
+#: ../storage/framework/messages/8e4d7e810cff02eb6877924d0c6f5e60e3b1655c.php.php:16
+msgid "Before proceeding, please check your email for a verification link."
+msgstr ""
+
+#: ../storage/framework/messages/8e4d7e810cff02eb6877924d0c6f5e60e3b1655c.php.php:18
+msgid "If you did not receive the email"
+msgstr ""
+
+#: ../storage/framework/messages/8e4d7e810cff02eb6877924d0c6f5e60e3b1655c.php.php:18
+msgid "click here to request another"
+msgstr ""
+
+#: ../storage/framework/messages/bcd3a151df3c91683aecc2e81f7c9f742b3afa79.php.php:67
+msgid "Remember Me"
+msgstr "Запам'ятити"
+
+#: ../storage/framework/messages/bcd3a151df3c91683aecc2e81f7c9f742b3afa79.php.php:82
+#: ../storage/framework/messages/d7dc7c6ddef5f8d431d08f71f79b57f8b6c38036.php.php:52
+msgid "Forgot Your Password?"
+msgstr ""
+
+#: ../storage/framework/messages/ce6b39faa4807e40f971c385d60779b6c7a5ed25.php.php:50
+msgid "Send Password Reset Link"
+msgstr ""
+
+#: ../storage/framework/messages/d7dc7c6ddef5f8d431d08f71f79b57f8b6c38036.php.php:9
+msgid "Please confirm your password before continuing."
+msgstr ""
+
+#: ../storage/framework/messages/da21463345aeae22a78ebae1b5c5f91da2c7b711.php.php:6
+#: ../storage/framework/messages/da21463345aeae22a78ebae1b5c5f91da2c7b711.php.php:107
+msgid "Register"
+msgstr ""
+
+#: ../storage/framework/messages/da21463345aeae22a78ebae1b5c5f91da2c7b711.php.php:13
+msgid "Name"
+msgstr ""
