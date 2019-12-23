@@ -15,7 +15,7 @@ Route::get('login', '\Framework\Http\Controllers\Auth\LoginController@showLoginF
 Route::post('login', '\Framework\Http\Controllers\Auth\LoginController@login');
 Route::post('logout', '\Framework\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function() {
 
     Route::get('/', 'DashboardController@index')->name('dashboard');
 });
