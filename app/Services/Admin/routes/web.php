@@ -12,7 +12,7 @@
  */
 
 Route::get('login', '\Framework\Http\Controllers\Auth\LoginController@showLoginForm')->name('get-login');
-Route::post('login', '\Framework\Http\Controllers\Auth\LoginController@login')-name('post-login');
+Route::post('login', '\Framework\Http\Controllers\Auth\LoginController@login')->name('post-login');
 Route::post('logout', '\Framework\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function() {
