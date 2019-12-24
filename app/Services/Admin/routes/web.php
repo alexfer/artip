@@ -22,4 +22,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function
     Route::get('/user/{id}', 'UserController@get')->name('user.get')->where('id', '[0-9]+');
     Route::put('/user/{id}', 'UserController@update')->name('user.update')->where('id', '[0-9]+');
     Route::get('/user/create', 'UserController@form')->name('user.form');
+    Route::post('/user', 'UserController@create')->name('user.create');
 });

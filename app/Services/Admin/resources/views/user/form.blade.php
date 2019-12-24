@@ -1,6 +1,6 @@
 @include('admin::flash-message')
 <form method="post" action="{{ $route }}">
-    @if($user)
+    @if(isset($user))
     @method('PUT')
     <input name="id" type="hidden" value="{{ $user['id'] }}">
     @endif    
@@ -11,11 +11,11 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="name">{{ _i('Name') }}</label>
-                        <input name="name" id="name" class="form-control" value="{{ $user ? $user['name'] : null }}">
+                        <input name="name" id="name" type="text" class="form-control" value="{{ isset($user) ? $user['name'] : old('name') }}" required="required">
                     </div>
                     <div class="form-group">
                         <label for="email">{{ _i('E-Mail Address') }}</label>
-                        <input name="email" id="email" type="email" class="form-control" value="{{ $user ? $user['email'] : null }}">
+                        <input name="email" id="email" type="email" class="form-control" value="{{ isset($user) ? $user['email'] : old('email') }}" required="required">
                     </div>
                 </div>
             </div>
@@ -27,13 +27,17 @@
                         <label for="locale">{{ _i('Locale') }}</label>
                         <select name="locale" id="locale" class="form-control">
                             @foreach($languages as $locale => $name)
-                            <option value="{{ $locale }}" {{ $locale == $user['locale'] ? "selected=selected" : '' }}>{{ $name }}</option>
+                            <option value="{{ $locale }}" {{ $locale == (isset($user) ? $user['locale'] : old('locale')) ? "selected=selected" : '' }}>{{ $name }}</option>
                             @endforeach
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="password">{{ _i('Password') }}</label><br>
+                        @if(isset($user))
                         <button id="password" class="btn btn-danger" type="button">{{ _i('Reset') }}</button>
+                        @else
+                        <input type="password" name="password" id="password" class="form-control" required="required">
+                        @endif
                     </div>
                 </div>
             </div>

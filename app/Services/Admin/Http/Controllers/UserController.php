@@ -7,7 +7,8 @@ use Artip\Services\Admin\Features\User\{
     CollectionFeature,
     GetFeature,
     UpdateFeature,
-    FormFeature
+    FormFeature,
+    CreateFeature
 };
 
 class UserController extends Controller
@@ -31,6 +32,11 @@ class UserController extends Controller
     public function form()
     {
         return $this->serve(FormFeature::class);
+    }
+
+    public function create()
+    {
+        return $this->serve(CreateFeature::class);
     }
 
 }
