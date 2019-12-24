@@ -25,6 +25,10 @@ return [
     'supported-locales' => [        
         'uk_UA'
     ],
+    'languages' => [
+        'uk_UA' => 'Ukrainian',
+        'en_US' => 'English',
+    ],
     /**
      * Default charset encoding.
      */

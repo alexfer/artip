@@ -29,24 +29,24 @@
                     <div class="sidebar-sticky">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('dashboard') }}">
+                                <a class="nav-link {{ !Request::segment(2) ? 'active' : '' }}" href="{{ route('dashboard') }}">
                                     <span data-feather="home"></span>
-                                    Dashboard <span class="sr-only">(current)</span>
+                                    {{ _i('Dashboard') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span data-feather="file"></span>
-                                    Files
+                                <a class="nav-link {{ Request::segment(2) == 'users' || Request::segment(2) == 'user' ? 'active' : '' }}" href="{{ route('user.collection') }}">
+                                    <span data-feather="users"></span>
+                                    {{ _i('Users') }}
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </nav>
-                <div class="col-10">                    
+                <div class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">                       
                     @if ($__env->yieldContent('content'))
                     @yield('content')                    
-                    @endif
+                    @endif                    
                 </div>
             </div>            
         </div>        

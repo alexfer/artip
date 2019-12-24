@@ -1,4 +1,4 @@
 @extends('admin::index')
 @section('content')
-<h1 class="h2">Dashboard</h1>
+<h1 class="h2">{{ _i('Dashboard') }}</h1>
 @endsection

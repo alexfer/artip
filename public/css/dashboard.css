@@ -8,6 +8,10 @@ body {
   vertical-align: text-bottom;
 }
 
+.h2 {
+    padding-left: 15px;
+}
+
 /*
  * Sidebar
  */
