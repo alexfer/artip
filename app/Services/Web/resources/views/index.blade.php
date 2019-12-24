@@ -4,9 +4,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Artip</title>                
+        <title>Artip - @yield('title')</title>                
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link href="{{ asset('css/common.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/common.css') }}" rel="stylesheet" />        
     </head>
     <body>
         <main role="main" class="container">
@@ -19,18 +19,12 @@
             </header>
             <div class="nav-scroller py-1 mb-2">
                 <nav class="nav d-flex justify-content-between">
-                    <a class="p-2 text-muted" href="#">World</a>
-                    <a class="p-2 text-muted" href="#">U.S.</a>
-                    <a class="p-2 text-muted" href="#">Technology</a>
-                    <a class="p-2 text-muted" href="#">Design</a>
-                    <a class="p-2 text-muted" href="#">Culture</a>
-                    <a class="p-2 text-muted" href="#">Business</a>
-                    <a class="p-2 text-muted" href="#">Politics</a>
-                    <a class="p-2 text-muted" href="#">Opinion</a>
-                    <a class="p-2 text-muted" href="#">Science</a>
-                    <a class="p-2 text-muted" href="#">Health</a>
-                    <a class="p-2 text-muted" href="#">Style</a>
-                    <a class="p-2 text-muted" href="#">Travel</a>
+                    <a class="p-2 text-muted" href="#">About Us</a>
+                    <a class="p-2 text-muted" href="#">Structure</a>
+                    <a class="p-2 text-muted" href="#">For Students</a>
+                    <a class="p-2 text-muted" href="#">Study</a>
+                    <a class="p-2 text-muted" href="#">Feature</a>
+                    <a class="p-2 text-muted" href="#">Contacts</a>                                        
                 </nav>
             </div>            
             @if ($__env->yieldContent('content'))
