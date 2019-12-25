@@ -35,7 +35,6 @@ class DetectLocale
     {
         $user = \Auth::user();
         $locale = $this->app['config']['laravel-gettext']['locale'];
-
         LaravelGettext::setLocale($user ? $user->locale : $locale);
 
         return $next($request);

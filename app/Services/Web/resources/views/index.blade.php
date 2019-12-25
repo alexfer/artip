@@ -24,7 +24,7 @@
                     <a class="p-2 text-muted" href="#">For Students</a>
                     <a class="p-2 text-muted" href="#">Study</a>
                     <a class="p-2 text-muted" href="#">Feature</a>
-                    <a class="p-2 text-muted" href="#">Contacts</a>                                        
+                    <a class="p-2 text-muted" href="{{ route('contacts') }}">{{ _i('Contacts') }}</a>                                        
                 </nav>
             </div>            
             @if ($__env->yieldContent('content'))

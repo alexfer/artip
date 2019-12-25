@@ -23,7 +23,7 @@ class PasswordFeature extends Feature
         ]);
         
         return response()->json([
-            'message' => _i('Passwerd has been changed.'),
+            'message' => _i('Password has been changed'),
         ]);
     }
 }

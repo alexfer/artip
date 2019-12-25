@@ -18,7 +18,7 @@ return [
      * Default locale: this will be the default for your application.
      * Is to be supposed that all strings are written in this language.
      */
-    'locale' => 'en_US',
+    'locale' => 'uk_UA',
     /**
      * Supported locales: An array containing all allowed languages
      */
