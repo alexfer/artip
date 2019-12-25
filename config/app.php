@@ -152,6 +152,7 @@ return [
         Framework\Providers\RouteServiceProvider::class,
         Artip\Foundation\ServiceProvider::class,
         Lucid\Console\LucidServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
     ],
     /*
       |--------------------------------------------------------------------------

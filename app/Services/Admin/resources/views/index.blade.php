@@ -18,7 +18,7 @@
                         {{ _i('Logout') }}
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
+                        @csrf                        
                     </form>
                 </li>
             </ul>
@@ -40,12 +40,18 @@
                                     {{ _i('Users') }}
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ Request::segment(2) == 'content' ? 'active' : '' }}" href="{{ route('content.collection') }}">
+                                    <span data-feather="book-open"></span>
+                                    {{ _i('Content') }}
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
                 <div class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">                       
                     @if ($__env->yieldContent('content'))
-                    @yield('content')                    
+                        @yield('content')                    
                     @endif                    
                 </div>
             </div>            

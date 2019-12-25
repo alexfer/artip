@@ -18,10 +18,15 @@ Route::post('logout', '\Framework\Http\Controllers\Auth\LoginController@logout')
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function() {
 
     Route::get('/', 'DashboardController@index')->name('dashboard');
+
+    // User section
     Route::get('/users', 'UserController@collection')->name('user.collection');
     Route::get('/user/{id}', 'UserController@get')->name('user.get')->where('id', '[0-9]+');
     Route::put('/user/{id}', 'UserController@update')->name('user.update')->where('id', '[0-9]+');
     Route::put('/user/{id}/password', 'UserController@password')->name('user.password')->where('id', '[0-9]+');
     Route::get('/user/create', 'UserController@form')->name('user.form');
     Route::post('/user', 'UserController@create')->name('user.create');
+
+    // Content section
+    Route::get('/content', 'ContentController@collection')->name('content.collection');
 });
