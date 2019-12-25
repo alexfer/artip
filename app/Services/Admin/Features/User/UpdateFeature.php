@@ -5,6 +5,7 @@ namespace Artip\Services\Admin\Features\User;
 use Lucid\Foundation\Feature;
 use Illuminate\Http\Request;
 use Artip\Domains\User\Jobs\UpdateJob;
+use Artip\Domains\User\Jobs\ValidateJob;
 
 class UpdateFeature extends Feature
 {
@@ -17,6 +18,10 @@ class UpdateFeature extends Feature
     public function handle(Request $request)
     {
         try {
+            $this->run(ValidateJob::class, [
+                'input' => $request->input(),
+            ]);
+            
             $this->run(UpdateJob::class, [
                 'input' => $request->only('name', 'email', 'locale', 'id'),
             ]);
