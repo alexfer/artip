@@ -35,6 +35,7 @@
                         <label for="password">{{ _i('Password') }}</label><br>
                         @if(isset($user))
                         <button id="password" class="btn btn-danger" type="button">{{ _i('Reset') }}</button>
+                        <span class="text-muted"></span>
                         @else
                         <input type="password" name="password" id="password" class="form-control" required="required">
                         @endif

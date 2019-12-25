@@ -21,7 +21,7 @@ class UpdateFeature extends Feature
             $this->run(ValidateJob::class, [
                 'input' => $request->input(),
             ]);
-            
+
             $this->run(UpdateJob::class, [
                 'input' => $request->only('name', 'email', 'locale', 'id'),
             ]);

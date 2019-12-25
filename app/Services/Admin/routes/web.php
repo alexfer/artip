@@ -21,6 +21,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function
     Route::get('/users', 'UserController@collection')->name('user.collection');
     Route::get('/user/{id}', 'UserController@get')->name('user.get')->where('id', '[0-9]+');
     Route::put('/user/{id}', 'UserController@update')->name('user.update')->where('id', '[0-9]+');
+    Route::put('/user/{id}/password', 'UserController@password')->name('user.password')->where('id', '[0-9]+');
     Route::get('/user/create', 'UserController@form')->name('user.form');
     Route::post('/user', 'UserController@create')->name('user.create');
 });

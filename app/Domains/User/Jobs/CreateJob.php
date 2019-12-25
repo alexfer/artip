@@ -15,7 +15,7 @@ class CreateJob extends Job
 
     /**
      * 
-     * @param array $id
+     * @param array $input
      */
     public function __construct(array $input)
     {

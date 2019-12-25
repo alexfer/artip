@@ -8,7 +8,8 @@ use Artip\Services\Admin\Features\User\{
     GetFeature,
     UpdateFeature,
     FormFeature,
-    CreateFeature
+    CreateFeature,
+    PasswordFeature
 };
 
 class UserController extends Controller
@@ -37,6 +38,11 @@ class UserController extends Controller
     public function create()
     {
         return $this->serve(CreateFeature::class);
+    }
+    
+    public function password()
+    {
+        return $this->serve(PasswordFeature::class);
     }
 
 }

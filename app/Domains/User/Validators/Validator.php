@@ -23,6 +23,9 @@ class Validator extends LucidValidator
             'email',
             'max:255',
         ],
+        'password' => [
+            'min:8',
+        ],
     ];
 
     /**
