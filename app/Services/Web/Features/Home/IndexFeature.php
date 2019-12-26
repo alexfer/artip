@@ -18,9 +18,9 @@ class IndexFeature extends Feature
     public function handle()
     {
         return $this->run(new RespondWithViewJob(self::TEMPLATE, [
-        	'news' => $this->run(LatestJob::class, [
-        		'service' => 'news',
-        	])
+                            'news' => $this->run(LatestJob::class, [
+                                'service' => 'news',
+                            ])
         ]));
     }
 
