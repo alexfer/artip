@@ -7,12 +7,13 @@ use Artip\Data\Models\User;
 
 class GetJob extends Job
 {
+
     /**
      *
      * @var int
      */
     private $id;
-    
+
     /**
      * 
      * @param int $id
@@ -21,7 +22,7 @@ class GetJob extends Job
     {
         $this->id = $id;
     }
-    
+
     /**
      * 
      * @param User $user
@@ -31,4 +32,5 @@ class GetJob extends Job
     {
         return $user->find($this->id)->toArray();
     }
+
 }

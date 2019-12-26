@@ -7,7 +7,8 @@ use Artip\Data\Models\User;
 
 class CreateJob extends Job
 {
-	/**
+
+    /**
      *
      * @var array
      */
@@ -30,9 +31,9 @@ class CreateJob extends Job
      */
     public function handle(User $user): object
     {
-    	 $this->input['password'] = \Hash::make($this->input['password']);
+        $this->input['password'] = \Hash::make($this->input['password']);
 
-    	 try {
+        try {
             $user = $user->create($this->input);
         } catch (\Exception $ex) {
             throw new \Exception($ex->getMessage());
@@ -40,4 +41,5 @@ class CreateJob extends Job
 
         return $user;
     }
+
 }

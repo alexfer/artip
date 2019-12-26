@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ LaravelGettext::getLocaleLanguage() }}">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,10 +46,16 @@
                                     {{ _i('Content') }}
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ Request::segment(2) == 'media' ? 'active' : '' }}" href="{{ route('media.collection') }}">
+                                    <span data-feather="image"></span>
+                                    {{ _i('Media') }}
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
-                <div class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">                       
+                <div class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 mb-3">                       
                     @if ($__env->yieldContent('content'))
                     @yield('content')                    
                     @endif                    

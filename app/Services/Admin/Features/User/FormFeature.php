@@ -12,7 +12,6 @@ class FormFeature extends Feature
 
     /**
      * 
-     * @param Request $request
      * @return mixed
      */
     public function handle()

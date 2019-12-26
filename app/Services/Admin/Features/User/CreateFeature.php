@@ -10,8 +10,6 @@ use Artip\Domains\User\Jobs\ValidateJob;
 class CreateFeature extends Feature
 {
 
-    const TEMPLATE = 'admin::user.get-form';
-
     /**
      * 
      * @param Request $request
@@ -19,9 +17,11 @@ class CreateFeature extends Feature
      */
     public function handle(Request $request)
     {
+        $input = $request->input();
+
         try {
             $this->run(ValidateJob::class, [
-                'input' => $request->input(),
+                'input' => $input,
             ]);
 
             $user = $this->run(CreateJob::class, [
@@ -30,7 +30,7 @@ class CreateFeature extends Feature
             \Session::flash('alert-success', _i('User created successfully.'));
         } catch (\Exception $ex) {
             \Session::flash('alert-danger', $ex->getMessage());
-            return response()->redirectTo(route('user.form'))->withInput($request->input());
+            return response()->redirectTo(route('user.form'))->withInput($input);
         }
 
         return response()->redirectTo(route('user.get', [
