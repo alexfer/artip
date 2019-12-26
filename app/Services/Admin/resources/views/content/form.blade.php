@@ -29,7 +29,13 @@
                 <textarea rows="12" name="content" id="content" class="form-control">{{ isset($entry) ? $entry['content'] : old('content') }}</textarea>
             </div>
         </div>
-    </div>    
+    </div>
+    <div class="card mt-3 h-100">
+        <div class="card-header">{{ _i('Media') }}</div>
+        <div class="card-body">
+            
+        </div>
+    </div>
     <div class="row mt-4">
         <div class="col-12 text-right">
             @if(isset($entry) && $entry['deleted_at'])
