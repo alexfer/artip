@@ -10,7 +10,9 @@ use Artip\Services\Admin\Features\Content\{
     CreateFeature,
     PublishFeature,
     UnpublishFeature,
-    UpdateFeature
+    UpdateFeature,
+    DeleteFeature,
+    RestoreFeature
 };
 
 class ContentController extends Controller
@@ -49,6 +51,16 @@ class ContentController extends Controller
     public function update()
     {
         return $this->serve(UpdateFeature::class);
+    }
+    
+    public function delete()
+    {
+        return $this->serve(DeleteFeature::class);
+    }
+    
+    public function restore()
+    {
+        return $this->serve(RestoreFeature::class);
     }
 
 }

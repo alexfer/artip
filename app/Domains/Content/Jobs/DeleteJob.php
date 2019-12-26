@@ -5,7 +5,7 @@ namespace Artip\Domains\Content\Jobs;
 use Lucid\Foundation\Job;
 use Artip\Data\Models\Content;
 
-class GetJob extends Job
+class DeleteJob extends Job
 {
 
     /**
@@ -26,11 +26,11 @@ class GetJob extends Job
     /**
      * 
      * @param Content $entry
-     * @return array
+     * @return bool
      */
-    public function handle(Content $entry): array
+    public function handle(Content $entry): bool
     {
-        return $entry->withTrashed()->find($this->id)->toArray();
+        return $entry->find($this->id)->delete();
     }
 
 }

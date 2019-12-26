@@ -17,6 +17,7 @@ class CollectionJob extends Job
     {
         return $content->with(['category:id,display_name'])
                         ->orderBy('id', 'desc')
+                        ->withTrashed()
                         ->paginate(env('PAGINATE_LIMIT'));
     }
 

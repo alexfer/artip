@@ -21,7 +21,7 @@
         </thead>
         <tbody>
             @forelse($collection as $row)
-            <tr>
+            <tr {!! $row->deleted_at ? 'class="text-muted"' : null !!}>
                 <td>{{ date('d M Y', strtotime($row->created_at)) }}</td>
                 <td>{{ $row->category->display_name }}</td>
                 <td>
@@ -32,10 +32,14 @@
                     @endif    
                 </td>
                 <td>{{ $row->is_published ? _i('Published') : _i('Hidden') }}</td>
-                <td>
+                <td>                    
                     <a href="{{ route('content.get', ['id' => $row->id]) }}" title="{{ _i('Edit') }}">
+                        @if($row->deleted_at)
+                        <span class="text-danger" data-feather="trash"></span>
+                        @else
                         <span data-feather="edit"></span>
-                    </a>
+                        @endif
+                    </a>                    
                 </td>
             </tr>
             @empty

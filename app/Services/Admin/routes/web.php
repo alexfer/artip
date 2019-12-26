@@ -33,6 +33,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function
     Route::get('/content/{id}', 'ContentController@get')->name('content.get')->where('id', '[0-9]+');
     Route::post('/content', 'ContentController@create')->name('content.create');
     Route::put('/content/{id}', 'ContentController@update')->name('content.update')->where('id', '[0-9]+');
+    Route::get('/content/{id}/delete', 'ContentController@delete')->name('content.delete')->where('id', '[0-9]+');
+    Route::get('/content/{id}/restore', 'ContentController@restore')->name('content.restore')->where('id', '[0-9]+');
     Route::get('/content/{id}/publish', 'ContentController@publish')->name('content.publish')->where('id', '[0-9]+');
     Route::get('/content/{id}/unpublish', 'ContentController@unpublish')->name('content.unpublish')->where('id', '[0-9]+');
     
