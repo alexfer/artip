@@ -80,6 +80,15 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
 }
+
 .footer p:last-child {
   margin-bottom: 0;
+}
+
+.cut-text { 
+  width : 280px;
+  overflow:hidden;
+  display:inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
