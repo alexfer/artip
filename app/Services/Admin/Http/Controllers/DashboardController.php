@@ -7,8 +7,10 @@ use Artip\Services\Admin\Features\Dashboard\IndexFeature;
 
 class DashboardController extends Controller
 {
+
     public function index()
     {
         return $this->serve(IndexFeature::class);
     }
+
 }

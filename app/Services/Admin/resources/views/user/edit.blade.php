@@ -15,14 +15,14 @@
                     password = new Array(8).join().replace(/(.|$)/g, function () {
                 return ((Math.random() * 36) | 0).toString(36)[Math.random() < .5 ? "toString" : "toUpperCase"]();
             });
-            
+
             $.post(url + '/password', {
                 password: password,
                 _token: token,
                 _method: 'PUT'
             }, function (response) {
                 self.next('span').html(response.message + ': ' + password);
-                self.remove();                
+                self.remove();
             });
         });
     });

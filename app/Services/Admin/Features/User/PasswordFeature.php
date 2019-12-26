@@ -8,6 +8,7 @@ use Artip\Domains\User\Jobs\PasswordJob;
 
 class PasswordFeature extends Feature
 {
+
     /**
      * 
      * @param Request $request
@@ -21,9 +22,10 @@ class PasswordFeature extends Feature
                 'id' => $request->id,
             ],
         ]);
-        
+
         return response()->json([
-            'message' => _i('Password has been changed'),
+                    'message' => _i('Password has been changed'),
         ]);
     }
+
 }

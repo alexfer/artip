@@ -39,7 +39,7 @@ class UserController extends Controller
     {
         return $this->serve(CreateFeature::class);
     }
-    
+
     public function password()
     {
         return $this->serve(PasswordFeature::class);

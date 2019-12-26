@@ -7,8 +7,10 @@ use Artip\Services\Admin\Features\Content\CollectionFeature;
 
 class ContentController extends Controller
 {
-	public function collection()
+
+    public function collection()
     {
         return $this->serve(CollectionFeature::class);
     }
+
 }

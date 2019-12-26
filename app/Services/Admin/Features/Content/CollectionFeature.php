@@ -8,7 +8,8 @@ use Artip\Domains\Content\Jobs\CollectionJob;
 
 class CollectionFeature extends Feature
 {
-	const TEMPLATE = 'admin::content.index';
+
+    const TEMPLATE = 'admin::content.index';
 
     /**
      * 
@@ -16,8 +17,9 @@ class CollectionFeature extends Feature
      */
     public function handle()
     {
-        return $this->run(new RespondWithViewJob(self::TEMPLATE, [                            
+        return $this->run(new RespondWithViewJob(self::TEMPLATE, [
                             'collection' => $this->run(CollectionJob::class),
         ]));
     }
+
 }

@@ -12,4 +12,4 @@
  */
 
 Route::get('/', 'IndexController@index')->name('index');
-Route::get('/contacts', 'IndexController@contact')->name('contacts');
+Route::get('/contacts.html', 'IndexController@contact')->name('contacts');

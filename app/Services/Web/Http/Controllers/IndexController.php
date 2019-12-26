@@ -16,7 +16,7 @@ class IndexController extends Controller
     {
         return $this->serve(IndexFeature::class);
     }
-    
+
     /**
      * 
      * @return mixed
