@@ -19,6 +19,7 @@ class DeleteFeature extends Feature
         $this->run(DeleteJob::class, [
             'id' => $request->id,
         ]);
+        \Session::flash('alert-success', _i('Entry moved to trash successfully.'));
     }
 
 }

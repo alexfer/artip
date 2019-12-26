@@ -4,11 +4,11 @@
     <div class="col-6">
         <h1 class="h2">{{ _i('Edit Entry') }}</h1>
     </div>
-    <div class="col-6 text-right">
-        <button data-url="{{ !$entry['is_published'] ? route('content.publish', ['id' => $entry['id']]) : route('content.unpublish', ['id' => $entry['id']]) }}" id="visible" type="button" class="btn btn-success">{{ !$entry['is_published'] ? _i('Publish') : _i('Unpublish') }}</button>
+    <div class="col-6 text-right">        
         @if($entry['deleted_at'])
         <button data-toggle="modal" data-target="#confirm" data-url="{{ route('content.restore', ['id' => $entry['id']]) }}" type="button" class="btn btn-secondary" id="delete">{{ _i('Restore') }}</button>
         @else
+        <button data-url="{{ !$entry['is_published'] ? route('content.publish', ['id' => $entry['id']]) : route('content.unpublish', ['id' => $entry['id']]) }}" id="visible" type="button" class="btn btn-success">{{ !$entry['is_published'] ? _i('Publish') : _i('Unpublish') }}</button>
         <button data-toggle="modal" data-target="#confirm" data-url="{{ route('content.delete', ['id' => $entry['id']]) }}" type="button" class="btn btn-danger" id="delete">{{ _i('Delete') }}</button>
         @endif
     </div>

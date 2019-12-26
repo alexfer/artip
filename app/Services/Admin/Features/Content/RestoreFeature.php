@@ -19,6 +19,8 @@ class RestoreFeature extends Feature
         $this->run(RestoreJob::class, [
             'id' => $request->id,
         ]);
+        
+        \Session::flash('alert-success', _i('Entry restored successfully.'));
     }
 
 }

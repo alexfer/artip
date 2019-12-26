@@ -29,10 +29,14 @@
                 <textarea rows="12" name="content" id="content" class="form-control">{{ isset($entry) ? $entry['content'] : old('content') }}</textarea>
             </div>
         </div>
-    </div>
+    </div>    
     <div class="row mt-4">
         <div class="col-12 text-right">
+            @if(isset($entry) && $entry['deleted_at'])
+            <span class="text-danger">{{ _i('Deleted at:') }} {{ date('H:i d M Y', strtotime($entry['deleted_at'])) }}</span>            
+            @else
             <button type="submit" class="btn btn-primary">{{ _i('Save') }}</button>
+            @endif
         </div>
     </div>
 </form>
