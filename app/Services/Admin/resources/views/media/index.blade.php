@@ -17,12 +17,12 @@
         <div class="card-body">
             <div class="row text-center text-lg-left">
                 @foreach($collection as $file)
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" data-size="{{ $file->size }}" data-mime="{{ $file->mime }}" class="d-block mb-4 h-100">
+                <div class="col-lg-3 col-md-4 col-6 text-center">
+                    <a href="#" data-size="{{ $file->size }}" data-ext="{{ $file->extension }}" data-mime="{{ $file->mime }}" class="d-block mb-4 h-100">
                         @if(in_array($file->extension, ['gif', 'jpg', 'jpeg', 'png']))
-                        <img class="img-fluid img-thumbnail" src="{{ asset("storage/$file->path") }}" alt="{{ $file->name }}">
+                        <img class="img-fluid img-thumbnail" src="{{ asset("storage/$file->path") }}" alt="{{ $file->name }}" title="{{ $file->name }}">
                         @else
-                        <img src="holder.js/350x200" data-holder-rendered="true">
+                        <img class="img-fluid img-thumbnail" src="holder.js/300x200?auto=yes" data-holder-rendered="true">
                         @endif
                     </a>
                 </div>
@@ -32,7 +32,7 @@
     </div>
 </div>
 <div class="mt-3">
-
+    {{ $collection->links() }}    
 </div>
 @section('custom-scripts')
 <script src="{{ asset('js/holder.min.js') }}"></script>
