@@ -39,7 +39,6 @@ class UploadJob extends Job
                 'name' => $file->getClientOriginalName(),
                 'extension' => $file->getClientOriginalExtension(),
             ]);
-            file_put_contents("/var/www/tmp/response.log", var_export($_file, true));
         }
     }
 
