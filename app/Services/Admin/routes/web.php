@@ -40,4 +40,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function
     
     // Media section    
     Route::get('/media', 'MediaController@collection')->name('media.collection');
+    Route::post('/media', 'MediaController@upload')->name('media.upload');
 });
