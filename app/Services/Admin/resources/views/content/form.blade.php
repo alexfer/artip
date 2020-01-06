@@ -33,7 +33,12 @@
     <div class="card mt-3 h-100">
         <div class="card-header">{{ _i('Media') }}</div>
         <div class="card-body">
-            
+            <div class="row">
+                <div class="col-6"></div>
+                <div class="col-6 text-right">
+                    <button type="button" class="btn btn-success">{{  _i('Attach Media') }}</button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row mt-4">
