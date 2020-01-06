@@ -15,7 +15,7 @@ class UploadJob extends Job
     private $files;
 
     /**
-     * 
+     *
      * @param array $files
      */
     public function __construct(array $files)
@@ -24,7 +24,7 @@ class UploadJob extends Job
     }
 
     /**
-     * 
+     *
      * @param Media $media
      * @return void
      */

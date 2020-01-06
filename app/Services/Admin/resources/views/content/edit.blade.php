@@ -4,7 +4,7 @@
     <div class="col-6">
         <h1 class="h2">{{ _i('Edit Entry') }}</h1>
     </div>
-    <div class="col-6 text-right">        
+    <div class="col-6 text-right">
         @if($entry['deleted_at'])
         <button data-toggle="modal" data-target="#confirm" data-url="{{ route('content.restore', ['id' => $entry['id']]) }}" type="button" class="btn btn-secondary" id="delete">{{ _i('Restore') }}</button>
         @else

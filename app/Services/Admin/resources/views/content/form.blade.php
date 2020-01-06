@@ -44,7 +44,7 @@
     <div class="row mt-4">
         <div class="col-12 text-right">
             @if(isset($entry) && $entry['deleted_at'])
-            <span class="text-danger">{{ _i('Deleted at:') }} {{ date('H:i d M Y', strtotime($entry['deleted_at'])) }}</span>            
+            <span class="text-danger">{{ _i('Deleted at:') }} {{ date('H:i d M Y', strtotime($entry['deleted_at'])) }}</span>
             @else
             <button type="submit" class="btn btn-primary">{{ _i('Save') }}</button>
             @endif
