@@ -18,6 +18,9 @@ Route::post('logout', '\Framework\Http\Controllers\Auth\LoginController@logout')
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function() {
 
     Route::get('/', 'DashboardController@index')->name('dashboard');
+    
+    // Categories section
+    Route::get('/categories', 'CategoryController@collection')->name('category.collection');
 
     // User section
     Route::get('/users', 'UserController@collection')->name('user.collection');

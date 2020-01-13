@@ -35,9 +35,9 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ Request::segment(2) == 'users' || Request::segment(2) == 'user' ? 'active' : '' }}" href="{{ route('user.collection') }}">
+                                <a class="nav-link {{ Request::segment(2) == 'categories' || Request::segment(2) == 'category' ? 'active' : '' }}" href="{{ route('category.collection') }}">
                                     <span data-feather="users"></span>
-                                    {{ _i('Users') }}
+                                    {{ _i('Categories') }}
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -50,6 +50,12 @@
                                 <a class="nav-link {{ Request::segment(2) == 'media' ? 'active' : '' }}" href="{{ route('media.collection') }}">
                                     <span data-feather="image"></span>
                                     {{ _i('Media') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ Request::segment(2) == 'users' || Request::segment(2) == 'user' ? 'active' : '' }}" href="{{ route('user.collection') }}">
+                                    <span data-feather="users"></span>
+                                    {{ _i('Users') }}
                                 </a>
                             </li>
                         </ul>
