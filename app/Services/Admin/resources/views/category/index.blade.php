@@ -36,5 +36,28 @@
         @endforelse
     </div>
 </div>
-</div>
+@section('custom-scripts')
+<script type="text/javascript">
+    $(function () {
+        $('#sortable-categories').sortable({
+            placeholder: "ui-state-highlight",
+            tolerance: 'pointer',
+            update: function (e, ui) {
+                var jsonData = [];
+                $('#sortable-categories .category-node').each(function (index, value) {
+                    jsonData.push({"id": $(value).data('id')});
+                });
+                $.ajax({
+                    url: '/categories/rebuild-tree',
+                    type: 'PATCH',
+                    dataType: 'json',
+                    async: false,
+                    data: JSON.stringify(jsonData)
+                });
+            }
+        });
+        $('#sortable-categories').disableSelection();
+    });
+</script>
+@append
 @endsection
