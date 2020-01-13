@@ -32,7 +32,7 @@
             @endif            
         </main>   
         <footer class="footer">
-            <p>Nice <a href="https://artip.edu.ua/">artip.edu.ua</a> by <a href="https://facebook.com">@facebook</a>.</p>
+            <p>Nice <a href="https://artip.com.ua/">artip.edu.ua</a> by <a href="https://facebook.com">@facebook</a>.</p>
             <p>
                 <a href="#">Back to top</a>
             </p>
