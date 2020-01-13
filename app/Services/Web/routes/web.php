@@ -13,3 +13,12 @@
 
 Route::get('/', 'IndexController@index')->name('index');
 Route::get('/contacts.html', 'IndexController@contact')->name('contacts');
+
+// External Url's
+foreach (config('external-urls') as $name => $url) {
+    Route::get(sprintf('/%s', $name), function() use ($url) {
+        return redirect()->away($url);
+    })->name(sprintf('redirect.to.%s', $name));
+}
+
+
