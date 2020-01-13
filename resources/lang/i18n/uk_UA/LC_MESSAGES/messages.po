@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MultilanguageLaravelApplication\n"
 "POT-Creation-Date: 2020-01-13 18:44+0200\n"
-"PO-Revision-Date: 2020-01-13 18:44+0200\n"
+"PO-Revision-Date: 2020-01-13 18:57+0200\n"
 "Last-Translator: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language-Team: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language: uk_UA\n"
@@ -254,7 +254,7 @@ msgstr "Створено"
 
 #: ../storage/framework/messages/8b7d6a061f0b0da60efd93c91d3bf1f7c26fabe7.php.php:15
 msgid "Category"
-msgstr "Категорія"
+msgstr "Розділ"
 
 #: ../storage/framework/messages/8b7d6a061f0b0da60efd93c91d3bf1f7c26fabe7.php.php:17
 msgid "Status"
