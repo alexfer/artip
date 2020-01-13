@@ -46,6 +46,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-overflow-scrolling: touch;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .nav-scroller .nav-link {
   padding-top: .75rem;
   padding-bottom: .75rem;
@@ -76,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   padding: 2.5rem 0;
   color: #999;
-  text-align: center;
+  text-align: left;
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
 }
