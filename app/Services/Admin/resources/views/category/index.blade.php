@@ -9,7 +9,7 @@
     </div>
 </div>
 <div class="justify-content-between">
-    <table class="table table-striped">
+    <table class="table table-striped mb-0">
         <thead class="thead-dark">
             <tr>
                 <th class="col-1">{{ _i('Category') }}</th>
@@ -29,7 +29,7 @@
         <table class="table table-striped">
             <tbody>
                 <tr>
-                    <td class="text-center alert-info">{{ _i('No Content Available') }}</td>
+                    <td class="bg-grey text-center">{{ _i('No Content Available') }}</td>
                 </tr>
             </tbody>
         </table>
