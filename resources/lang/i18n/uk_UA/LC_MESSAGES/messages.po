@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MultilanguageLaravelApplication\n"
-"POT-Creation-Date: 2020-01-14 09:20+0200\n"
-"PO-Revision-Date: 2020-01-14 09:21+0200\n"
+"POT-Creation-Date: 2020-01-14 11:14+0200\n"
+"PO-Revision-Date: 2020-01-14 11:15+0200\n"
 "Last-Translator: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language-Team: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language: uk_UA\n"
@@ -28,13 +28,8 @@ msgstr ""
 msgid "Sub category added successfully."
 msgstr "Підрозділ створено успішно."
 
-#: ../app/Services/Admin/Features/Category/CreateFeature.php:20
-#: ../storage/framework/messages/ac17b873d02a6f35e7b350cdabbfbfde3f2fb56b.php.php:20
-msgid "You do not have permission to this action."
-msgstr "Ви не маєте доступу для цих дій."
-
-#: ../app/Services/Admin/Features/Category/CreateFeature.php:25
-#: ../storage/framework/messages/ac17b873d02a6f35e7b350cdabbfbfde3f2fb56b.php.php:25
+#: ../app/Services/Admin/Features/Category/CreateFeature.php:23
+#: ../storage/framework/messages/ac17b873d02a6f35e7b350cdabbfbfde3f2fb56b.php.php:23
 msgid "New Category added successfully."
 msgstr "Новий розділс створено успішно."
 
@@ -157,7 +152,7 @@ msgid "Create New Entry"
 msgstr "Створити новий запис"
 
 #: ../storage/framework/messages/240f5436ad54d2d0730ef3822d61366a8e8bd194.php.php:2
-#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:35
+#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:36
 msgid "Dashboard"
 msgstr "Головна"
 
@@ -177,32 +172,32 @@ msgstr "Відмінити"
 msgid "Proceed"
 msgstr "Продовжити"
 
-#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:14
+#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:15
 msgid "Search"
 msgstr "Пошук"
 
-#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:18
+#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:19
 #: ../storage/framework/messages/7854e343e3573001c5d3e03890b18ebe99479a85.php.php:49
 msgid "Logout"
 msgstr "Вихід"
 
-#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:42
+#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:43
 #: ../storage/framework/messages/50f437e52873a393681a7e79793c4ce74005a66b.php.php:4
 msgid "Categories"
 msgstr "Розділи"
 
-#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:49
+#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:50
 #: ../storage/framework/messages/c2981bea8075bb003bc9a8e5d878a5b74c438425.php.php:28
 msgid "Content"
 msgstr "Вміст"
 
-#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:56
+#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:57
 #: ../storage/framework/messages/c2981bea8075bb003bc9a8e5d878a5b74c438425.php.php:34
 #: ../storage/framework/messages/f3fdc1931cf4bbd7899312cbca3aab2fcbec5d23.php.php:4
 msgid "Media"
 msgstr "Медіафайли"
 
-#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:63
+#: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:64
 #: ../storage/framework/messages/714c2bc0fbf22d9d8d040b86d91cdeda57b5e526.php.php:4
 msgid "Users"
 msgstr "Корисувачі"
@@ -213,22 +208,26 @@ msgstr "Корисувачі"
 msgid "Create"
 msgstr "Створити"
 
-#: ../storage/framework/messages/50f437e52873a393681a7e79793c4ce74005a66b.php.php:14
+#: ../storage/framework/messages/50f437e52873a393681a7e79793c4ce74005a66b.php.php:15
 #: ../storage/framework/messages/809cc28980fc78494e8e4f4a332c1c28974a05bf.php.php:15
 msgid "Category"
 msgstr "Розділ"
 
-#: ../storage/framework/messages/50f437e52873a393681a7e79793c4ce74005a66b.php.php:15
+#: ../storage/framework/messages/50f437e52873a393681a7e79793c4ce74005a66b.php.php:16
 msgid "Sub Category"
 msgstr "Підрозділ"
 
-#: ../storage/framework/messages/50f437e52873a393681a7e79793c4ce74005a66b.php.php:16
+#: ../storage/framework/messages/50f437e52873a393681a7e79793c4ce74005a66b.php.php:17
+msgid "Slug"
+msgstr "Слаг"
+
+#: ../storage/framework/messages/50f437e52873a393681a7e79793c4ce74005a66b.php.php:18
 #: ../storage/framework/messages/714c2bc0fbf22d9d8d040b86d91cdeda57b5e526.php.php:27
 #: ../storage/framework/messages/809cc28980fc78494e8e4f4a332c1c28974a05bf.php.php:36
 msgid "Edit"
 msgstr "Редагувати"
 
-#: ../storage/framework/messages/50f437e52873a393681a7e79793c4ce74005a66b.php.php:31
+#: ../storage/framework/messages/50f437e52873a393681a7e79793c4ce74005a66b.php.php:51
 #: ../storage/framework/messages/809cc28980fc78494e8e4f4a332c1c28974a05bf.php.php:47
 msgid "No Content Available"
 msgstr "Записи відсутні"
@@ -332,31 +331,31 @@ msgstr ""
 msgid "click here to request another"
 msgstr ""
 
-#: ../storage/framework/messages/b75848deed6308d003015b0c839f8e5b27531158.php.php:7
+#: ../storage/framework/messages/b75848deed6308d003015b0c839f8e5b27531158.php.php:6
 msgid "Name Category:"
 msgstr "Назва розділу:"
 
-#: ../storage/framework/messages/b75848deed6308d003015b0c839f8e5b27531158.php.php:9
+#: ../storage/framework/messages/b75848deed6308d003015b0c839f8e5b27531158.php.php:8
 msgid "Name Category"
 msgstr "Назва розділу"
 
-#: ../storage/framework/messages/b75848deed6308d003015b0c839f8e5b27531158.php.php:16
+#: ../storage/framework/messages/b75848deed6308d003015b0c839f8e5b27531158.php.php:15
 msgid "or"
 msgstr "або"
 
-#: ../storage/framework/messages/b75848deed6308d003015b0c839f8e5b27531158.php.php:22
+#: ../storage/framework/messages/b75848deed6308d003015b0c839f8e5b27531158.php.php:21
 msgid "Category:"
 msgstr "Розділ:"
 
-#: ../storage/framework/messages/b75848deed6308d003015b0c839f8e5b27531158.php.php:32
+#: ../storage/framework/messages/b75848deed6308d003015b0c839f8e5b27531158.php.php:31
 msgid "Name Subcategory:"
 msgstr "Назва підрозділу:"
 
-#: ../storage/framework/messages/b75848deed6308d003015b0c839f8e5b27531158.php.php:34
+#: ../storage/framework/messages/b75848deed6308d003015b0c839f8e5b27531158.php.php:33
 msgid "Name Subcategory"
 msgstr "Назва підрозділу"
 
-#: ../storage/framework/messages/b75848deed6308d003015b0c839f8e5b27531158.php.php:41
+#: ../storage/framework/messages/b75848deed6308d003015b0c839f8e5b27531158.php.php:40
 #: ../storage/framework/messages/c2981bea8075bb003bc9a8e5d878a5b74c438425.php.php:49
 #: ../storage/framework/messages/ef7a6db9d7252812575708cb5818c7d31720e064.php.php:49
 msgid "Save"
@@ -443,3 +442,6 @@ msgstr "Завантажити"
 #: ../storage/framework/messages/f3fdc1931cf4bbd7899312cbca3aab2fcbec5d23.php.php:41
 msgid "File Preview"
 msgstr "Попередній перегляд"
+
+#~ msgid "You do not have permission to this action."
+#~ msgstr "Ви не маєте доступу для цих дій."
