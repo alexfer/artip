@@ -21,9 +21,6 @@ class GetFeature extends Feature
      */
     public function handle(Request $request)
     {
-        file_put_contents("/var/www/tmp/response.log", var_export($this->run(GetJob::class, [
-                                'id' => $request->id,
-                            ]), true));
         return $this->run(new RespondWithViewJob(self::TEMPLATE, [
                             'types' => $this->run(CollectionJob::class),
                             'categories' => $this->run(ListJob::class),

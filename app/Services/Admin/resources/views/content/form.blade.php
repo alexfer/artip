@@ -29,10 +29,10 @@
                 <select name="category_id" id="category_id" class="form-control">
                     <option value="">{{ _i('Category') }}</option>
                     @foreach($categories as $category)
-                    <option value="{{ $category['id'] }}" {{ $category['id'] == old('category_id') ? "selected=selected" : '' }}>{{ $category['name'] }}</option>
+                    <option value="{{ $category['id'] }}" {{ $category['id'] == (isset($entry) && isset($entry['category']) ? $entry['category']['id'] : old('category_id')) ? "selected=selected" : '' }}>{{ $category['name'] }}</option>
                     @if(count($category['children']))
                     @foreach($category['children'] as $child)
-                    <option value="{{ $child['id'] }}" {{ $child['id'] == old('category_id') ? "selected=selected" : '' }}>- {{ $child['name'] }}</option>
+                    <option value="{{ $child['id'] }}" {{ $child['id'] == (isset($entry) && isset($entry['category']) ? $entry['category']['id'] : old('category_id')) ? "selected=selected" : '' }}>- {{ $child['name'] }}</option>
                     @endforeach
                     @endif
                     @endforeach
