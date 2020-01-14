@@ -10,9 +10,9 @@ use Artip\Services\Admin\Features\Category\{
     AppendFeature,
     GetFeature,
     RebuildTreeFeature,
-    SearchFeature,
     UpdateFeature,
-    DeleteFeature
+    DeleteFeature,
+    FormFeature
 };
 
 class CategoryController extends Controller
@@ -37,6 +37,11 @@ class CategoryController extends Controller
         } else {
             return $this->serve(AppendFeature::class);
         }
+    }
+    
+    public function form()
+    {
+        return $this->serve(FormFeature::class);
     }
 
     /**

@@ -27,7 +27,7 @@ class AppendFeature extends Feature
             \Session::flash('error', nl2br($ex->getMessage()));
         }
 
-        return redirect(route('categories.index'));
+        return redirect(route('category.collection'));
     }
 
 }

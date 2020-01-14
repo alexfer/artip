@@ -4,6 +4,7 @@ namespace Artip\Domains\Category\Jobs;
 
 use Lucid\Foundation\Job;
 use Artip\Data\Models\Category;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class CreateJob extends Job
 {
@@ -31,6 +32,7 @@ class CreateJob extends Job
      */
     public function handle(Category $category)
     {
+        $this->input['slug'] = SlugService::createSlug(Category::class, 'slug', $this->input['name'], ['unique' => false]);
         return $category->create($this->input);
     }
 

@@ -24,7 +24,7 @@ class Validator extends LucidValidator
      */
     public function validateInput($input)
     {
-        parent::validate($input, $this->rules, $this->messages);
+        parent::validate($input, $this->rules);
     }
 
 }

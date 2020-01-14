@@ -18,9 +18,15 @@ Route::post('logout', '\Framework\Http\Controllers\Auth\LoginController@logout')
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function() {
 
     Route::get('/', 'DashboardController@index')->name('dashboard');
-    
+
     // Categories section
     Route::get('/categories', 'CategoryController@collection')->name('category.collection');
+    Route::post('/category', 'CategoryController@create')->name('category.create');
+    Route::get('/category/create', 'CategoryController@form')->name('category.form');
+    Route::get('/category/{id}', 'CategoryController@edit')->name('category.edit');
+    Route::put('/category/{id}', 'CategoryController@update')->name('category.update');
+    Route::delete('/category/{id}', 'CategoryController@delete')->name('category.delete');
+    Route::patch('/categories/rebuild-tree', 'CategoryController@rebuildTree')->name('categories.rebuild-tree');
 
     // User section
     Route::get('/users', 'UserController@collection')->name('user.collection');
@@ -40,7 +46,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function
     Route::get('/content/{id}/restore', 'ContentController@restore')->name('content.restore')->where('id', '[0-9]+');
     Route::get('/content/{id}/publish', 'ContentController@publish')->name('content.publish')->where('id', '[0-9]+');
     Route::get('/content/{id}/unpublish', 'ContentController@unpublish')->name('content.unpublish')->where('id', '[0-9]+');
-    
+
     // Media section    
     Route::get('/media', 'MediaController@collection')->name('media.collection');
     Route::post('/media', 'MediaController@upload')->name('media.upload');

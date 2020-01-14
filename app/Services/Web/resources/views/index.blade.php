@@ -33,19 +33,12 @@
             @endif            
         </main>   
         <footer class="footer">
-<<<<<<< HEAD
-            <p>Nice <a href="https://artip.com.ua/">artip.edu.ua</a> by <a href="https://facebook.com">@facebook</a>.</p>
-            <p>
-                <a href="#">Back to top</a>
-            </p>
-=======
             <div class="container">
-                <p>Nice <a href="https://artip.edu.ua/">artip.edu.ua</a> by <a href="https://facebook.com">@facebook</a>.</p>
+                <p>Nice <a href="https://artip.com.ua/">artip.com.ua</a> by <a href="https://facebook.com">@facebook</a>.</p>
                 <p>
                     <a href="#">Back to top</a>
                 </p>
             </div>
->>>>>>> 68df3f4cfda65f1e304a95064094b860944cc54c
         </footer>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

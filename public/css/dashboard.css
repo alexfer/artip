@@ -94,3 +94,5 @@ body {
 
 .border-top { border-top: 1px solid #e5e5e5; }
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
+.children-node{margin-bottom: 0;display: none;}
+.primary-category{margin-bottom: 0;}

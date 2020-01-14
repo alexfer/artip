@@ -10,11 +10,11 @@ class ListJob extends Job
 
     /**
      * 
-     * @return object
+     * @return array
      */
-    public function handle(): object
+    public function handle(): array
     {
-        return Category::get()->toTree();
+        return Category::get()->toTree()->toArray();
     }
 
 }

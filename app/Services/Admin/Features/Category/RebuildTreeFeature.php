@@ -11,6 +11,11 @@ use Artip\Domains\Http\Jobs\RespondWithJsonJob;
 class RebuildTreeFeature extends Feature
 {
 
+    /**
+     * 
+     * @param Request $request
+     * @return string
+     */
     public function handle(Request $request)
     {
         try {
