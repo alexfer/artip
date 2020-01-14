@@ -30,7 +30,10 @@ class GetJob extends Job
      */
     public function handle(Content $entry): array
     {
-        return $entry->withTrashed()->find($this->id)->toArray();
+        return $entry->with(['category'])
+                        ->withTrashed()
+                        ->find($this->id)
+                        ->toArray();
     }
 
 }

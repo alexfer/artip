@@ -23,7 +23,7 @@
             @forelse($collection as $row)
             <tr {!! $row->deleted_at ? 'class="text-muted"' : null !!}>
                 <td>{{ date('d M Y', strtotime($row->created_at)) }}</td>
-                <td>{{ $row->category->display_name }}</td>
+                <td>{{ $row->type->display_name }}</td>
                 <td>
                     @if($row->is_published)
                         {{ $row->short_title }}

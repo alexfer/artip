@@ -3,7 +3,10 @@
 namespace Artip\Domains\Content\Jobs;
 
 use Lucid\Foundation\Job;
-use Artip\Data\Models\Content;
+use Artip\Data\Models\{
+    Content,
+    CategoryContent
+};
 
 class CreateJob extends Job
 {
@@ -35,6 +38,13 @@ class CreateJob extends Job
             $entry = $entry->create($this->input);
         } catch (\Exception $ex) {
             throw new \Exception($ex->getMessage());
+        }
+
+        if (isset($this->input['category_id'])) {
+            CategoryContent::insert([
+                'category_id' => $this->input['category_id'],
+                'content_id' => $entry->id,
+            ]);
         }
 
         return $entry;

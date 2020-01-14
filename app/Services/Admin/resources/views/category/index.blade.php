@@ -31,18 +31,18 @@
                             <a href="#" class="category-children">
                                 <span data-feather="chevron-right"></span>
                             </a>
-                        </td> 
+                        </td>
                         <td class="col-lg-5">{{ str_limit($category['slug'], 45, '...') }}</td>
-                        <td class="col-lg-1">                            
+                        <td class="col-lg-1">
                             <a class="pull-left" href="{{ route('category.edit', ['id' => $category['id']]) }}">
                                 <span data-feather="edit"></span>
-                            </a>                            
+                            </a>
                         </td>
                     </tr>
                 </tbody>
             </table>
             @if(count($category['children']))
-            @include('admin::category.children',['children' => $category['children']])                
+            @include('admin::category.children',['children' => $category['children']])
             @endif
         </div>
         @empty

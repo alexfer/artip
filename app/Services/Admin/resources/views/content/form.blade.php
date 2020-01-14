@@ -20,7 +20,21 @@
                 <label for="content_type_id">{{ _i('Content Type') }}</label>
                 <select name="content_type_id" id="content_type_id" class="form-control">
                     @foreach($types as $type)
-                    <option value="{{ $type['id'] }}" {{ $type['id'] == (isset($entry) ? $entry['content_type_id'] : old('content_type_id')) ? "selected=selected" : '' }}>{{ $type['display_name'] }}</option>
+                    <option data-service-name="{{ $type['service_name'] }}" value="{{ $type['id'] }}" {{ $type['id'] == (isset($entry) ? $entry['content_type_id'] : old('content_type_id')) ? "selected=selected" : '' }}>{{ $type['display_name'] }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group category_id_block">
+                <label for="category_id">{{ _i('Category') }}</label>
+                <select name="category_id" id="category_id" class="form-control">
+                    <option value="">{{ _i('Category') }}</option>
+                    @foreach($categories as $category)
+                    <option value="{{ $category['id'] }}" {{ $category['id'] == old('category_id') ? "selected=selected" : '' }}>{{ $category['name'] }}</option>
+                    @if(count($category['children']))
+                    @foreach($category['children'] as $child)
+                    <option value="{{ $child['id'] }}" {{ $child['id'] == old('category_id') ? "selected=selected" : '' }}>- {{ $child['name'] }}</option>
+                    @endforeach
+                    @endif
                     @endforeach
                 </select>
             </div>

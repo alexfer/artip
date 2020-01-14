@@ -15,7 +15,7 @@ class CollectionJob extends Job
      */
     public function handle(Content $content): object
     {
-        return $content->with(['category:id,display_name'])
+        return $content->with(['type:id,display_name'])
                         ->orderBy('id', 'desc')
                         ->withTrashed()
                         ->paginate(env('PAGINATE_LIMIT'));

@@ -25,9 +25,22 @@ class Content extends Model
         'content_type_id',
     ];
 
-    public function category()
+    /**
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\hasOne
+     */
+    public function type()
     {
         return $this->hasOne(ContentType::class, 'id', 'content_type_id');
+    }
+
+    /**
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\hasOneThrough
+     */
+    public function category()
+    {
+        return $this->hasOneThrough(Category::class, CategoryContent::class, 'content_id', 'id', 'id', 'category_id');
     }
 
 }
