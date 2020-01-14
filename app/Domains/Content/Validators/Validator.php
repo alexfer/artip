@@ -28,6 +28,9 @@ class Validator extends LucidValidator
             'required',
             'integer',
         ],
+        'category_id' => [
+            'integer',
+        ],
     ];
 
     /**
@@ -38,6 +41,13 @@ class Validator extends LucidValidator
      */
     public function validateInput(array $input, Request $request)
     {
+        /*
+        if (isset($input['category_id'])) {
+            array_push($this->rules['category_id'], sprintf('unique:category_content,category_id,%d', $input['category_id']));
+        }
+         * 
+         */
+
         try {
             parent::validate($input, $this->rules);
         } catch (InvalidInputException $ex) {

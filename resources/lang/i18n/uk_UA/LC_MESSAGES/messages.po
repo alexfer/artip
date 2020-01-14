@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MultilanguageLaravelApplication\n"
 "POT-Creation-Date: 2020-01-14 11:14+0200\n"
-"PO-Revision-Date: 2020-01-14 11:15+0200\n"
+"PO-Revision-Date: 2020-01-14 15:09+0200\n"
 "Last-Translator: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language-Team: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language: uk_UA\n"
@@ -103,7 +103,7 @@ msgstr "Користувача  успішно оновлено."
 
 #: ../storage/framework/messages/006d3b8c709b4aea2d2471859262dcead9e089ce.php.php:4
 msgid "Edit Entry"
-msgstr "Редігувати запис"
+msgstr "Редагувати запис"
 
 #: ../storage/framework/messages/006d3b8c709b4aea2d2471859262dcead9e089ce.php.php:8
 msgid "Restore"

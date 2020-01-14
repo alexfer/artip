@@ -3,6 +3,7 @@
 namespace Artip\Domains\Content\Jobs;
 
 use Lucid\Foundation\Job;
+use Artip\Data\Models\Category;
 
 class SinglePageJob extends Job
 {
@@ -22,9 +23,12 @@ class SinglePageJob extends Job
         $this->slug = $slug;
     }
 
-    public function handle()
+    public function handle(Category $content)
     {
-        
+        return $content->with(['content'])
+                        ->where('slug', $this->slug)
+                        ->first()
+                        ->toArray();
     }
 
 }

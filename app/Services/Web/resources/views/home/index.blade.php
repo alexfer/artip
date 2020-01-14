@@ -7,7 +7,7 @@
     <div class="col-md-6">
         <div class="card flex-md-row mb-4 box-shadow h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
-                <strong class="d-inline-block mb-2 text-primary">{{ $item->category->display_name }}</strong>
+                <strong class="d-inline-block mb-2 text-primary">{{ $item->type->display_name }}</strong>
                 <h3 class="mb-0">
                     <a class="text-dark cut-text" title="{{ $item->short_title }}" href="#">{{ $item->short_title }}</a>
                 </h3>

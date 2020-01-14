@@ -23,7 +23,7 @@ class UpdateFeature extends Feature
             ]);
 
             $this->run(UpdateJob::class, [
-                'input' => $request->only('short_title', 'long_title', 'content', 'content_type_id', 'id'),
+                'input' => $request->only('short_title', 'long_title', 'content', 'content_type_id', 'id', 'category_id'),
             ]);
             \Session::flash('alert-success', _i('Entry updated successfully.'));
         } catch (\Exception $ex) {

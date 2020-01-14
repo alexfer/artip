@@ -38,5 +38,14 @@ class Category extends Model
      * @var boolean
      */
     public $timestamps = true;
+    
+    /**
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\hasOneThrough
+     */
+    public function content()
+    {
+        return $this->hasOneThrough(Content::class, CategoryContent::class, 'category_id', 'id', 'id', 'content_id');
+    }
 
 }
