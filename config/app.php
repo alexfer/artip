@@ -153,6 +153,7 @@ return [
         Artip\Foundation\ServiceProvider::class,
         Lucid\Console\LucidServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Framework\Providers\CategoryServiceProvider::class,
     ],
     /*
       |--------------------------------------------------------------------------

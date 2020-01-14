@@ -17,13 +17,4 @@ class IndexController extends Controller
         return $this->serve(IndexFeature::class);
     }
 
-    /**
-     * 
-     * @return mixed
-     */
-    public function contact()
-    {
-        return view('web::single-pages.contacts');
-    }
-
 }

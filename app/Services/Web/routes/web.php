@@ -12,7 +12,8 @@
  */
 
 Route::get('/', 'IndexController@index')->name('index');
-Route::get('/contacts.html', 'IndexController@contact')->name('contacts');
+Route::get('/contacts.html', 'ContentController@contact')->name('contacts');
+Route::get('/{slug}.html', 'ContentController@single')->name('single.by.slug');
 
 // External Url's
 foreach (config('external-urls') as $name => $url) {

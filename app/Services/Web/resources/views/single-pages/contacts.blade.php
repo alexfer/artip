@@ -6,7 +6,7 @@
     <div class="col-4">
         <div class="card">
             <div class="card-header">
-                <p>{{ _i('Our contacts:') }}</p>
+                <h2 class="title">{{ _i('Our contacts:') }}</h2>
             </div>
             <div class="card-body">                
                 <p>{{ _i('Main address:') }}</p>
