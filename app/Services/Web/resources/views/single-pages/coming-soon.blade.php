@@ -1,9 +1,5 @@
-@extends('web::index')
-@section('title', _i('Coming Soon))
-@section('content')
-<div class="card">
-    <div class="card-body h-100">
-        {{ _i('Coming Soon) }}
+<div class="row h-100">
+    <div class="col-sm-12 my-auto text-center">
+        <h1 class="mx-auto text-muted display-1">{{ _i('Coming Soon') }}</h1>
     </div>
-</div>>
-@endsection
+</div>

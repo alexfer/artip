@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MultilanguageLaravelApplication\n"
-"POT-Creation-Date: 2020-01-15 12:04+0200\n"
-"PO-Revision-Date: 2020-01-15 12:05+0200\n"
+"POT-Creation-Date: 2020-01-15 13:43+0200\n"
+"PO-Revision-Date: 2020-01-15 13:43+0200\n"
 "Last-Translator: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language-Team: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language: uk_UA\n"
@@ -198,11 +198,9 @@ msgstr "Медіафайли"
 msgid "Users"
 msgstr "Корисувачі"
 
-#: ../storage/framework/messages/499e9fdac28eab536d5adb31002071d94beb776a.php.php:1
-msgid ""
-"Coming Soon)); ?>\n"
-"<?php $__env->startSection("
-msgstr ""
+#: ../storage/framework/messages/499e9fdac28eab536d5adb31002071d94beb776a.php.php:3
+msgid "Coming Soon"
+msgstr "Незабаром"
 
 #: ../storage/framework/messages/50f437e52873a393681a7e79793c4ce74005a66b.php.php:7
 #: ../storage/framework/messages/714c2bc0fbf22d9d8d040b86d91cdeda57b5e526.php.php:7

@@ -10,30 +10,30 @@
         <link href="{{ asset('css/common.css') }}" rel="stylesheet" />
     </head>
     <body>
-        <main role="main" class="container">
-            <header class="header py-3">
-                <div class="row flex-nowrap justify-content-between align-items-center">
-                    <div class="col-12 text-center">
-                        <a class="header-logo text-dark" href="{{ env('APP_URL') }}">{{ _i('ARTIP') }}</a>
-                    </div>
+        <header class="container header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-12 text-center">
+                    <a class="header-logo text-dark" href="{{ env('APP_URL') }}">{{ _i('ARTIP') }}</a>
                 </div>
-            </header>
-            <div class="nav-scroller py-1 mb-2">
-                <nav class="nav d-flex justify-content-between navbar-nav-scroll">
-                    @foreach($categories as $category)
-                    @if(!$category['parent_id'])
-                    <a class="p-2 text-muted" href="{{ route('single.by.slug', ['slug' => $category['slug']]) }}">{{ $category['name'] }}</a>
-                    @endif
-                    @endforeach
-                    <a class="p-2 text-muted" href="{{ route('contacts') }}">{{ _i('Contacts') }}</a>
-                </nav>
-            </div>
+            </div>            
+        </header> 
+        <div class="container nav-scroller py-1 mb-2">
+            <nav class="nav d-flex justify-content-between navbar-nav-scroll">
+                @foreach($categories as $category)
+                @if(!$category['parent_id'])
+                <a class="p-2 text-muted" href="{{ route('single.by.slug', ['slug' => $category['slug']]) }}">{{ $category['name'] }}</a>
+                @endif
+                @endforeach
+                <a class="p-2 text-muted" href="{{ route('contacts') }}">{{ _i('Contacts') }}</a>
+            </nav>
+        </div>
+        <section class="container" style="min-height: 100vh;">            
             @if ($__env->yieldContent('content'))
             @yield('content')
             @endif
-        </main>
-        <footer class="footer">
-            <div class="container">
+        </section>
+        <footer class="footer mt-4">
+            <div class="container py-3">
                 <p>Nice <a href="https://artip.com.ua/">artip.com.ua</a> by <a href="https://facebook.com">@facebook</a>.</p>
                 <p>
                     <a href="#">Back to top</a>
