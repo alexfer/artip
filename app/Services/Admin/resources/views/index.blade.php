@@ -37,7 +37,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::segment(2) == 'categories' || Request::segment(2) == 'category' ? 'active' : '' }}" href="{{ route('category.collection') }}">
-                                    <span data-feather="users"></span>
+                                    <span data-feather="menu"></span>
                                     {{ _i('Categories') }}
                                 </a>
                             </li>

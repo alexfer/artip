@@ -19,10 +19,12 @@ class SingleFeature extends Feature
      */
     public function handle(Request $request)
     {
+        $page = $this->run(SinglePageJob::class, [
+            'slug' => $request->slug,
+        ]);
+
         return $this->run(new RespondWithViewJob(self::TEMPLATE, [
-                            'page' => $this->run(SinglePageJob::class, [
-                                'slug' => $request->slug,
-                            ])
+                            'page' => $page,
         ]));
     }
 

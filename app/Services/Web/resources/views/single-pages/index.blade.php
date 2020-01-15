@@ -7,13 +7,13 @@
         <div class="card mb-3">
             <div class="card-header">{{ $page['name'] }}</div>
             <div class="card-body h-100">
-                @if(isset($categories[$page['id']]) && count($categories[$page['id']]['children']))
-                <nav id="sidebar">
-                    <ul class="list-unstyled" id="children">
-                    @foreach($categories[$page['id']]['children'] as $child)
-                    <li>
-                        <a href="{{ route('single.by.slug', ['slug' => $child['slug']]) }}">{{ $child['name'] }}</a>
-                    </li>
+                @if(count($categories))
+                <nav id="sidebar" class="m-0">
+                    <ul class="list-unstyled">
+                    @foreach($categories as $category)
+                        @if($category['id'] == $page['id'])
+                            @include('web::single-pages.partial', $category)
+                        @endif    
                     @endforeach
                     </ul>
                 </nav>

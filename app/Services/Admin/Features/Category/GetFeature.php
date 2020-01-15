@@ -16,16 +16,15 @@ class GetFeature extends Feature
     public function handle(Request $request)
     {
         try {
-            $categoryObj = $this->run(GetCategoryJob::class, [
+            $category = $this->run(GetCategoryJob::class, [
                 'id' => $request->id,
             ]);
 
             return $this->run(new RespondWithViewJob(self::TEMPLATE, [
-                                'model' => $categoryObj->toArray(),
-                                'headerImageUrls' => $categoryObj->getImagesAdmin(),
+                                'model' => $category->toArray(),
             ]));
         } catch (ModelNotFoundException $e) {
-            \Session::flash('error', _i('Category with id `%s` not found.', $request->id));
+            \Session::flash('alert-danger', _i('Category with id `%s` not found.', $request->id));
         }
     }
 
