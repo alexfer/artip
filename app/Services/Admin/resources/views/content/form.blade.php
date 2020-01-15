@@ -28,18 +28,8 @@
                 <label for="category_id">{{ _i('Category') }}</label>
                 <select name="category_id" id="category_id" class="form-control">
                     <option value="">{{ _i('Category') }}</option>
-                    @foreach($categories as $category)
-                    <option value="{{ $category['id'] }}" {{ $category['id'] == (isset($entry) && isset($entry['category']) ? $entry['category']['id'] : old('category_id')) ? "selected=selected" : '' }}>{{ $category['name'] }}</option>
-                        @if(count($category['children']))
-                        @foreach($category['children'] as $child)
-                        <option value="{{ $child['id'] }}" {{ $child['id'] == (isset($entry) && isset($entry['category']) ? $entry['category']['id'] : old('category_id')) ? "selected=selected" : '' }}>- {{ $child['name'] }}</option>
-                        @if(count($child['children']))
-                            @foreach($child['children'] as $_child)
-                            <option value="{{ $_child['id'] }}" {{ $_child['id'] == (isset($entry) && isset($entry['category']) ? $entry['category']['id'] : old('category_id')) ? "selected=selected" : '' }}>-- {{ $_child['name'] }}</option>
-                            @endforeach
-                            @endif
-                        @endforeach
-                        @endif
+                    @foreach($categories as $category)                    
+                        @include('admin::category.children-option', $category)
                     @endforeach
                 </select>
             </div>

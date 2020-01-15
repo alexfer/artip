@@ -3,7 +3,10 @@
 namespace Artip\Domains\Category\Jobs;
 
 use Lucid\Foundation\Job;
-use Artip\Data\Models\Category;
+use Artip\Data\Models\{
+    Category,
+    CategoryContent
+};
 
 class DeleteJob extends Job
 {
@@ -18,18 +21,19 @@ class DeleteJob extends Job
      * 
      * @param int $id
      */
-    public function __construct($id)
+    public function __construct(int $id)
     {
         $this->id = $id;
     }
 
     /**
-     * Execute the job.
-     *
-     * @return void
+     * 
+     * @param Category $category
+     * @return bool
      */
     public function handle(Category $category)
     {
+        CategoryContent::where('category_id', $this->id)->delete();
         return $category->findOrFail($this->id)->delete();
     }
 
