@@ -24,8 +24,7 @@ class CategoryServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
-        file_put_contents("/var/www/tmp/response.log", var_export(Category::get()->toTree()->toArray(), true));
+    {        
         return view()->share('categories', Category::get()->toTree()->toArray());
     }
 

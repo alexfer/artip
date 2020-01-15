@@ -14,7 +14,7 @@ class ListJob extends Job
      */
     public function handle(): array
     {
-        return Category::get()->toTree()->toArray();
+        return Category::with('ancestors')->get()->toTree()->toArray();
     }
 
 }

@@ -40,10 +40,8 @@
                         </td>
                     </tr>
                 </tbody>
-            </table>
-            @if(count($category['children']))
-            @include('admin::category.children',['children' => $category['children']])
-            @endif
+            </table>            
+            @include('admin::category.children',$category)            
         </div>
         @empty
         <table class="table table-striped">

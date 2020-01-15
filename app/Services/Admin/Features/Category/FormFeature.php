@@ -4,7 +4,7 @@ namespace Artip\Services\Admin\Features\Category;
 
 use Lucid\Foundation\Feature;
 use Artip\Domains\Http\Jobs\RespondWithViewJob;
-use Artip\Domains\Category\Jobs\CollectionJob;
+use Artip\Domains\Category\Jobs\ListJob;
 
 class FormFeature extends Feature
 {
@@ -18,7 +18,7 @@ class FormFeature extends Feature
     public function handle()
     {
         return $this->run(new RespondWithViewJob(self::TEMPLATE, [
-                            'categories' => $this->run(CollectionJob::class),
+                            'categories' => $this->run(ListJob::class),
         ]));
     }
 

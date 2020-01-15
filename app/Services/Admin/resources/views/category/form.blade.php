@@ -22,17 +22,7 @@
                 <div class="col-sm-8">
                     <select class="form-control" id="category" name="category">
                         @foreach($categories as $key => $category)
-                        <option value="{{ $category['id'] }}">{{ $category['name'] ?? '' }}</option>
-                            @if(count($category['children']))
-                            @foreach($category['children'] as $child)
-                            <option value="{{ $child['id'] }}">- {{ $child['name'] }}</option>
-                                @if(count($child['children']))
-                                @foreach($child['children'] as $_child)
-                                <option value="{{ $_child['id'] }}">-- {{ $_child['name'] }}</option>
-                                @endforeach
-                                @endif
-                            @endforeach
-                            @endif
+                            @include('admin::category.children-option', $category)
                         @endforeach
                     </select>
                 </div>

@@ -21,12 +21,11 @@ class CreateFeature extends Feature
             $this->run(ValidateJob::class, ['input' => $input]);
             $this->run(CreateJob::class, ['input' => $input]);
             \Session::flash('alert-success', _i('New Category added successfully.'));
+            return redirect(route('category.collection'));
         } catch (InvalidInputException $ex) {
             \Session::flash('alert-danger', nl2br($ex->getMessage()));
+            return redirect(route('category.form'));
         }
-
-
-        return redirect(route('category.collection'));
     }
 
 }
