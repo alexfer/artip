@@ -13,14 +13,22 @@ class LatestJob extends Job
      * @var string
      */
     private $service;
-
+    
     /**
      *
-     * @param int $id
+     * @var int
      */
-    public function __construct(string $service)
+    private $limit;
+
+    /**
+     * 
+     * @param string $service
+     * @param int $limit
+     */
+    public function __construct(string $service, int $limit = 2)
     {
         $this->service = $service;
+        $this->limit = $limit;
     }
 
     /**
@@ -37,7 +45,7 @@ class LatestJob extends Job
                         ->where('content.is_published', true)
                         ->orderBy('content.created_at', 'desc')
                         ->get()
-                        ->take(2);
+                        ->take($this->limit);
     }
 
 }

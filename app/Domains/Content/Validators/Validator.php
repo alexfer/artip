@@ -28,9 +28,9 @@ class Validator extends LucidValidator
             'required',
             'integer',
         ],
-        'category_id' => [
-            'integer',
-        ],
+//        'category_id' => [
+//            'integer',
+//        ],
     ];
 
     /**

@@ -37,9 +37,10 @@ class UpdateJob extends Job
         if (isset($this->input['category_id'])) {
             CategoryContent::updateOrCreate(['content_id' => $this->input['id']], [
                 'category_id' => $this->input['category_id'],
-            ]);
-            unset($this->input['category_id']);
+            ]);            
         }
+        
+        unset($this->input['category_id']);
 
         try {
             $entry = $entry->where('id', $this->input['id'])

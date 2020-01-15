@@ -34,15 +34,18 @@ class CreateJob extends Job
      */
     public function handle(Content $entry): object
     {
+        $categoryId = $this->input['category_id'];
+        unset($this->input['category_id']);
+        
         try {
             $entry = $entry->create($this->input);
         } catch (\Exception $ex) {
             throw new \Exception($ex->getMessage());
         }
 
-        if (isset($this->input['category_id'])) {
+        if (isset($categoryId)) {
             CategoryContent::insert([
-                'category_id' => $this->input['category_id'],
+                'category_id' => $categoryId,
                 'content_id' => $entry->id,
             ]);
         }

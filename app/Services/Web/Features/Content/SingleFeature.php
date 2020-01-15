@@ -6,6 +6,7 @@ use Lucid\Foundation\Feature;
 use Illuminate\Http\Request;
 use Artip\Domains\Http\Jobs\RespondWithViewJob;
 use Artip\Domains\Content\Jobs\SinglePageJob;
+use Artip\Domains\Content\Jobs\Widget\LatestJob;
 
 class SingleFeature extends Feature
 {
@@ -26,6 +27,10 @@ class SingleFeature extends Feature
         return $this->run(new RespondWithViewJob(self::TEMPLATE, [
                             'page' => $page['content'],
                             'children' => $page['children'],
+                            'news' => $this->run(LatestJob::class, [
+                                'service' => 'news',
+                                'limit' => 5,
+                            ]),
         ]));
     }
 
