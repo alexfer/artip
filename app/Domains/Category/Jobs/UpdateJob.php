@@ -5,39 +5,44 @@ namespace Artip\Domains\Category\Jobs;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Lucid\Foundation\Job;
 use Artip\Data\Models\Category;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class UpdateJob extends Job
 {
 
+    /**
+     *
+     * @var int
+     */
     private $id;
+
+    /**
+     *
+     * @var array
+     */
     private $input = [];
 
     /**
-     * Create a new job instance.
-     *
-     * @return void
+     * 
+     * @param array $input
+     * @param int $id
      */
-    public function __construct($input = [])
+    public function __construct(array $input, int $id)
     {
-        $this->id = $input['id'];
-        unset($input['id']);
+        $this->id = $id;
         $this->input = $input;
     }
 
     /**
-     * Execute the job.
-     *
-     * @return mixed
+     * 
+     * @param Category $category
+     * @return bool
      */
-    public function handle()
+    public function handle(Category $category)
     {
-        $category = Category::query()->where('id', '=', $this->id)->first();
-
-        if (empty($category)) {
-            throw new ModelNotFoundException();
-        }
-
-        return $category->patch($this->input);
+        unset($this->input['_method'], $this->input['_token']);
+        $this->input['slug'] = SlugService::createSlug(Category::class, 'slug', $this->input['name'], ['unique' => false]);
+        return $category->where('id', '=', $this->id)->update($this->input);
     }
 
 }

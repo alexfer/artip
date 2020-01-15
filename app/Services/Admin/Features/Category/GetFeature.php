@@ -11,7 +11,7 @@ use Artip\Domains\Category\Jobs\GetJob as GetCategoryJob;
 class GetFeature extends Feature
 {
 
-    const TEMPLATE = 'Admin::dashboard.layouts.category.edit';
+    const TEMPLATE = 'admin::category.edit';
 
     public function handle(Request $request)
     {
@@ -21,7 +21,7 @@ class GetFeature extends Feature
             ]);
 
             return $this->run(new RespondWithViewJob(self::TEMPLATE, [
-                                'model' => $category->toArray(),
+                                'category' => $category->toArray(),
             ]));
         } catch (ModelNotFoundException $e) {
             \Session::flash('alert-danger', _i('Category with id `%s` not found.', $request->id));
