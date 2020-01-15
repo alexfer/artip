@@ -32,7 +32,7 @@ class CreateJob extends Job
      */
     public function handle(Category $category)
     {
-        $this->input['slug'] = SlugService::createSlug(Category::class, 'slug', $this->input['name'], ['unique' => false]);
+        $this->input['slug'] = SlugService::createSlug(Category::class, 'slug', $this->input['name'], ['unique' => true]);
         return $category->create($this->input);
     }
 

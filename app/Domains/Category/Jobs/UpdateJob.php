@@ -2,10 +2,9 @@
 
 namespace Artip\Domains\Category\Jobs;
 
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Lucid\Foundation\Job;
 use Artip\Data\Models\Category;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class UpdateJob extends Job
 {
