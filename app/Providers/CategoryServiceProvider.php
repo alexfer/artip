@@ -25,7 +25,7 @@ class CategoryServiceProvider extends ServiceProvider
      */
     public function boot()
     {        
-        return view()->share('categories', Category::get()->toTree()->toArray());
+        return view()->share('categories', Category::withDepth()->having('depth', '=', 0)->get()->toArray());
     }
 
 }

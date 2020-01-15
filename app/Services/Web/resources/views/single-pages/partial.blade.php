@@ -1,12 +1,10 @@
-@if($category['parent_id'])
 <li>
-    <a href="{{ route('single.by.slug', ['slug' => $category['slug']]) }}">{{ $category['name'] }}</a>
+    <a href="{{ route('single.by.slug', ['slug' => $child['slug']]) }}">{{ $child['name'] }}</a>
 </li>
-@endif
-@if (count($category['children']) > 0)
+@if (count($child['children']) > 0)
 <ul class="children-node">
-    @foreach($category['children'] as $category)
-        @include('web::single-pages.partial', $category)
+    @foreach($child['children'] as $child)
+        @include('web::single-pages.partial', $child)
     @endforeach
 </ul>
 @endif

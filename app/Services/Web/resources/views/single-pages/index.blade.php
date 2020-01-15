@@ -1,27 +1,25 @@
 @extends('web::index')
-@section('title', $page['content']['short_title'])
+@section('title', isset($page['content']['short_title']) ? $page['content']['short_title'] : $page['name'])
 @section('content')
-<h2 class="title mb-3">{{ $page['content']['short_title'] }}</h2>
-<div class="row">
+<h2 class="title mb-3">{{ isset($page['content']['short_title']) ? $page['content']['short_title'] : $page['name'] }}</h2>
+<div class="row">        
+    @if(count($children))
     <div class="col-3">
         <div class="card mb-3">
             <div class="card-header">{{ $page['name'] }}</div>
-            <div class="card-body h-100">
-                @if(count($categories))
+            <div class="card-body h-100">                
                 <nav id="sidebar" class="m-0">
                     <ul class="list-unstyled">
-                    @foreach($categories as $category)
-                        @if($category['id'] == $page['id'])
-                            @include('web::single-pages.partial', $category)
-                        @endif    
+                    @foreach($children as $child)                        
+                        @include('web::single-pages.partial', $child)                        
                     @endforeach
                     </ul>
-                </nav>
-                @endif
+                </nav>                
             </div>
         </div>
     </div>
-    <div class="col-9">
+    @endif
+    <div class="col-{{ count($children) ? 9 : 12}}">
         {!! $page['content']['content'] !!}
     </div>
 </div>

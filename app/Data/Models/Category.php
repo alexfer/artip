@@ -45,7 +45,7 @@ class Category extends Model
      */
     public function content()
     {
-        return $this->hasOneThrough(Content::class, CategoryContent::class, 'category_id', 'id', 'id', 'content_id');
+        return $this->hasOneThrough(Content::class, CategoryContent::class, 'category_id', 'id', 'id', 'content_id')->where('is_published', 1);
     }
 
 }

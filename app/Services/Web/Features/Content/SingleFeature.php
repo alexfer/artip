@@ -24,7 +24,8 @@ class SingleFeature extends Feature
         ]);
 
         return $this->run(new RespondWithViewJob(self::TEMPLATE, [
-                            'page' => $page,
+                            'page' => $page['content'],
+                            'children' => $page['children'],
         ]));
     }
 

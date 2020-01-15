@@ -23,12 +23,22 @@ class SinglePageJob extends Job
         $this->slug = $slug;
     }
 
-    public function handle(Category $content)
+    public function handle(Category $category)
     {
-        return $content->with(['content'])
-                        ->where('slug', $this->slug)
-                        ->first()
-                        ->toArray();
+        $content = $category->with(['content'])
+                    ->where('slug', $this->slug)
+                    ->first()
+                    ->toArray();
+       
+        $root = $category->whereAncestorOrSelf($content['id'])->first()->toArray();
+        
+        return [
+            'content' => $content,
+            'children' => $category
+                    ->get()
+                    ->toTree($root['id'])
+                    ->toArray(),
+        ];
     }
 
 }
