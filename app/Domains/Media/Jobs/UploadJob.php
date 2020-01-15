@@ -26,10 +26,12 @@ class UploadJob extends Job
     /**
      *
      * @param Media $media
-     * @return void
+     * @return array
      */
-    public function handle(Media $media): void
+    public function handle(Media $media): array
     {
+        $images = [];
+
         foreach ($this->files as $file) {
             $path = \Storage::disk('public')->put('media/', $file);
             $media->create([
@@ -39,7 +41,10 @@ class UploadJob extends Job
                 'name' => $file->getClientOriginalName(),
                 'extension' => $file->getClientOriginalExtension(),
             ]);
+            $images[] = $path;
         }
+
+        return $images;
     }
 
 }
