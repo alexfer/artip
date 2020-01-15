@@ -13,7 +13,7 @@
         <header class="container header py-3">
             <div class="row flex-nowrap justify-content-between align-items-center">
                 <div class="col-12 text-center">
-                    <a class="header-logo text-dark" href="{{ env('APP_URL') }}">{{ _i('ARTIP') }}</a>
+                    <a class="header-logo text-dark" href="{{ route('index') }}">{{ _i('ARTIP') }}</a>
                 </div>
             </div>            
         </header> 
