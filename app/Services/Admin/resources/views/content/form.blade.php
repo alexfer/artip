@@ -9,6 +9,10 @@
     <div class="card mt-3 h-100">
         <div class="card-body">
             <div class="form-group">
+                <label for="date">{{ _i('Date') }}</label>
+                <input name="date" id="date" type="text" class="form-control" value="{{ isset($entry) ? $entry['date'] : old('date') }}">
+            </div>
+            <div class="form-group">
                 <label for="short_title">{{ _i('Short Title') }}</label>
                 <input name="short_title" id="short_title" type="text" class="form-control" value="{{ isset($entry) ? $entry['short_title'] : old('short_title') }}" required="required">
             </div>
@@ -23,7 +27,8 @@
                     <option data-service-name="{{ $type['service_name'] }}" value="{{ $type['id'] }}" {{ $type['id'] == (isset($entry) ? $entry['content_type_id'] : old('content_type_id')) ? "selected=selected" : '' }}>{{ $type['display_name'] }}</option>
                     @endforeach
                 </select>
-            </div>
+            </div>            
+            @if(config('content-types.annonces') !=  $entry['content_type_id'])
             <div class="form-group category_id_block">
                 <label for="category_id">{{ _i('Category') }}</label>
                 <select name="category_id" id="category_id" class="form-control">
@@ -37,23 +42,27 @@
                 <label for="content">{{ _i('Content') }}</label>
                 <textarea rows="12" name="content" id="content" class="form-control">{{ isset($entry) ? $entry['content'] : old('content') }}</textarea>
             </div>
+            @endif
         </div>
     </div>
+    @if(config('content-types.annonces') !=  $entry['content_type_id'])
     <div class="card mt-3 h-100">
         <div class="card-header">{{ _i('Media') }}</div>
         <div class="card-body">
             <div class="row">
                 <div class="col-9" id="media-content">
-                    @foreach($entry['media'] as $media)
-                    <a href="#" class="remove-media mb-2 h-100">
-                        <input type="hidden" name="media[]" value="{{ $media['file']['id'] }}">
-                        @if(in_array($media['file']['extension'], ['gif', 'jpg', 'jpeg', 'png']))
-                        <img class="figure-img img-thumbnail mr-2" src="{{ asset("storage/media/50-thumb-{$media['file']['path']}") }}" alt="{{ $media['file']['name'] }}" title="{{ $media['file']['name'] }}">
-                        @else
-                        <img class="img-thumbnail mr-2" data-src="holder.js/50x50?auto=yes&textmode=exact" data-holder-rendered="true" alt="{{ $media['file']['name'] }}" title="{{ $media['file']['name'] }}">
-                        @endif
-                    </a>
-                    @endforeach
+                    @if(isset($entry))
+                        @foreach($entry['media'] as $media)
+                        <a href="#" class="remove-media mb-2 h-100">
+                            <input type="hidden" name="media[]" value="{{ $media['file']['id'] }}">
+                            @if(in_array($media['file']['extension'], ['gif', 'jpg', 'jpeg', 'png']))
+                            <img class="figure-img img-thumbnail mr-2" src="{{ asset("storage/media/50-thumb-{$media['file']['path']}") }}" alt="{{ $media['file']['name'] }}" title="{{ $media['file']['name'] }}">
+                            @else
+                            <img class="img-thumbnail mr-2" data-src="holder.js/50x50?auto=yes&textmode=exact" data-holder-rendered="true" alt="{{ $media['file']['name'] }}" title="{{ $media['file']['name'] }}">
+                            @endif
+                        </a>
+                        @endforeach
+                    @endif    
                 </div>
                 <div class="col-3 text-right">
                     <button data-toggle="modal" data-target="#media" type="button" class="btn btn-success media-files">{{  _i('Attach Media') }}</button>
@@ -61,6 +70,7 @@
             </div>
         </div>
     </div>
+    @endif
     <div class="row mt-4">
         <div class="col-12 text-right">
             @if(isset($entry) && $entry['deleted_at'])

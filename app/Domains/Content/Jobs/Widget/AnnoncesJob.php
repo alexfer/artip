@@ -5,7 +5,7 @@ namespace Artip\Domains\Content\Jobs\Widget;
 use Artip\Data\Models\Content;
 use Lucid\Foundation\Job;
 
-class LatestJob extends Job
+class AnnoncesJob extends Job
 {
 
     /**
@@ -18,7 +18,7 @@ class LatestJob extends Job
      * 
      * @param int $limit
      */
-    public function __construct(int $limit = 2)
+    public function __construct(int $limit = 1)
     {
         $this->limit = $limit;
     }
@@ -30,15 +30,10 @@ class LatestJob extends Job
      */
     public function handle(Content $content): object
     {
-        return $content->with([
-                            'type',
-                            'media' => function($query) {
-                                $query->with(['file']);
-                            },
-                        ])
+        return $content->with(['type'])
                         ->where('content.is_published', true)
-                        ->where('content_type_id', config('content-types.news'))
-                        ->orderBy('content.created_at', 'desc')
+                        ->where('content_type_id', config('content-types.annonces'))
+                        ->orderBy('content.date', 'desc')
                         ->get()
                         ->take($this->limit);
     }

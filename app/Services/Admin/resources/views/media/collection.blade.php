@@ -18,6 +18,7 @@
 $(function () {
     $('.insert-media').on('click', function (e) {
         e.preventDefault();
+        $(this).removeClass('insert-media').addClass('remove-media');
         $('#media-content').append($(this));
     });
     $('.page-link').on('click', function (e) {

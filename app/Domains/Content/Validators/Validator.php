@@ -20,9 +20,15 @@ class Validator extends LucidValidator
         ],
         'long_title' => [
             'max:510',
+            'nullable',
         ],
         'content' => [
-            'required',
+            'max:65535',
+            'nullable',
+        ],
+        'date' => [
+            'date_format:Y-m-d',
+            'nullable',
         ],
         'content_type_id' => [
             'required',
@@ -42,10 +48,9 @@ class Validator extends LucidValidator
     public function validateInput(array $input, Request $request)
     {
         /*
-        if (isset($input['category_id'])) {
-            array_push($this->rules['category_id'], sprintf('unique:category_content,category_id,%d', $input['category_id']));
-        }
-         * 
+          if (isset($input['category_id'])) {
+          array_push($this->rules['category_id'], sprintf('unique:category_content,category_id,%d', $input['category_id']));
+          }
          */
 
         try {

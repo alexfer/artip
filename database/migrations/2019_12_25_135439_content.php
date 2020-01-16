@@ -20,7 +20,7 @@ class Content extends Migration
             $table->integer('is_widget')->default(0);
             $table->string('short_title');
             $table->text('long_title')->nullable();
-            $table->text('content');
+            $table->text('content')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
