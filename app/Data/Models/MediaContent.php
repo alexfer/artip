@@ -27,4 +27,13 @@ class MediaContent extends Model
         'content_id',
     ];
 
+    /**
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\hasOne
+     */
+    public function file()
+    {
+        return $this->hasOne(Media::class, 'id', 'media_id');
+    }
+
 }

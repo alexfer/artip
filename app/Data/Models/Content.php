@@ -43,4 +43,13 @@ class Content extends Model
         return $this->hasOneThrough(Category::class, CategoryContent::class, 'content_id', 'id', 'id', 'category_id');
     }
 
+    /**
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\hasMany
+     */
+    public function media()
+    {
+        return $this->hasMany(MediaContent::class);
+    }
+
 }

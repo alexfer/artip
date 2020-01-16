@@ -28,7 +28,7 @@
                 <label for="category_id">{{ _i('Category') }}</label>
                 <select name="category_id" id="category_id" class="form-control">
                     <option value="">{{ _i('Category') }}</option>
-                    @foreach($categories as $category)                    
+                    @foreach($categories as $category)
                         @include('admin::category.children-option', $category)
                     @endforeach
                 </select>
@@ -43,9 +43,20 @@
         <div class="card-header">{{ _i('Media') }}</div>
         <div class="card-body">
             <div class="row">
-                <div class="col-6"></div>
-                <div class="col-6 text-right">
-                    <button type="button" class="btn btn-success">{{  _i('Attach Media') }}</button>
+                <div class="col-9" id="media-content">
+                    @foreach($entry['media'] as $media)
+                    <a href="#" class="remove-media mb-2 h-100">
+                        <input type="hidden" name="media[]" value="{{ $media['file']['id'] }}">
+                        @if(in_array($media['file']['extension'], ['gif', 'jpg', 'jpeg', 'png']))
+                        <img class="figure-img img-thumbnail mr-2" src="{{ asset("storage/media/50-thumb-{$media['file']['path']}") }}" alt="{{ $media['file']['name'] }}" title="{{ $media['file']['name'] }}">
+                        @else
+                        <img class="img-thumbnail mr-2" data-src="holder.js/50x50?auto=yes&textmode=exact" data-holder-rendered="true" alt="{{ $media['file']['name'] }}" title="{{ $media['file']['name'] }}">
+                        @endif
+                    </a>
+                    @endforeach
+                </div>
+                <div class="col-3 text-right">
+                    <button data-toggle="modal" data-target="#media" type="button" class="btn btn-success media-files">{{  _i('Attach Media') }}</button>
                 </div>
             </div>
         </div>
@@ -60,9 +71,22 @@
         </div>
     </div>
 </form>
+@include('admin::content.media')
 @section('custom-scripts')
 <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
+<script src="{{ asset('js/holder.min.js') }}"></script>
 <script>
+    $(function() {
+        $('.media-files').on('click', function() {
+            $.get("{{ route('media.content') }}", function(response) {
+                $('#media').find('.modal-body').html(response);
+            });
+        });
+        $('.remove-media').on('click', function(e) {
+            e.preventDefault();
+            $(this).remove();
+        });
+    });
     tinymce.init({
         selector: 'textarea#content',
         language: '{{ LaravelGettext::getLocaleLanguage() }}',

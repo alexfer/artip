@@ -30,7 +30,9 @@ class GetJob extends Job
      */
     public function handle(Content $entry): array
     {
-        return $entry->with(['category'])
+        return $entry->with(['category', 'media' => function($query) {
+                                $query->with(['file']);
+                            }])
                         ->withTrashed()
                         ->find($this->id)
                         ->toArray();

@@ -18,14 +18,16 @@ use Artip\Services\Admin\Features\Category\{
 class CategoryController extends Controller
 {
 
+    /**
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function collection()
     {
         return $this->serve(CollectionFeature::class);
     }
 
-
     /**
-     * Show the form for creating a new resource.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -38,14 +40,17 @@ class CategoryController extends Controller
             return $this->serve(AppendFeature::class);
         }
     }
-    
+
+    /**
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function form()
     {
         return $this->serve(FormFeature::class);
     }
 
     /**
-     * Show the form for editing the specified resource.
      *
      * @return \Illuminate\Http\Response
      */
@@ -55,7 +60,6 @@ class CategoryController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
      * 
      * @return \Illuminate\Http\Response
      */
@@ -65,9 +69,8 @@ class CategoryController extends Controller
     }
 
     /**
-     * Rebuild tree
      *
-     * @param Request $request
+     * @return \Illuminate\Http\Response
      */
     public function rebuildTree()
     {

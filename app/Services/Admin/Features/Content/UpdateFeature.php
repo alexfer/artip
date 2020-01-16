@@ -4,8 +4,11 @@ namespace Artip\Services\Admin\Features\Content;
 
 use Lucid\Foundation\Feature;
 use Illuminate\Http\Request;
-use Artip\Domains\Content\Jobs\UpdateJob;
-use Artip\Domains\Content\Jobs\ValidateJob;
+use Artip\Domains\Content\Jobs\{
+    UpdateJob,
+    ValidateJob,
+    MediaJob
+};
 
 class UpdateFeature extends Feature
 {
@@ -29,6 +32,14 @@ class UpdateFeature extends Feature
         } catch (\Exception $ex) {
             \Session::flash('alert-danger', $ex->getMessage());
         }
+
+        $media = $request->input('media');
+
+        $this->run(MediaJob::class, [
+            'id' => $request->id,
+            'ids' => $media,
+        ]);
+
 
         return response()->redirectTo(route('content.get', [
                     'id' => $request->id,
