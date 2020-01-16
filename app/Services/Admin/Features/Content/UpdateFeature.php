@@ -26,20 +26,24 @@ class UpdateFeature extends Feature
             ]);
 
             $this->run(UpdateJob::class, [
-                'input' => $request->only('short_title', 'long_title', 'content', 'content_type_id', 'id', 'category_id'),
+                'input' => $request->only([
+                    'short_title',
+                    'long_title',
+                    'content',
+                    'content_type_id',
+                    'id',
+                    'category_id',
+                ]),
             ]);
             \Session::flash('alert-success', _i('Entry updated successfully.'));
         } catch (\Exception $ex) {
             \Session::flash('alert-danger', $ex->getMessage());
         }
 
-        $media = $request->input('media');
-
         $this->run(MediaJob::class, [
             'id' => $request->id,
-            'ids' => $media,
+            'ids' => $request->input('media'),
         ]);
-
 
         return response()->redirectTo(route('content.get', [
                     'id' => $request->id,

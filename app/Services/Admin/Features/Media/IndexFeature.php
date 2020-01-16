@@ -18,7 +18,9 @@ class IndexFeature extends Feature
     public function handle()
     {
         return $this->run(new RespondWithViewJob(self::TEMPLATE, [
-                            'collection' => $this->run(CollectionJob::class),
+                            'collection' => $this->run(CollectionJob::class, [
+                                'limit' => 50,
+                            ]),
         ]));
     }
 

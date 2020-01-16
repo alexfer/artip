@@ -17,6 +17,11 @@ class IndexFeature extends Feature
      */
     public function handle()
     {
+        file_put_contents("/var/www/tmp/response.log", var_export($this->run(LatestJob::class, [
+                                'service' => 'news',
+                                'limit' => 5,
+                            ])->toArray(), true));
+        
         return $this->run(new RespondWithViewJob(self::TEMPLATE, [
                             'news' => $this->run(LatestJob::class, [
                                 'service' => 'news',

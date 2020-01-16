@@ -13,7 +13,7 @@ class LatestJob extends Job
      * @var string
      */
     private $service;
-    
+
     /**
      *
      * @var int
@@ -38,7 +38,20 @@ class LatestJob extends Job
      */
     public function handle(Content $content): object
     {
-        return $content->join('content_types', function($join) {
+        return $content->select([
+                            'content.created_at',
+                            'content.short_title',
+                            'content.long_title',
+                            'media.path',
+                            'content_types.display_name',
+                        ])
+                        ->join('media_content', function($join) {
+                            $join->on('content.id', '=', 'media_content.content_id');
+                        })
+                        ->join('media', function($join) {
+                            $join->on('media.id', '=', 'media_content.media_id');
+                        })
+                        ->join('content_types', function($join) {
                             $join->on('content_types.id', '=', 'content.content_type_id')
                             ->where('content_types.service_name', $this->service);
                         })
