@@ -19,8 +19,7 @@ class IndexFeature extends Feature
      * @return mixed
      */
     public function handle()
-    {
-        file_put_contents("/var/www/tmp/response.log", var_export($this->run(AnnoncesJob::class)->toArray(), true));
+    {        
         return $this->run(new RespondWithViewJob(self::TEMPLATE, [
                             'news' => $this->run(LatestJob::class),
                             'annonces' => $this->run(AnnoncesJob::class),

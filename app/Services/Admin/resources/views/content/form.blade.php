@@ -9,10 +9,6 @@
     <div class="card mt-3 h-100">
         <div class="card-body">
             <div class="form-group">
-                <label for="date">{{ _i('Date') }}</label>
-                <input name="date" id="date" type="text" class="form-control" value="{{ isset($entry) ? $entry['date'] : old('date') }}">
-            </div>
-            <div class="form-group">
                 <label for="short_title">{{ _i('Short Title') }}</label>
                 <input name="short_title" id="short_title" type="text" class="form-control" value="{{ isset($entry) ? $entry['short_title'] : old('short_title') }}" required="required">
             </div>
@@ -27,8 +23,12 @@
                     <option data-service-name="{{ $type['service_name'] }}" value="{{ $type['id'] }}" {{ $type['id'] == (isset($entry) ? $entry['content_type_id'] : old('content_type_id')) ? "selected=selected" : '' }}>{{ $type['display_name'] }}</option>
                     @endforeach
                 </select>
-            </div>            
-            @if(config('content-types.annonces') !=  $entry['content_type_id'])
+            </div>
+            <div class="form-group">
+                <label for="date">{{ _i('Date') }}</label>
+                <input name="date" id="date" type="text" class="form-control" value="{{ isset($entry) ? $entry['date'] : old('date') }}">
+            </div>
+            @if(config('content-types.annonces') !=  (isset($entry) ? $entry['content_type_id'] : null))
             <div class="form-group category_id_block">
                 <label for="category_id">{{ _i('Category') }}</label>
                 <select name="category_id" id="category_id" class="form-control">
@@ -45,7 +45,7 @@
             @endif
         </div>
     </div>
-    @if(config('content-types.annonces') !=  $entry['content_type_id'])
+    @if(config('content-types.annonces') != (isset($entry) ? $entry['content_type_id'] : null))
     <div class="card mt-3 h-100">
         <div class="card-header">{{ _i('Media') }}</div>
         <div class="card-body">
@@ -62,7 +62,7 @@
                             @endif
                         </a>
                         @endforeach
-                    @endif    
+                    @endif
                 </div>
                 <div class="col-3 text-right">
                     <button data-toggle="modal" data-target="#media" type="button" class="btn btn-success media-files">{{  _i('Attach Media') }}</button>
@@ -82,6 +82,9 @@
     </div>
 </form>
 @include('admin::content.media')
+@section('custom-css')
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
+@append
 @section('custom-scripts')
 <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
 <script src="{{ asset('js/holder.min.js') }}"></script>
@@ -97,6 +100,14 @@
             $(this).remove();
         });
     });
+    $('#date').datepicker({
+        weekStart: 1,
+        daysOfWeekHighlighted: "6,0",
+        autoclose: true,
+        todayHighlight: true,
+        format: 'yyyy-mm-dd'
+    });
+    $('#date').datepicker("setDate", {{ isset($entry) ? $entry['date'] : 'new Date()' }});
     tinymce.init({
         selector: 'textarea#content',
         language: '{{ LaravelGettext::getLocaleLanguage() }}',

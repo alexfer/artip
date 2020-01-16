@@ -69,6 +69,7 @@ class CropJob extends Job
                     $img->save($thumbnail);
                 }
             }
+            sleep(1);
         }
     }
 

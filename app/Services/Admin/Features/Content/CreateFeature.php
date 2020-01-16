@@ -25,7 +25,14 @@ class CreateFeature extends Feature
             ]);
 
             $entry = $this->run(CreateJob::class, [
-                'input' => $request->only('short_title', 'long_title', 'content', 'content_type_id', 'category_id'),
+                'input' => $request->only([
+                    'short_title',
+                    'long_title',
+                    'content',
+                    'content_type_id',
+                    'category_id',
+                    'date',
+                ]),
             ]);
             \Session::flash('alert-success', _i('Entry created successfully.'));
         } catch (\Exception $ex) {
