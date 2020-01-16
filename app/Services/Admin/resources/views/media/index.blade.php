@@ -18,9 +18,9 @@
             <div class="row text-center text-lg-left">
                 @foreach($collection as $file)
                 <div class="col-lg-3 col-md-4 col-6 text-center">
-                    <a href="{{ asset("storage/$file->path") }}" data-size="{{ $file->size }}" data-ext="{{ $file->extension }}" data-mime="{{ $file->mime }}" class="display-image-data d-block mb-4 h-100">
+                    <a href="{{ asset("storage/media/$file->path") }}" data-size="{{ $file->size }}" data-ext="{{ $file->extension }}" data-mime="{{ $file->mime }}" class="display-image-data d-block mb-4 h-100">
                         @if(in_array($file->extension, ['gif', 'jpg', 'jpeg', 'png']))
-                        <img class="img-fluid img-thumbnail" src="{{ asset("storage/$file->path") }}" alt="{{ $file->name }}" title="{{ $file->name }}">
+                        <img class="img-fluid img-thumbnail" src="{{ asset("storage/media/240-thumb-$file->path") }}" alt="{{ $file->name }}" title="{{ $file->name }}">
                         @else
                         <img class="img-fluid img-thumbnail" data-src="holder.js/300x200?auto=yes&textmode=exact" data-holder-rendered="true">
                         @endif
@@ -62,7 +62,7 @@
 $(function () {
     $(".display-image-data").on("click", function (e) {
         e.preventDefault();
-        $('#imagepreview').attr('src', $(this).children('img').attr('src'));
+        $('#imagepreview').attr('src', $(this).children('img').attr('src').replace('240', '800'));
         $('#url').attr('value', $(this).attr('href'));
         $('#preview').modal('toggle');
     });

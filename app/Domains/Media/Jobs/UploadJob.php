@@ -33,7 +33,7 @@ class UploadJob extends Job
         $images = [];
 
         foreach ($this->files as $file) {
-            $path = \Storage::disk('public')->put('media/', $file);
+            $path = \Storage::disk('media')->put(null, $file);
             $media->create([
                 'mime' => $file->getClientMimeType(),
                 'size' => $file->getSize(),
