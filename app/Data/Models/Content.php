@@ -23,6 +23,7 @@ class Content extends Model
         'long_title',
         'content',
         'content_type_id',
+        'date',
     ];
 
     /**

@@ -33,6 +33,7 @@ class UpdateFeature extends Feature
                     'content_type_id',
                     'id',
                     'category_id',
+                    'date',
                 ]),
             ]);
             \Session::flash('alert-success', _i('Entry updated successfully.'));
