@@ -46,6 +46,27 @@
         </div>
     </div>
     @if(config('content-types.annonces') != (isset($entry) ? $entry['content_type_id'] : null))
+    <div class="card mt-3 h-100 urls">
+        <div class="card-header">{{ _i('URL') }}</div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="50x50">{{ _i('50x50') }}</label>
+                <input id="50x50" type="text" class="form-control form-control-sm" value="">
+            </div>
+            <div class="form-group">
+                <label for="240x240">{{ _i('240x240') }}</label>
+                <input id="240x240" type="text" class="form-control form-control-sm" value="">
+            </div>
+            <div class="form-group">
+                <label for="800x600">{{ _i('800x600') }}</label>
+                <input id="800x600" type="text" class="form-control form-control-sm" value="">
+            </div>
+            <div class="form-group">
+                <label for="full">{{ _i('Full size') }}</label>
+                <input id="full" type="text" class="form-control form-control-sm" value="">
+            </div>
+        </div>
+    </div>
     <div class="card mt-3 h-100">
         <div class="card-header">{{ _i('Media') }}</div>
         <div class="card-body">
@@ -53,7 +74,10 @@
                 <div class="col-9" id="media-content">
                     @if(isset($entry))
                         @foreach($entry['media'] as $media)
-                        <a href="#" class="remove-media mb-2 h-100">
+                        <a href="#" class="mb-2 h-100 show-url" data-url="{{ asset("storage/media/{$media['file']['path']}") }}">
+                            <span href="#" class="remove-media text-danger">
+                                <span data-feather="x-square"></span>
+                            </span>
                             <input type="hidden" name="media[]" value="{{ $media['file']['id'] }}">
                             @if(in_array($media['file']['extension'], ['gif', 'jpg', 'jpeg', 'png']))
                             <img class="figure-img img-thumbnail mr-2" src="{{ asset("storage/media/50-thumb-{$media['file']['path']}") }}" alt="{{ $media['file']['name'] }}" title="{{ $media['file']['name'] }}">
@@ -90,6 +114,24 @@
 <script src="{{ asset('js/holder.min.js') }}"></script>
 <script>
     $(function() {
+        $('.show-url').on('click', function(e) {
+            e.preventDefault();
+            let url = $(this).data('url'), 
+                file = url.substring(url.lastIndexOf('/') + 1),
+                size = {
+                    50: '#50x50',
+                    240: '#240x240',
+                    800: '#800x600'
+                };
+
+            $('.urls').show();
+
+            $.each(size, function(key, value) {                        
+                $(value).val(url.replace(file, key + '-thumb-' + file));
+            });
+            $('#full').val(url);
+
+        });
         $('.media-files').on('click', function() {
             $.get("{{ route('media.content') }}", function(response) {
                 $('#media').find('.modal-body').html(response);
@@ -97,20 +139,31 @@
         });
         $('.remove-media').on('click', function(e) {
             e.preventDefault();
-            $(this).remove();
+            $(this).parent('a').remove();
         });
+            $('#date').datepicker({
+            weekStart: 1,
+            daysOfWeekHighlighted: "6,0",
+            autoclose: true,
+            todayHighlight: true,
+            format: 'yyyy-mm-dd'
+        });
+        $('#date').datepicker("setDate", {{ isset($entry) ? $entry['date'] : 'new Date()' }});
     });
-    $('#date').datepicker({
-        weekStart: 1,
-        daysOfWeekHighlighted: "6,0",
-        autoclose: true,
-        todayHighlight: true,
-        format: 'yyyy-mm-dd'
-    });
-    $('#date').datepicker("setDate", {{ isset($entry) ? $entry['date'] : 'new Date()' }});
+
     tinymce.init({
         selector: 'textarea#content',
         language: '{{ LaravelGettext::getLocaleLanguage() }}',
+        relative_urls : false,
+        remove_script_host : false,
+        convert_urls : true,
+        image_class_list: [
+            {title: 'None', value: ''},
+            {title: 'Rounded', value: 'rounded'},
+            {title: 'Fluid', value: 'img-fluid'},
+            {title: 'Responsive', value: 'img-responsive'},
+            {title: 'All', value: 'rounded img-fluid img-responsive'},
+        ],
         plugins: 'print preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help code',
         toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | removeformat | code',
         setup: function (editor) {
