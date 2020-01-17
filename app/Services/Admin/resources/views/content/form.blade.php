@@ -62,8 +62,8 @@
                 <input id="800x600" type="text" class="form-control form-control-sm" value="">
             </div>
             <div class="form-group">
-                <label for="full">{{ _i('Full size') }}</label>
-                <input id="full" type="text" class="form-control form-control-sm" value="">
+                <label for="original">{{ _i('Original') }}</label>
+                <input id="original" type="text" class="form-control form-control-sm" value="">
             </div>
         </div>
     </div>
@@ -116,7 +116,7 @@
     $(function() {
         $('.show-url').on('click', function(e) {
             e.preventDefault();
-            let url = $(this).data('url'), 
+            let url = $(this).data('url'),
                 file = url.substring(url.lastIndexOf('/') + 1),
                 size = {
                     50: '#50x50',
@@ -125,12 +125,19 @@
                 };
 
             $('.urls').show();
+            $('.form-control-sm').val('');
 
-            $.each(size, function(key, value) {                        
-                $(value).val(url.replace(file, key + '-thumb-' + file));
-            });
-            $('#full').val(url);
+            if($.inArray(file.split('.').pop(), ['gif', 'jpg', 'jpeg', 'png']) !== -1) {
+                $.each(size, function(key, value) {                    
+                    $(value).val(url.replace(file, key + '-thumb-' + file));
+                });
+            }
 
+            $('#original').val(url);
+
+        });
+        $('.form-control-sm').on('click', function() {
+            $(this).select();
         });
         $('.media-files').on('click', function() {
             $.get("{{ route('media.content') }}", function(response) {
