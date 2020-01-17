@@ -7,6 +7,7 @@
         <title>Artip - @yield('title')</title>
         <link rel="canonical" href="{{ env('APP_URL') }}">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        @yield('custom-css')
         <link href="{{ asset('css/common.css') }}" rel="stylesheet" />
     </head>
     <body>

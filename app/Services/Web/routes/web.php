@@ -14,7 +14,8 @@
 Route::get('/', 'IndexController@index')->name('index');
 Route::get('/contacts.html', 'ContentController@contact')->name('contacts');
 Route::get('/{slug}.html', 'ContentController@single')->name('single.by.slug');
-Route::get('/news/{id}-{slug}.html', 'ContentController@news')->name('news.by.slug');
+Route::get('/news/{id}-{slug}.html', 'ContentController@news')->where('id', '[0-9]+')->name('news.by.slug');
+Route::get( '/download/{id}', 'MediaController@download')->where('id', '[0-9]+')->name('download');
 
 // External Url's
 foreach (config('external-urls') as $name => $url) {
