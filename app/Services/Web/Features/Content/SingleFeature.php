@@ -23,11 +23,11 @@ class SingleFeature extends Feature
         $page = $this->run(SinglePageJob::class, [
             'slug' => $request->slug,
         ]);
-        file_put_contents("/var/www/tmp/response.log", var_export($page, true));
+
         return $this->run(new RespondWithViewJob(self::TEMPLATE, [
                             'page' => $page['content'],
                             'children' => $page['children'],
-                            'news' => $this->run(LatestJob::class, [                                
+                            'news' => $this->run(LatestJob::class, [
                                 'limit' => 5,
                             ]),
         ]));
