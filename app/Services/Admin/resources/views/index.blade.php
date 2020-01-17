@@ -4,9 +4,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{ _i('Admin Dashboard') }}</title>        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        @yield('custom-css')        
+        <title>{{ _i('Admin Dashboard') }}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+        @yield('custom-css')
         <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet" />
     </head>
     <body>
@@ -19,12 +19,12 @@
                         {{ _i('Logout') }}
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf                        
+                        @csrf
                     </form>
                 </li>
             </ul>
         </nav>
-        <div class="container-fluid">            
+        <div class="container-fluid">
             <div class="row">
                 <nav class="col-md-2 d-none d-md-block bg-light sidebar">
                     <div class="sidebar-sticky">
@@ -62,21 +62,20 @@
                         </ul>
                     </div>
                 </nav>
-                <div class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 mb-3">                       
+                <div class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 mb-3">
                     @if ($__env->yieldContent('content'))
-                    @yield('content')                    
-                    @endif                    
+                    @yield('content')
+                    @endif
                 </div>
-            </div>            
-        </div>        
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        s<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
         @yield('custom-scripts')
         <script>
-                        feather.replace();
+            feather.replace();
         </script>
     </body>
 </html>

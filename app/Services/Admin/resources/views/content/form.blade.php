@@ -107,9 +107,11 @@
 </form>
 @include('admin::content.media')
 @section('custom-css')
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
 @append
 @section('custom-scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.uk.min.js"></script>
 <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
 <script src="{{ asset('js/holder.min.js') }}"></script>
 <script>
@@ -128,7 +130,7 @@
             $('.form-control-sm').val('');
 
             if($.inArray(file.split('.').pop(), ['gif', 'jpg', 'jpeg', 'png']) !== -1) {
-                $.each(size, function(key, value) {                    
+                $.each(size, function(key, value) {
                     $(value).val(url.replace(file, key + '-thumb-' + file));
                 });
             }
@@ -148,14 +150,12 @@
             e.preventDefault();
             $(this).parent('a').remove();
         });
-            $('#date').datepicker({
-            weekStart: 1,
-            daysOfWeekHighlighted: "6,0",
+        $('#date').datepicker({
             autoclose: true,
             todayHighlight: true,
-            format: 'yyyy-mm-dd'
+            format: 'yyyy-mm-dd',            
+            language: "{{ app()->getLocale() }}"
         });
-        $('#date').datepicker("setDate", {{ isset($entry) ? $entry['date'] : 'new Date()' }});
     });
 
     tinymce.init({
