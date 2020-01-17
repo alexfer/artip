@@ -3,7 +3,10 @@
 namespace Artip\Services\Web\Http\Controllers;
 
 use Lucid\Foundation\Http\Controller;
-use Artip\Services\Web\Features\Content\SingleFeature;
+use Artip\Services\Web\Features\Content\{
+    SingleFeature,
+    NewsFeature
+};
 
 class ContentController extends Controller
 {
@@ -15,6 +18,15 @@ class ContentController extends Controller
     public function single()
     {
         return $this->serve(SingleFeature::class);
+    }
+
+    /**
+     * 
+     * @return mixed
+     */
+    public function news()
+    {
+        return $this->serve(NewsFeature::class);
     }
 
     /**

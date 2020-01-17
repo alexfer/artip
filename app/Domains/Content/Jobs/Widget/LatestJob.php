@@ -12,15 +12,16 @@ class LatestJob extends Job
      *
      * @var int
      */
-    private $limit;
+    private $limit, $notIn;
 
     /**
      * 
      * @param int $limit
      */
-    public function __construct(int $limit = 2)
+    public function __construct(int $limit = 2, int $notIn = 0)
     {
         $this->limit = $limit;
+        $this->notIn = $notIn;
     }
 
     /**
@@ -30,17 +31,19 @@ class LatestJob extends Job
      */
     public function handle(Content $content): object
     {
-        return $content->with([
-                            'type',
-                            'media' => function($query) {
-                                $query->with(['file']);
-                            },
-                        ])
-                        ->where('content.is_published', true)
-                        ->where('content_type_id', config('content-types.news'))
-                        ->orderBy('content.created_at', 'desc')
-                        ->get()
-                        ->take($this->limit);
+        $latest = $content->with([
+                    'type',
+                    'media' => function($query) {
+                        $query->with(['file']);
+                    },
+                ])
+                ->where('is_published', true)
+                ->where('id', '<>', $this->notIn)
+                ->where('content_type_id', config('content-types.news'))
+                ->orderBy('created_at', 'desc')
+                ->get()
+                ->take($this->limit);
+        return $latest;
     }
 
 }

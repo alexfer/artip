@@ -4,11 +4,24 @@ namespace Artip\Data\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Content extends Model
 {
 
-    use SoftDeletes;
+    use SoftDeletes, Sluggable;
+    
+    /**
+     * 
+     * @return array
+     */
+    public function sluggable() {
+        return [
+            'slug' => [
+                'source' => 'short_title',
+            ],
+        ];
+    }
 
     /**
      * @var string

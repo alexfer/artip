@@ -4,11 +4,42 @@ namespace Artip\Data\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Kalnoy\Nestedset\NodeTrait;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Category extends Model
 {
 
-    use NodeTrait;
+    use Sluggable,
+        NodeTrait {
+        NodeTrait::replicate as replicateNode;
+        Sluggable::replicate as replicateSlug;
+    }
+
+    /**
+     * 
+     * @param array $except
+     * @return object
+     */
+    public function replicate(array $except = null)
+    {
+        $instance = $this->replicateNode($except);
+        (new SlugService())->slug($instance, true);
+
+        return $instance;
+    }
+
+    /**
+     * 
+     * @return array
+     */
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'name',
+            ],
+        ];
+    }
 
     /**
      * @var string
@@ -38,7 +69,7 @@ class Category extends Model
      * @var boolean
      */
     public $timestamps = true;
-    
+
     /**
      * 
      * @return \Illuminate\Database\Eloquent\Relations\hasOneThrough

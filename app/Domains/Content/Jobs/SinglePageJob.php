@@ -25,13 +25,17 @@ class SinglePageJob extends Job
 
     public function handle(Category $category)
     {
-        $content = $category->with(['content'])
-                    ->where('slug', $this->slug)
-                    ->first()
-                    ->toArray();
-       
+        $content = $category->with(['content' => function($query) {
+                        $query->with(['media' => function($query) {
+                                $query->with(['file']);
+                            }]);
+                    }])
+                ->where('slug', $this->slug)
+                ->first()
+                ->toArray();
+
         $root = $category->whereAncestorOrSelf($content['id'])->first()->toArray();
-        
+
         return [
             'content' => $content,
             'children' => $category
