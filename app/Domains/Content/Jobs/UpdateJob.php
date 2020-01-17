@@ -7,6 +7,7 @@ use Artip\Data\Models\{
     Content,
     CategoryContent
 };
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class UpdateJob extends Job
 {
@@ -19,7 +20,7 @@ class UpdateJob extends Job
 
     /**
      * 
-     * @param array $id
+     * @param array $input
      */
     public function __construct(array $input)
     {
@@ -34,6 +35,8 @@ class UpdateJob extends Job
      */
     public function handle(Content $entry): bool
     {
+        $this->input['slug'] = SlugService::createSlug(Content::class, 'slug', $this->input['short_title'], ['unique' => true]);
+        
         if (isset($this->input['category_id'])) {
             CategoryContent::updateOrCreate(['content_id' => $this->input['id']], [
                 'category_id' => $this->input['category_id'],

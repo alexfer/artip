@@ -4,7 +4,7 @@ namespace Artip\Domains\Category\Jobs;
 
 use Lucid\Foundation\Job;
 use Artip\Data\Models\Category;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class CreateJob extends Job
 {
