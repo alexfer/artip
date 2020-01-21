@@ -35,10 +35,13 @@ class NewsPageJob
                     }])
                 ->where('content_type_id', config('content-types.news'))
                 ->where('is_published', true)
-                ->find($this->id)
-                ->toArray();
+                ->find($this->id);
 
-        return $entry;
+        if (!$entry) {
+            return [];
+        }
+
+        return $entry->toArray();
     }
 
 }

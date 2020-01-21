@@ -20,10 +20,16 @@ class NewsFeature extends Feature
      */
     public function handle(Request $request)
     {
+        $page = $this->run(NewsPageJob::class, [
+            'id' => $request->id,
+        ]);
+
+        if (!count($page)) {
+            return redirect(route('index'));
+        }
+
         return $this->run(new RespondWithViewJob(self::TEMPLATE, [
-                            'page' => $this->run(NewsPageJob::class, [
-                                'id' => $request->id,
-                            ]),
+                            'page' => $page,
                             'news' => $this->run(LatestJob::class, [
                                 'notIn' => $request->id,
                                 'limit' => 5,
