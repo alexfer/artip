@@ -25,7 +25,7 @@ class NewsPageJob
 
     /**
      * 
-     * @param Content $entry
+     * @param Content $content
      * @return array
      */
     public function handle(Content $content): array
@@ -34,6 +34,7 @@ class NewsPageJob
                         $query->with(['file']);
                     }])
                 ->where('content_type_id', config('content-types.news'))
+                ->where('is_published', true)
                 ->find($this->id)
                 ->toArray();
 

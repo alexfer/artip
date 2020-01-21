@@ -5,7 +5,9 @@
         @if(in_array($file->extension, ['gif', 'jpg', 'jpeg', 'png']))
         <img class="img-thumbnail mr-2" src="{{ asset("storage/media/50-thumb-$file->path") }}" alt="{{ $file->name }}" title="{{ $file->name }}">
         @else
-        <img class="img-thumbnail mr-2" data-src="holder.js/50x50?auto=yes&textmode=exact" data-holder-rendered="true">
+        <div class="fi fi-{{ $file->extension }}">
+            <div class="fi-content">{{ $file->extension }}</div>
+        </div>
         @endif
     </a>
     @endforeach
