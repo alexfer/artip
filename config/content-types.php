@@ -5,4 +5,5 @@ return [
     'single-pages' => 3,
     'annonces' => 4,
     'widget' => 5,
+    'slides' => 6,
 ];

@@ -6,7 +6,8 @@ use Lucid\Foundation\Feature;
 use Artip\Domains\Http\Jobs\RespondWithViewJob;
 use Artip\Domains\Content\Jobs\Widget\{
     LatestJob,
-    AnnoncesJob
+    AnnoncesJob,
+    SlidesJob
 };
 
 class IndexFeature extends Feature
@@ -19,10 +20,11 @@ class IndexFeature extends Feature
      * @return mixed
      */
     public function handle()
-    {        
+    {
         return $this->run(new RespondWithViewJob(self::TEMPLATE, [
                             'news' => $this->run(LatestJob::class),
                             'annonces' => $this->run(AnnoncesJob::class),
+                            'slides' => $this->run(SlidesJob::class),
         ]));
     }
 

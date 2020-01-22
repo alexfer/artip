@@ -5,7 +5,8 @@ namespace Artip\Services\Web\Http\Controllers;
 use Lucid\Foundation\Http\Controller;
 use Artip\Services\Web\Features\Content\{
     SingleFeature,
-    NewsFeature
+    NewsFeature,
+    SlidesFeature
 };
 
 class ContentController extends Controller
@@ -35,7 +36,7 @@ class ContentController extends Controller
      */
     public function contact()
     {
-        return view('web::single-pages.contacts');
+        return $this->serve(SlidesFeature::class);
     }
 
 }

@@ -1,7 +1,7 @@
 @extends('web::index')
 @section('title', _i('Home'))
 @section('content')
-@include('web::widgets.feature-news')
+@include('web::widgets.slides')
 @if(isset($annonces))
     @include('web::widgets.annonces', ['annonces' => $annonces])
 @endif    
