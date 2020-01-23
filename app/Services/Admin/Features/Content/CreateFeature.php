@@ -4,8 +4,11 @@ namespace Artip\Services\Admin\Features\Content;
 
 use Lucid\Foundation\Feature;
 use Illuminate\Http\Request;
-use Artip\Domains\Content\Jobs\CreateJob;
-use Artip\Domains\Content\Jobs\ValidateJob;
+use Artip\Domains\Content\Jobs\{
+    CreateJob,
+    MediaJob,
+    ValidateJob
+};
 
 class CreateFeature extends Feature
 {
@@ -34,6 +37,12 @@ class CreateFeature extends Feature
                     'date',
                 ]),
             ]);
+
+            $this->run(MediaJob::class, [
+                'id' => $entry->id,
+                'ids' => $request->input('media'),
+            ]);
+
             \Session::flash('alert-success', _i('Entry created successfully.'));
         } catch (\Exception $ex) {
             \Session::flash('alert-danger', $ex->getMessage());
