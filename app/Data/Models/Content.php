@@ -9,13 +9,15 @@ use Cviebrock\EloquentSluggable\Sluggable;
 class Content extends Model
 {
 
-    use SoftDeletes, Sluggable;
-    
+    use SoftDeletes,
+        Sluggable;
+
     /**
      * 
      * @return array
      */
-    public function sluggable() {
+    public function sluggable()
+    {
         return [
             'slug' => [
                 'source' => 'short_title',

@@ -27,19 +27,19 @@
                 <td>
                     @if($row->is_published)
                         {{ $row->short_title }}
-                    @else    
+                    @else
                         <strike>{{ $row->short_title }}</strike>
-                    @endif    
+                    @endif
                 </td>
-                <td>{{ $row->is_published ? _i('Published') : _i('Hidden') }}</td>
-                <td>                    
+                <td>{{ $row->is_published ? $row->deleted_at ? _i('Deleted') : _i('Published') : _i('Hidden') }}</td>
+                <td>
                     <a href="{{ route('content.get', ['id' => $row->id]) }}" title="{{ _i('Edit') }}">
                         @if($row->deleted_at)
                         <span class="text-danger" data-feather="trash"></span>
                         @else
                         <span data-feather="edit"></span>
                         @endif
-                    </a>                    
+                    </a>
                 </td>
             </tr>
             @empty
