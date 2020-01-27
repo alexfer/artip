@@ -6,6 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateFailedJobsTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -32,4 +33,5 @@ class CreateFailedJobsTable extends Migration
     {
         Schema::dropIfExists('failed_jobs');
     }
+
 }

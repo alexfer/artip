@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class ContentTypes extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -15,8 +16,8 @@ class ContentTypes extends Migration
     {
         Schema::create('content_types', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('display_name'); 
-            $table->string('service_name');           
+            $table->string('display_name');
+            $table->string('service_name');
         });
     }
 
@@ -29,4 +30,5 @@ class ContentTypes extends Migration
     {
         Schema::dropIfExists('content_types');
     }
+
 }

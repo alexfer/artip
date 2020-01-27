@@ -3,9 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Kalnoy\Nestedset\NestedSet;
 
-class Categories extends Migration
+class Submission extends Migration
 {
 
     /**
@@ -15,12 +14,13 @@ class Categories extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('category')) {
-            Schema::create('category', function (Blueprint $table) {
+        if (!Schema::hasTable('submissions')) {
+            Schema::create('submissions', function (Blueprint $table) {
                 $table->increments('id');
-                NestedSet::columns($table);
                 $table->string('name');
-                $table->string('slug');
+                $table->string('email');
+                $table->ipAddress('visitor')->nullable();
+                $table->text('message')->nullable();
                 $table->timestamps();
             });
         }
@@ -33,9 +33,7 @@ class Categories extends Migration
      */
     public function down()
     {
-        Schema::table('table', function (Blueprint $table) {
-            NestedSet::dropColumns($table);
-        });
+        Schema::dropIfExists('submissions');
     }
 
 }

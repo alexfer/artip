@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class DateContent extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -33,4 +34,5 @@ class DateContent extends Migration
             });
         }
     }
+
 }

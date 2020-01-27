@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class Content extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -35,4 +36,5 @@ class Content extends Migration
     {
         Schema::dropIfExists('content');
     }
+
 }

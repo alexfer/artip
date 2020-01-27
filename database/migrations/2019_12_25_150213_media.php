@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class Media extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -16,9 +17,9 @@ class Media extends Migration
         Schema::create('media', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('owner_id');
-            $table->string('path'); 
-            $table->string('mime');  
-            $table->timestamps();         
+            $table->string('path');
+            $table->string('mime');
+            $table->timestamps();
         });
     }
 
@@ -31,4 +32,5 @@ class Media extends Migration
     {
         Schema::dropIfExists('media');
     }
+
 }
