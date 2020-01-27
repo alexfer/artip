@@ -26,10 +26,11 @@ class SubmissionJob extends Job
 
     /**
      * 
-     * @param Submission $send
+     * @param Submission $submision
      */
-    public function handle(Submission $send)
+    public function handle(Submission $submision)
     {
-        
+        $this->input['visitor'] = request()->ip();
+        return $submision->create($this->input);
     }
 }

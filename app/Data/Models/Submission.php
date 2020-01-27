@@ -19,7 +19,7 @@ class Submission extends Model
         'name',
         'email',
         'message',
-        'ipaddress',
+        'visitor',
     ];
 
 }

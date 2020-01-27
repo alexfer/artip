@@ -31,7 +31,9 @@ class SubmissionFeature extends Feature
                 ]),
             ]);
         } catch (\Exception $ex) {
-            
+            return response()->json([
+                        'errors' => explode(PHP_EOL, $ex->getMessage()),
+                            ], 400);
         }
 
         return response()->json([
