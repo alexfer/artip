@@ -3,6 +3,7 @@
 namespace Artip\Domains\Action\Jobs;
 
 use Lucid\Foundation\Job;
+use Artip\Data\Models\Submission;
 
 class SubmissionJob extends Job
 {
@@ -22,12 +23,12 @@ class SubmissionJob extends Job
         $this->input = $input;
     }
 
+
     /**
-     * Execute the job.
-     *
-     * @return mixed
+     * 
+     * @param Submission $send
      */
-    public function handle(Category $category)
+    public function handle(Submission $send)
     {
         
     }
