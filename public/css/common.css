@@ -4,7 +4,7 @@
 }
 .header-logo {
     background: url('../images/logo.png');
-    width: 120px;
+    width: 125px;
     height: 100px;
 }
 .header-logo:hover {
@@ -123,4 +123,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 img.img-caruusel {
     opacity: 0.5; 
+}
+.social {
+    margin-top: 70px;
+}
+.social a {
+    color: #cd201f;
+}
+.social a:hover {
+    color: #6c757d;
 }

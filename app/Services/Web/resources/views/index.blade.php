@@ -7,16 +7,42 @@
         <title>Artip - @yield('title')</title>
         <link rel="canonical" href="{{ env('APP_URL') }}">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         @yield('custom-css')
         <link href="{{ asset('css/common.css') }}" rel="stylesheet" />
     </head>
     <body>
         <header class="container header py-1">
             <div class="row flex-nowrap justify-content-between align-items-center">
-                <div class="col-12 text-center">
+                <div class="col-4"></div>
+                <div class="col-4 text-center">
                     <a href="{{ route('index') }}" title="{{ _i('ARTIP') }}">
                         <img src="{{ asset('images/logo.png') }}" class="header-logo">
                     </a>
+                </div>
+                <div class="col-4 text-right">
+                    <ul class="social list-inline">
+                        <li class="list-inline-item">
+                            <a target="_blank" href="{{ route('redirect.to.facebook') }}">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="{{ route('redirect.to.google-plus') }}">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="{{ route('redirect.to.instagram') }}">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="{{ route('redirect.to.youtube') }}">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </header>

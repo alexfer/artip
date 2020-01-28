@@ -1,4 +1,4 @@
-<div class="row mb-2 h-100">
+<div class="row h-100">
     <div class="col-6">
         <h4>{{ _i('Annonces') }}</h4>
     </div>

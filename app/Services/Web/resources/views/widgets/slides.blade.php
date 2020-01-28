@@ -12,6 +12,7 @@
             @foreach($slide->media as $i => $media) 
             <div class="carousel-item transbox {{ !$key ? ' active' : null }}">
                 <img class="d-block w-100 img-caruusel" src="{{ asset(\Storage::disk('media')->url($media->file->path)) }}" alt="{{ $slide->short_title }}">
+                <!--
                 <div class="carousel-caption d-none d-md-block text-left">
                     <h1 class="display-4 font-italic">{{ $slide->short_title }}</h1>
                     <p class="lead my-3">{{ $slide->long_title }}</p>
@@ -19,6 +20,7 @@
                         <a href="#" class="text-white font-weight-bold">{{ _i('Continue reading') }}...</a>
                     </p>
                 </div>
+                -->
             </div>
             @if($i == 0) @break @endif
             @endforeach
