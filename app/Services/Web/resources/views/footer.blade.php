@@ -1,7 +1,9 @@
 <footer class="footer mt-4">
     <div class="container py-3">
         <div class="row mb-3">
-            <div class="col-3"></div>
+            <div class="col-3">
+                @include('web::widgets.social', ['class' => 'social-footer'])
+            </div>
             <div class="col-3"></div>
             <div class="col-3"></div>
             <div class="col-3">
@@ -28,7 +30,7 @@
                 </ul>
             </div>
         </div>
-        <p class="text-center">Nice <a href="https://artip.com.ua/">artip.com.ua</a> by <a href="https://facebook.com">@facebook</a>.</p>
+        <p class="text-center">© <a href="{{ route('index') }}">{{ parse_url(env('APP_URL'), PHP_URL_HOST) }}</a> — {{ _i('Education in Ukraine') }}. </p>
         <p class="text-right">
             <a href="#" id="toTop">Back to top</a>
         </p>

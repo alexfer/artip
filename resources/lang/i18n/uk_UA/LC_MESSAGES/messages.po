@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MultilanguageLaravelApplication\n"
-"POT-Creation-Date: 2020-01-27 19:17+0200\n"
-"PO-Revision-Date: 2020-01-27 19:21+0200\n"
+"POT-Creation-Date: 2020-01-28 19:09+0200\n"
+"PO-Revision-Date: 2020-01-28 19:12+0200\n"
 "Last-Translator: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language-Team: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language: uk_UA\n"
@@ -96,8 +96,8 @@ msgstr "Пароль успішно змінено"
 msgid "User updated successfully."
 msgstr "Користувача  успішно оновлено."
 
-#: ../app/Services/Web/Features/Action/SubmissionFeature.php:38
-#: ../storage/framework/messages/2cad012a0c838465e2f05f0f81299a46fc52d8fe.php.php:38
+#: ../app/Services/Web/Features/Action/SubmissionFeature.php:40
+#: ../storage/framework/messages/2cad012a0c838465e2f05f0f81299a46fc52d8fe.php.php:40
 msgid "Your message has been sent succesfully."
 msgstr "Ваше повідомлення успішно надіслано!"
 
@@ -105,38 +105,38 @@ msgstr "Ваше повідомлення успішно надіслано!"
 msgid "Admin Dashboard"
 msgstr "Адмін панель"
 
-#: ../storage/framework/messages/0bde8bc1e7fac4743aca2e5c85231d5f91eb3927.php.php:15
+#: ../storage/framework/messages/0bde8bc1e7fac4743aca2e5c85231d5f91eb3927.php.php:16
 msgid "Search"
 msgstr "Пошук"
 
-#: ../storage/framework/messages/0bde8bc1e7fac4743aca2e5c85231d5f91eb3927.php.php:19
+#: ../storage/framework/messages/0bde8bc1e7fac4743aca2e5c85231d5f91eb3927.php.php:20
 #: ../storage/framework/messages/ec1e96063252b41624d8ccec05cc9bdd33fb905b.php.php:49
 msgid "Logout"
 msgstr "Вихід"
 
-#: ../storage/framework/messages/0bde8bc1e7fac4743aca2e5c85231d5f91eb3927.php.php:36
+#: ../storage/framework/messages/0bde8bc1e7fac4743aca2e5c85231d5f91eb3927.php.php:37
 #: ../storage/framework/messages/52b3522882734cb185ee871eeb8675cc73f1f25b.php.php:2
 msgid "Dashboard"
 msgstr "Головна"
 
-#: ../storage/framework/messages/0bde8bc1e7fac4743aca2e5c85231d5f91eb3927.php.php:43
+#: ../storage/framework/messages/0bde8bc1e7fac4743aca2e5c85231d5f91eb3927.php.php:44
 #: ../storage/framework/messages/e9c21970563b9be07e76da21fafe95824a9b0bec.php.php:4
 msgid "Categories"
 msgstr "Розділи"
 
-#: ../storage/framework/messages/0bde8bc1e7fac4743aca2e5c85231d5f91eb3927.php.php:50
+#: ../storage/framework/messages/0bde8bc1e7fac4743aca2e5c85231d5f91eb3927.php.php:51
 #: ../storage/framework/messages/4c6cd1c2720cb4b841de8a71cf93cd8a5eea72f4.php.php:42
 msgid "Content"
 msgstr "Вміст"
 
-#: ../storage/framework/messages/0bde8bc1e7fac4743aca2e5c85231d5f91eb3927.php.php:57
+#: ../storage/framework/messages/0bde8bc1e7fac4743aca2e5c85231d5f91eb3927.php.php:58
 #: ../storage/framework/messages/15860515564ccd0c89ac929edbcb74c1d712a7cb.php.php:4
 #: ../storage/framework/messages/3f2aab19adec58690d20d028b720974b10f1398d.php.php:5
 #: ../storage/framework/messages/4c6cd1c2720cb4b841de8a71cf93cd8a5eea72f4.php.php:71
 msgid "Media"
 msgstr "Медіафайли"
 
-#: ../storage/framework/messages/0bde8bc1e7fac4743aca2e5c85231d5f91eb3927.php.php:64
+#: ../storage/framework/messages/0bde8bc1e7fac4743aca2e5c85231d5f91eb3927.php.php:65
 #: ../storage/framework/messages/c145ba535d257daf2658d8a94ace093ba3b895c8.php.php:4
 msgid "Users"
 msgstr "Корисувачі"
@@ -303,16 +303,16 @@ msgstr ""
 msgid "Create New Entry"
 msgstr "Створити новий запис"
 
-#: ../storage/framework/messages/85a9aff003412aaad5358238b5291f9be05ac524.php.php:19
+#: ../storage/framework/messages/85a9aff003412aaad5358238b5291f9be05ac524.php.php:20
 #: ../storage/framework/messages/c4a6cc2eb56be012e2d2cf1d67085cf03618ad24.php.php:18
 msgid "Continue reading"
 msgstr "Читати далі"
 
-#: ../storage/framework/messages/85a9aff003412aaad5358238b5291f9be05ac524.php.php:29
+#: ../storage/framework/messages/85a9aff003412aaad5358238b5291f9be05ac524.php.php:31
 msgid "Previous"
 msgstr "Попередній"
 
-#: ../storage/framework/messages/85a9aff003412aaad5358238b5291f9be05ac524.php.php:33
+#: ../storage/framework/messages/85a9aff003412aaad5358238b5291f9be05ac524.php.php:35
 msgid "Next"
 msgstr "Наступний"
 
@@ -358,12 +358,13 @@ msgstr "Редагувати"
 msgid "No Content Available"
 msgstr "Записи відсутні"
 
-#: ../storage/framework/messages/987eb9500e9577aeb1244d62f76189c6ec04d0a6.php.php:17
+#: ../storage/framework/messages/987eb9500e9577aeb1244d62f76189c6ec04d0a6.php.php:19
 msgid "ARTIP"
 msgstr "АРТІП"
 
-#: ../storage/framework/messages/987eb9500e9577aeb1244d62f76189c6ec04d0a6.php.php:28
+#: ../storage/framework/messages/987eb9500e9577aeb1244d62f76189c6ec04d0a6.php.php:36
 #: ../storage/framework/messages/b5f9250874eb286742a4badbffefd07b971bc404.php.php:1
+#: ../storage/framework/messages/c3106b7a36c54c963c150989b4461a028a805353.php.php:25
 msgid "Contacts"
 msgstr "Контакти"
 
@@ -445,6 +446,34 @@ msgstr ""
 msgid "Language"
 msgstr "Мова"
 
+#: ../storage/framework/messages/c3106b7a36c54c963c150989b4461a028a805353.php.php:10
+msgid "Quick Links"
+msgstr "Швидкі посилання"
+
+#: ../storage/framework/messages/c3106b7a36c54c963c150989b4461a028a805353.php.php:13
+msgid "Documents"
+msgstr "Документи"
+
+#: ../storage/framework/messages/c3106b7a36c54c963c150989b4461a028a805353.php.php:16
+msgid "Online"
+msgstr "Онліне"
+
+#: ../storage/framework/messages/c3106b7a36c54c963c150989b4461a028a805353.php.php:19
+msgid "Publications"
+msgstr "Публікації"
+
+#: ../storage/framework/messages/c3106b7a36c54c963c150989b4461a028a805353.php.php:22
+msgid "Gallery"
+msgstr "Галерея"
+
+#: ../storage/framework/messages/c3106b7a36c54c963c150989b4461a028a805353.php.php:28
+msgid "International Students"
+msgstr ""
+
+#: ../storage/framework/messages/c3106b7a36c54c963c150989b4461a028a805353.php.php:33
+msgid "Education in Ukraine"
+msgstr "Освіта в Україні"
+
 #: ../storage/framework/messages/c48378f1e447051e5137c6ad69641eda48170cee.php.php:9
 msgid "Please confirm your password before continuing."
 msgstr ""
@@ -469,29 +498,33 @@ msgstr "Відмінити"
 msgid "Proceed"
 msgstr "Продовжити"
 
-#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:6
+#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:3
+msgid "Annonces"
+msgstr "Оголошення"
+
+#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:8
 msgid "Quick Message"
 msgstr "Швиде повідомлення"
 
-#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:10
-#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:11
+#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:12
+#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:13
 msgid "Your  Name"
 msgstr "Ваше Ім'я"
 
-#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:14
-#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:15
+#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:16
+#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:17
 msgid "Your Email"
 msgstr "Ваша адреса електронної пошти"
 
-#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:18
+#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:20
 msgid "Your  Message"
 msgstr "Ваше повідомлення"
 
-#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:19
+#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:21
 msgid "Type text here ..."
 msgstr "Введіть текст ...."
 
-#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:22
+#: ../storage/framework/messages/dc3700094f7f155e3a365273d10f12f37b5f00e9.php.php:26
 msgid "Send Message"
 msgstr "Надіслати"
 
