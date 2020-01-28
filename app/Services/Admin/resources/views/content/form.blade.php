@@ -153,7 +153,7 @@
         $('#date').datepicker({
             autoclose: true,
             todayHighlight: true,
-            format: 'yyyy-mm-dd',            
+            format: 'yyyy-mm-dd',
             language: "{{ app()->getLocale() }}"
         });
     });

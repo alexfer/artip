@@ -58,11 +58,7 @@
         </div>
     </div>
 </div>
-@section('custom-css')
-<link href="{{ asset('css/css-file-icons.css') }}" rel="stylesheet" />
-@append
 @section('custom-scripts')
-<script src="{{ asset('js/holder.min.js') }}"></script>
 <script>
 $(function () {
     $(".display-image-data").on("click", function (e) {

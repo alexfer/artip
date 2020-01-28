@@ -1,7 +1,9 @@
-<div class="row mb-2">
-    <div class="col-6">1</div>
+<div class="row mb-2 h-100">
     <div class="col-6">
-        <div class="card shadow-sm">
+        <h4>{{ _i('Annonces') }}</h4>
+    </div>
+    <div class="col-6">
+        <div class="card box-shadow">
             <div class="card-body">
                 <h4>{{ _i('Quick Message') }}</h4>
                 <form id="quick-message" action="{{ route('submission') }}">

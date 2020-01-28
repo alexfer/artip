@@ -7,6 +7,7 @@
         <title>{{ _i('Admin Dashboard') }}</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
         @yield('custom-css')
+        <link href="{{ asset('css/css-file-icons.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet" />
     </head>
     <body>

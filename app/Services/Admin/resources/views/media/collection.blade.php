@@ -5,7 +5,7 @@
         @if(in_array($file->extension, ['gif', 'jpg', 'jpeg', 'png']))
         <img class="img-thumbnail mr-2" src="{{ asset("storage/media/50-thumb-$file->path") }}" alt="{{ $file->name }}" title="{{ $file->name }}">
         @else
-        <div class="fi fi-{{ $file->extension }}">
+        <div class="mr-2 fi-size-md fi fi-{{ $file->extension }}">
             <div class="fi-content">{{ $file->extension }}</div>
         </div>
         @endif
@@ -15,7 +15,6 @@
 <div class="small">    
     {{ $collection->links() }}    
 </div>
-<script src="{{ asset('js/holder.min.js') }}"></script>
 <script>
 $(function () {
     $('.insert-media').on('click', function (e) {

@@ -11,22 +11,26 @@
         <link href="{{ asset('css/common.css') }}" rel="stylesheet" />
     </head>
     <body>
-        <header class="container header py-3">
+        <header class="container header py-1">
             <div class="row flex-nowrap justify-content-between align-items-center">
                 <div class="col-12 text-center">
-                    <a class="header-logo text-dark" href="{{ route('index') }}">{{ _i('ARTIP') }}</a>
+                    <a href="{{ route('index') }}" title="{{ _i('ARTIP') }}">
+                        <img src="{{ asset('images/logo.png') }}" class="header-logo">
+                    </a>
                 </div>
             </div>
         </header>
-        <div class="container nav-scroller py-1 mb-2">
-            <nav class="nav d-flex justify-content-between navbar-nav-scroll">
-                @foreach($categories as $category)
-                @if(!$category['parent_id'])
-                <a class="p-2 text-muted" href="{{ route('single.by.slug', ['slug' => $category['slug']]) }}">{{ $category['name'] }}</a>
-                @endif
-                @endforeach
-                <a class="p-2 text-muted" href="{{ route('contacts') }}">{{ _i('Contacts') }}</a>
-            </nav>
+        <div class="container-fluid bg-white">
+            <div class="container nav-scroller py-1 mb-2">
+                <nav class="nav d-flex justify-content-between navbar-nav-scroll">
+                    @foreach($categories as $category)
+                    @if(!$category['parent_id'])
+                    <a class="p-2 text-muted" href="{{ route('single.by.slug', ['slug' => $category['slug']]) }}">{{ $category['name'] }}</a>
+                    @endif
+                    @endforeach
+                    <a class="p-2 text-muted" href="{{ route('contacts') }}">{{ _i('Contacts') }}</a>
+                </nav>
+            </div>
         </div>
         <section class="container" style="min-height: 100vh;">
             @if ($__env->yieldContent('content'))

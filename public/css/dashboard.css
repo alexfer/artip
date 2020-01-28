@@ -74,5 +74,5 @@ body {
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 .children-node{margin-bottom: 0;display: none;}
 .primary-category{margin-bottom: 0;}
-.remove-media{cursor: pointer;position:absolute;margin-left:52px;margin-top:-2px;}
+.remove-media{cursor: pointer;position:absolute;margin-top:-2px;}
 .urls{display:none;}
