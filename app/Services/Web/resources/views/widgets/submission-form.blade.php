@@ -24,7 +24,7 @@
                     <div class="alert alert-success collapse"></div>
                     <div class="form-group text-right">
                         <button type="submit" class="btn btn-success">{{ _i('Send Message') }}</button>
-                    </div>                    
+                    </div>
                 </form>
             </div>
         </div>
