@@ -30,10 +30,10 @@ class SubmissionFeature extends Feature
                     'message',
                 ]),
             ]);
-        } catch (\Exception $ex) {
+        } catch (\Exception $ex) {           
             return response()->json([
                         'errors' => explode(PHP_EOL, $ex->getMessage()),
-                            ], 400);
+                            ]);
         }
 
         return response()->json([

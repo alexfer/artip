@@ -20,9 +20,11 @@
                         <label for="message">{{ _i('Your  Message') }}</label>
                         <textarea name="message" id="message" rows="5" class="form-control" required="required" placeholder="{{ _i('Type text here ...') }}"></textarea>
                     </div>
+                    <div class="alert alert-danger collapse"></div>
+                    <div class="alert alert-success collapse"></div>
                     <div class="form-group text-right">
                         <button type="submit" class="btn btn-success">{{ _i('Send Message') }}</button>
-                    </div>
+                    </div>                    
                 </form>
             </div>
         </div>
