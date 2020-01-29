@@ -3,7 +3,7 @@
 @section('content')
 @include('web::widgets.slides')
 @if(isset($annonces))
-    @include('web::widgets.annonces', ['annonces' => $annonces])
+    @include('web::widgets.annonce', ['annonce' => $annonce])
 @endif    
 <div class="row mb-2">
     @foreach($news as $item)

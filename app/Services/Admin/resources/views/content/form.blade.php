@@ -51,7 +51,7 @@
         <div class="card-body">
             <div class="form-group">
                 <label for="title">{{ _i('Title Translation') }}</label>
-                <input name="title" id="title" type="text" class="form-control" value="{{ isset($entry) ? $entry['translation']['title'] : old('title') }}" required="required">
+                <input name="title" id="title" type="text" class="form-control" value="{{ isset($entry) ? $entry['translation']['title'] : old('title') }}">
             </div>
             <div class="form-group">
                 <label for="translation">{{ _i('Content Translation') }}</label>

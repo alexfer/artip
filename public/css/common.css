@@ -140,3 +140,22 @@ img.img-caruusel {
 .social-footer a:hover {
     color: #6c757d;
 }
+#accordion .btn-link {
+    color: #0db896;
+}
+#accordion .btn-link:hover {
+    text-decoration: none;  
+    color: #6c757d;
+    width: 100%;
+    background-color: #eee;
+    text-align: left;
+}
+#accordion .btn-link:enabled {
+    text-decoration: none;    
+}
+#accordion .card-header {
+    border-bottom: none;
+}
+#accordion .card-body {
+    
+}

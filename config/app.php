@@ -155,6 +155,7 @@ return [
         Lucid\Console\LucidServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Framework\Providers\CategoryServiceProvider::class,
+        Framework\Providers\AnnoncesServiceProvider::class,
     ],
     /*
       |--------------------------------------------------------------------------

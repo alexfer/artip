@@ -1,9 +1,21 @@
-@foreach($annonces as $key => $annonce)
-<div class="jumbotron p-1 rounded bg-light mb-2 border">
-    <blockquote class="blockquote text-right pr-1">
-        <p class="mb-0">{{ $annonce->long_title }}</p>
-        <footer class="blockquote-footer">{{ date('m.d.Y', strtotime($annonce->date)) }} <cite title="Source Title text-black">{{ $annonce->short_title }}</cite></footer>
-    </blockquote>
+<div id="accordion">
+    @foreach($annonces as $key => $item)
+    <div class="card mb-2">
+        <div class="card-header" id="heading-{{ $item['id'] }}}">
+            <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-{{ $item['id'] }}" aria-expanded="{{ !$key ? 'true' : 'false' }}" aria-controls="collapse-{{ $item['id'] }}">
+                    {{ $item['short_title'] }}
+                </button>
+            </h5>
+        </div>
+        <div id="collapse-{{ $item['id'] }}" class="collapse{{ !$key ? ' show' : null }}" aria-labelledby="heading-{{ $item['id'] }}" data-parent="#accordion">
+            <div class="card-body pt-0">
+                @if($item['date'])
+                <div class="text-muted">{{ date('d.m.Y', strtotime($item['date'])) }}</div>
+                @endif
+                {{ $item['long_title'] }}
+            </div>
+        </div>
+    </div> 
+    @endforeach
 </div>
-@if(!$key) @break @endif
-@endforeach

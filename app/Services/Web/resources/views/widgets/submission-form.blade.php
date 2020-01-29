@@ -1,11 +1,12 @@
 <div class="row h-100">
     <div class="col-6">
         <h4>{{ _i('Annonces') }}</h4>
+        @include('web::widgets.annonces')
     </div>
     <div class="col-6">
+        <h4>{{ _i('Quick Message') }}</h4>
         <div class="card box-shadow">
-            <div class="card-body">
-                <h4>{{ _i('Quick Message') }}</h4>
+            <div class="card-body">                
                 <form id="quick-message" action="{{ route('submission') }}">
                     @csrf
                     <div class="form-group">
