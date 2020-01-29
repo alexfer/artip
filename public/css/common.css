@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
 img.img-caruusel {
     opacity: 0.5; 
 }
-.social {
+.social, .locale {
     margin-top: 70px;
 }
 .social a {

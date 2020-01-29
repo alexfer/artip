@@ -16,9 +16,11 @@
             <div class="row flex-nowrap justify-content-between align-items-center">
                 <div class="col-4">
                     @if(isset($page) && isset($page['content']['translation']))
-                    <a href="{{ route('single-translation.by.slug', ['locale' => $page['content']['translation']['locale'], 'slug' => $page['slug']]) }}">
-                        <img src="{{ asset("images/{$page['content']['translation']['locale']}.png") }}">
-                    </a>
+                    <div class="locale">
+                        <a href="{{ route('single-translation.by.slug', ['locale' => $page['content']['translation']['locale'], 'slug' => $page['slug']]) }}">
+                            <img src="{{ asset("images/{$page['content']['translation']['locale']}.png") }}">
+                        </a>
+                    </div>
                     @endif
                 </div>
                 <div class="col-4 text-center">

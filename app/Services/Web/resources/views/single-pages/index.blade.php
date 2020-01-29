@@ -23,9 +23,9 @@
         </div>
     </div>
     @endif
-    <div class="col-9{{ !$page['content']['content'] ? ' coming-soon' : null }}">
+    <div class="col-9{{ !$page['content']['content'] ? ' coming-soon' : null }}">        
         @if($page['content']['content'])
-            @if($page['content']['translation'])
+            @if($page['content']['translation'] && count(request()->segments()) > 1)
                 {!! $page['content']['translation']['translation'] !!}
             @else
                 {!! $page['content']['content'] !!}
