@@ -25,8 +25,9 @@ class SinglePageJob extends Job
 
     public function handle(Category $category)
     {
-        $content = $category->with(['content' => function($query) {
-                        $query->with(['media' => function($query) {
+        $content = $category->with([                    
+                    'content' => function($query) {
+                        $query->with(['translation', 'media' => function($query) {
                                 $query->with(['file']);
                             }]);
                     }])

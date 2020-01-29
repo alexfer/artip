@@ -45,6 +45,15 @@ class Content extends Model
      * 
      * @return \Illuminate\Database\Eloquent\Relations\hasOne
      */
+    public function translation()
+    {
+        return $this->hasOne(ContentTranslation::class);
+    }
+
+    /**
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\hasOne
+     */
     public function type()
     {
         return $this->hasOne(ContentType::class, 'id', 'content_type_id');

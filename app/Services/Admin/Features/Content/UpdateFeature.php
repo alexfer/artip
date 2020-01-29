@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use Artip\Domains\Content\Jobs\{
     UpdateJob,
     ValidateJob,
-    MediaJob
+    MediaJob,
+    Translation\UpdateJob as UpdateTranslationJob
 };
 
 class UpdateFeature extends Feature
@@ -44,6 +45,14 @@ class UpdateFeature extends Feature
         $this->run(MediaJob::class, [
             'id' => $request->id,
             'ids' => $request->input('media'),
+        ]);
+
+        $this->run(UpdateTranslationJob::class, [
+            'input' => $request->only([
+                'title',
+                'translation',
+                'id',
+            ]),
         ]);
 
         return response()->redirectTo(route('content.get', [

@@ -45,6 +45,21 @@
             @endif
         </div>
     </div>
+    @if(isset($entry) && $entry['content_type_id'] == config('content-types.single-pages'))
+    <div class="card mt-3 h-100">
+        <div class="card-header">{{ _i('Translation') }}</div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="title">{{ _i('Title Translation') }}</label>
+                <input name="title" id="title" type="text" class="form-control" value="{{ isset($entry) ? $entry['translation']['title'] : old('title') }}" required="required">
+            </div>
+            <div class="form-group">
+                <label for="translation">{{ _i('Content Translation') }}</label>
+                <textarea rows="12" name="translation" id="translation" class="form-control">{{ isset($entry) ? $entry['translation']['translation'] : old('translation') }}</textarea>
+            </div>
+        </div>
+    </div>    
+    @endif
     @if(config('content-types.annonces') != (isset($entry) ? $entry['content_type_id'] : null))
     <div class="card mt-3 h-100 urls">
         <div class="card-header">{{ _i('URL') }}</div>
@@ -66,7 +81,7 @@
                 <input id="original" type="text" class="form-control form-control-sm" value="">
             </div>
         </div>
-    </div>
+    </div>    
     <div class="card mt-3 h-100">
         <div class="card-header">{{ _i('Media') }}</div>
         <div class="card-body">
@@ -159,7 +174,7 @@
     });
 
     tinymce.init({
-        selector: 'textarea#content',
+        selector: 'textarea#content, textarea#translation',
         language: '{{ LaravelGettext::getLocaleLanguage() }}',
         relative_urls : false,
         remove_script_host : false,
