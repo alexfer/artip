@@ -45,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;    
     width: 100%; 
     z-index: 36;
+    opacity: .97;
 }
 .nav-scroller .nav-link {
     padding-top: .75rem;
