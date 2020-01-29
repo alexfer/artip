@@ -1,7 +1,7 @@
 @extends('web::index')
-@section('title', isset($page['content']['short_title']) ? $page['content']['short_title'] : $page['name'])
+@section('title', isset($page['content']['short_title']) ? $page['content']['translation'] ? $page['content']['translation']['title'] : $page['content']['short_title'] : $page['name'])
 @section('content')
-<h2 class="title mb-3">{{ isset($page['content']['short_title']) ? $page['content']['short_title'] : $page['name'] }}</h2>
+<h2 class="title mb-3">{{ isset($page['content']['short_title']) ? $page['content']['translation'] ? $page['content']['translation']['title'] : $page['content']['short_title'] : $page['name'] }}</h2>
 <div class="row h-100">
     @if(count($children))
     <div class="col-3">
@@ -25,7 +25,11 @@
     @endif
     <div class="col-9{{ !$page['content']['content'] ? ' coming-soon' : null }}">
         @if($page['content']['content'])
-            {!! $page['content']['content'] !!}
+            @if($page['content']['translation'])
+                {!! $page['content']['translation']['translation'] !!}
+            @else
+                {!! $page['content']['content'] !!}
+            @endif
             @if(count($page['content']['media']))
             <ul class="list-unstyled">
                 @foreach($page['content']['media'] as $media)

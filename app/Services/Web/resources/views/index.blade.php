@@ -14,12 +14,18 @@
     <body>
         <header class="container header py-1">
             <div class="row flex-nowrap justify-content-between align-items-center">
-                <div class="col-4"></div>
+                <div class="col-4">
+                    @if(isset($page) && isset($page['content']['translation']))
+                    <a href="{{ route('single-translation.by.slug', ['locale' => $page['content']['translation']['locale'], 'slug' => $page['slug']]) }}">
+                        <img src="{{ asset("images/{$page['content']['translation']['locale']}.png") }}">
+                    </a>
+                    @endif
+                </div>
                 <div class="col-4 text-center">
                     <a href="{{ route('index') }}" title="{{ _i('ARTIP') }}">
                         <img src="{{ asset('images/logo.png') }}" class="header-logo">
                     </a>
-                </div>
+                </div>                
                 <div class="col-4 text-right">
                     @include('web::widgets.social', ['class' => 'social'])
                 </div>
