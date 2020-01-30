@@ -37,8 +37,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .sticky {
     position: fixed;
-    top: 0;    
-    width: 100%; 
+    top: 0;
+    width: 100%;
     z-index: 36;
     opacity: .97;
 }
@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 .border-top { border-top: 1px solid #e5e5e5; }
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
-.footer {    
+.footer {
     padding: 2.5rem 0;
     color: #999;
     text-align: left;
@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer p:last-child {
     margin-bottom: 0;
 }
-.cut-text { 
+.cut-text {
     width : 280px;
     overflow:hidden;
     display:inline-block;
@@ -111,17 +111,17 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     position: relative;
     background-image: url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png);
-    opacity: 0.12; 
+    opacity: 0.12;
     width: 100%;
     height: 100%;
     position: absolute;
     background-size: cover;
 }
 img.img-caruusel {
-    opacity: .7; 
+    opacity: .7;
 }
 img.img-caruusel:hover {
-    opacity: .87; 
+    opacity: .87;
 }
 .social, .locale {
     margin-top: 70px;
@@ -142,18 +142,15 @@ img.img-caruusel:hover {
     color: #0db896;
 }
 #accordion .btn-link:hover {
-    text-decoration: none;  
+    text-decoration: none;
     color: #6c757d;
     width: 100%;
     background-color: #eee;
     text-align: left;
 }
 #accordion .btn-link:enabled {
-    text-decoration: none;    
+    text-decoration: none;
 }
 #accordion .card-header {
     border-bottom: none;
-}
-#accordion .card-body {
-    
 }

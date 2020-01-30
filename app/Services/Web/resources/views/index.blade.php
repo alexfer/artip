@@ -12,7 +12,7 @@
         <link href="{{ asset('css/common.css') }}" rel="stylesheet" />
     </head>
     <body>
-        <header class="container header py-1">
+        <header class="container{{ config('resolution.fluid') }} header py-1">
             <div class="row flex-nowrap justify-content-between align-items-center">
                 <div class="col-4">
                     @if(isset($page) && isset($page['content']['translation']))
@@ -33,7 +33,7 @@
                 </div>
             </div>
         </header>
-        <div class="container-fluid bg-white">
+        <div class="container-fluid stycki-bar bg-white">
             <div class="container nav-scroller py-1 mb-2">
                 <nav class="nav d-flex justify-content-between navbar-nav-scroll">
                     @foreach($categories as $category)
@@ -45,6 +45,11 @@
                 </nav>
             </div>
         </div>
+        @if(isset($slides ))
+        <div class="container{{ config('resolution.fluid') }}{{ config('resolution.fluid') ? ' px-0' : null }}">
+            @include('web::widgets.slides')
+        </div>
+        @endif
         <section class="container" style="min-height: 100vh;">
             @if ($__env->yieldContent('content'))
             @yield('content')

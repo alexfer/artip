@@ -18,9 +18,9 @@ $(function () {
 
     $(window).scroll(function () {
         if ($(window).scrollTop() >= 30) {
-            $('.container-fluid').addClass('sticky border-bottom box-shadow');
+            $('.stycki-bar').addClass('sticky border-bottom box-shadow');
         } else {
-            $('.container-fluid').removeClass('sticky border-bottom box-shadow');
+            $('.stycki-bar').removeClass('sticky border-bottom box-shadow');
         }
     });
     $('#carousel-indicators').carousel({

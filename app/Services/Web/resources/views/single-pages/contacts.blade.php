@@ -1,7 +1,6 @@
 @extends('web::index')
 @section('title', _i('Contacts'))
 @section('content')
-@include('web::widgets.slides')
 <div class="row mb-2">
     <div class="col-4">
         <div class="card">

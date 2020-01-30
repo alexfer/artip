@@ -1,5 +1,5 @@
 <footer class="footer mt-4">
-    <div class="container py-3">
+    <div class="container{{ config('resolution.fluid') }} py-3">
         <div class="row mb-3">
             <div class="col-3">
                 @include('web::widgets.social', ['class' => 'social-footer'])
