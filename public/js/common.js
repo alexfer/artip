@@ -23,4 +23,8 @@ $(function () {
             $('.container-fluid').removeClass('sticky border-bottom box-shadow');
         }
     });
+    $('#carousel-indicators').carousel({
+        interval: 20000,
+        cycle: true
+    });
 });
