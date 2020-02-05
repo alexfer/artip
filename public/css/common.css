@@ -148,13 +148,13 @@ img.img-caruusel:hover {
 }
 #accordion .btn-link {
     color: #0db896;
+    width: 100%;
+    text-align: left;
 }
 #accordion .btn-link:hover {
     text-decoration: none;
-    color: #6c757d;
-    width: 100%;
+    color: #6c757d;    
     background-color: #eee;
-    text-align: left;
 }
 #accordion .btn-link:enabled {
     text-decoration: none;
