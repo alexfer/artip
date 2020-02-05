@@ -3,11 +3,10 @@
 @section('content')
 <div class="row my-2">
     <div class="col-4">
-        <div class="card">
-            <div class="card-header">
-                <h2 class="title">{{ _i('Our contacts:') }}</h2>
-            </div>
+        <div class="card">            
             <div class="card-body">                
+                <h5 class="card-title">{{ _i('Our contacts:') }}</h5>
+                <hr class="my-1">
                 <p>{{ _i('Main address:') }}</p>
                 <p>{{ _i('Main phone number:') }}</p>
                 <p>{{ _i('Cell phone number 1:') }}</p>

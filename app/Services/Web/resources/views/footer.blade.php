@@ -25,6 +25,9 @@
                     <li>
                         <a href="#">{{ _i('International Students') }}</a>
                     </li>
+                    <li>
+                        <a href="{{ route('mon.gov.ua') }}" target="_blank">{{ _i('Ministry of Education and Science') }}</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-3">

@@ -12,25 +12,27 @@
         <link href="{{ asset('css/common.css') }}" rel="stylesheet" />
     </head>
     <body>
-        <header class="container{{ config('resolution.fluid') }} py-2">
-            <div class="row flex-nowrap justify-content-between align-items-center">
-                <div class="col-4">
-                    @if(isset($page) && isset($page['content']['translation']))
-                    <div class="locale">
-                        <a href="{{ route('single-translation.by.slug', ['locale' => $page['content']['translation']['locale'], 'slug' => $page['slug']]) }}">
-                            <img src="{{ asset("images/{$page['content']['translation']['locale']}.png") }}">
-                        </a>
+        <header class="container-fluid py-2">
+            <div class="container">
+                <div class="row flex-nowrap justify-content-between align-items-center">
+                    <div class="col-4">
+                        @if(isset($page) && isset($page['content']['translation']))
+                        <div class="locale">
+                            <a href="{{ route('single-translation.by.slug', ['locale' => $page['content']['translation']['locale'], 'slug' => $page['slug']]) }}">
+                                <img src="{{ asset("images/{$page['content']['translation']['locale']}.png") }}">
+                            </a>
+                        </div>
+                        @endif
                     </div>
-                    @endif
-                </div>
-                <div class="col-4 text-center">
-                    <a href="{{ route('index') }}" title="{{ _i('ARTIP') }}">
-                        <img src="{{ asset('images/logo.png') }}" class="header-logo"alt="{{ _i('ARTIP') }}">
-                    </a>
-                    <p class="mt-1 text-white text-capitalize">{{ _i('ARTIP') }}</p>
-                </div>                
-                <div class="col-4 text-right">
-                    @include('web::widgets.social', ['class' => 'social'])
+                    <div class="col-4 text-center">
+                        <a href="{{ route('index') }}" title="{{ _i('ARTIP') }}">
+                            <img src="{{ asset('images/logo.png') }}" class="header-logo"alt="{{ _i('ARTIP') }}">
+                        </a>
+                        <p class="mt-1 text-white text-capitalize">{{ _i('ARTIP') }}</p>
+                    </div>                
+                    <div class="col-4 text-right">
+                        @include('web::widgets.social', ['class' => 'social'])
+                    </div>
                 </div>
             </div>
         </header>

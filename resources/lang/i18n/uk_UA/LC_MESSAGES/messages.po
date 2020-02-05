@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MultilanguageLaravelApplication\n"
-"POT-Creation-Date: 2020-01-29 12:47+0200\n"
-"PO-Revision-Date: 2020-02-05 09:28+0200\n"
+"POT-Creation-Date: 2020-02-05 10:26+0200\n"
+"PO-Revision-Date: 2020-02-05 10:43+0200\n"
 "Last-Translator: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language-Team: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language: uk_UA\n"
@@ -156,29 +156,29 @@ msgstr "Головна"
 msgid "Annonces"
 msgstr "Оголошення"
 
-#: ../storage/framework/messages/30b7fa88e7641406395fe41f267f05f74c191b84.php.php:8
+#: ../storage/framework/messages/30b7fa88e7641406395fe41f267f05f74c191b84.php.php:7
 msgid "Quick Message"
 msgstr "Швидке повідомлення"
 
-#: ../storage/framework/messages/30b7fa88e7641406395fe41f267f05f74c191b84.php.php:12
 #: ../storage/framework/messages/30b7fa88e7641406395fe41f267f05f74c191b84.php.php:13
+#: ../storage/framework/messages/30b7fa88e7641406395fe41f267f05f74c191b84.php.php:14
 msgid "Your  Name"
 msgstr "Ваше Ім'я"
 
-#: ../storage/framework/messages/30b7fa88e7641406395fe41f267f05f74c191b84.php.php:16
 #: ../storage/framework/messages/30b7fa88e7641406395fe41f267f05f74c191b84.php.php:17
+#: ../storage/framework/messages/30b7fa88e7641406395fe41f267f05f74c191b84.php.php:18
 msgid "Your Email"
 msgstr "Ваша адреса електронної пошти"
 
-#: ../storage/framework/messages/30b7fa88e7641406395fe41f267f05f74c191b84.php.php:20
+#: ../storage/framework/messages/30b7fa88e7641406395fe41f267f05f74c191b84.php.php:21
 msgid "Your  Message"
 msgstr "Ваше повідомлення"
 
-#: ../storage/framework/messages/30b7fa88e7641406395fe41f267f05f74c191b84.php.php:21
+#: ../storage/framework/messages/30b7fa88e7641406395fe41f267f05f74c191b84.php.php:22
 msgid "Type text here ..."
 msgstr "Введіть текст ...."
 
-#: ../storage/framework/messages/30b7fa88e7641406395fe41f267f05f74c191b84.php.php:26
+#: ../storage/framework/messages/30b7fa88e7641406395fe41f267f05f74c191b84.php.php:27
 msgid "Send Message"
 msgstr "Надіслати"
 
@@ -290,7 +290,7 @@ msgid "Save"
 msgstr "Зберегти"
 
 #: ../storage/framework/messages/529773ca0e3a08f6b76a552583be72fe9b92d72b.php.php:20
-#: ../storage/framework/messages/59f86ef4aa2924afe5cbb851c091285312551f41.php.php:18
+#: ../storage/framework/messages/59f86ef4aa2924afe5cbb851c091285312551f41.php.php:17
 msgid "Continue reading"
 msgstr "Читати далі"
 
@@ -306,13 +306,19 @@ msgstr "Наступний"
 msgid "Home"
 msgstr "Головна"
 
-#: ../storage/framework/messages/61160a1acf112aa5517ece27687fc1dde2e3b234.php.php:27
+#: ../storage/framework/messages/61160a1acf112aa5517ece27687fc1dde2e3b234.php.php:7
+#: ../storage/framework/messages/61160a1acf112aa5517ece27687fc1dde2e3b234.php.php:28
+#: ../storage/framework/messages/61160a1acf112aa5517ece27687fc1dde2e3b234.php.php:29
+#: ../storage/framework/messages/61160a1acf112aa5517ece27687fc1dde2e3b234.php.php:31
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:83
 msgid "ARTIP"
 msgstr "Академія рекреаційних технологій і права"
 
-#: ../storage/framework/messages/61160a1acf112aa5517ece27687fc1dde2e3b234.php.php:44
+#: ../storage/framework/messages/61160a1acf112aa5517ece27687fc1dde2e3b234.php.php:47
 #: ../storage/framework/messages/c0ed31af036a4606d8d8a0b17e4a3489131cd90c.php.php:1
-#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:25
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:23
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:49
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:72
 msgid "Contacts"
 msgstr "Контакти"
 
@@ -415,27 +421,27 @@ msgstr "Запам'ятити"
 msgid "Forgot Your Password?"
 msgstr ""
 
-#: ../storage/framework/messages/c0ed31af036a4606d8d8a0b17e4a3489131cd90c.php.php:8
+#: ../storage/framework/messages/c0ed31af036a4606d8d8a0b17e4a3489131cd90c.php.php:7
 msgid "Our contacts:"
 msgstr "Наші контакти"
 
-#: ../storage/framework/messages/c0ed31af036a4606d8d8a0b17e4a3489131cd90c.php.php:11
+#: ../storage/framework/messages/c0ed31af036a4606d8d8a0b17e4a3489131cd90c.php.php:10
 msgid "Main address:"
 msgstr "43023, м. Луцьк, вул. Карбишева, 2."
 
-#: ../storage/framework/messages/c0ed31af036a4606d8d8a0b17e4a3489131cd90c.php.php:12
+#: ../storage/framework/messages/c0ed31af036a4606d8d8a0b17e4a3489131cd90c.php.php:11
 msgid "Main phone number:"
 msgstr "Тел.: (0332) 28 04 28, 28 01 97"
 
-#: ../storage/framework/messages/c0ed31af036a4606d8d8a0b17e4a3489131cd90c.php.php:13
+#: ../storage/framework/messages/c0ed31af036a4606d8d8a0b17e4a3489131cd90c.php.php:12
 msgid "Cell phone number 1:"
 msgstr "Моб.: 099 44 70 728"
 
-#: ../storage/framework/messages/c0ed31af036a4606d8d8a0b17e4a3489131cd90c.php.php:14
+#: ../storage/framework/messages/c0ed31af036a4606d8d8a0b17e4a3489131cd90c.php.php:13
 msgid "Cell phone number 2:"
 msgstr "Моб.: 067 92 58 235"
 
-#: ../storage/framework/messages/c0ed31af036a4606d8d8a0b17e4a3489131cd90c.php.php:15
+#: ../storage/framework/messages/c0ed31af036a4606d8d8a0b17e4a3489131cd90c.php.php:14
 msgid "Main email addredd:"
 msgstr "E-mail: academrtp@gmail.com"
 
@@ -508,33 +514,45 @@ msgstr ""
 msgid "Register"
 msgstr ""
 
-#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:10
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:8
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:34
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:57
 msgid "Quick Links"
 msgstr "Швидкі посилання"
 
-#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:13
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:11
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:37
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:60
 msgid "Documents"
 msgstr "Документи"
 
-#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:16
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:14
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:40
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:63
 msgid "Online"
-msgstr "Онліне"
+msgstr "Онлайн"
 
-#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:19
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:17
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:43
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:66
 msgid "Publications"
 msgstr "Публікації"
 
-#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:22
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:20
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:46
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:69
 msgid "Gallery"
 msgstr "Галерея"
 
-#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:28
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:26
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:52
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:75
 msgid "International Students"
 msgstr ""
 
-#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:33
-msgid "Education in Ukraine"
-msgstr "Освіта в Україні"
+#: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:29
+msgid "Ministry of Education and Science"
+msgstr "Міністерство освіти і науки"
 
 #: ../storage/framework/messages/ef7a6db9d7252812575708cb5818c7d31720e064.php.php:27
 msgid "Locale"
@@ -551,6 +569,9 @@ msgstr "Завантажити"
 #: ../storage/framework/messages/f3fdc1931cf4bbd7899312cbca3aab2fcbec5d23.php.php:43
 msgid "File Preview"
 msgstr "Попередній перегляд"
+
+#~ msgid "Education in Ukraine"
+#~ msgstr "Освіта в Україні"
 
 #~ msgid "Full size"
 #~ msgstr "Повний розмір"

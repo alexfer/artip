@@ -29,4 +29,6 @@ foreach (config('external-urls') as $name => $url) {
     })->name(sprintf('redirect.to.%s', $name));
 }
 
-
+Route::get('ministry-of-education-and-science', function() {
+    return redirect()->away('https://mon.gov.ua');
+})->name('mon.gov.ua');

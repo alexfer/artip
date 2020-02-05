@@ -9,7 +9,7 @@
             </h5>
         </div>
         <div id="collapse-{{ $item['id'] }}" class="collapse{{ !$key ? ' show' : null }}" aria-labelledby="heading-{{ $item['id'] }}" data-parent="#accordion">
-            <div class="card-body pt-0">
+            <div class="card-body pt-1">
                 @if($item['date'])
                 <div class="text-muted">{{ date('d.m.Y', strtotime($item['date'])) }}</div>
                 @endif
