@@ -18,7 +18,7 @@ class SubmissionExtra extends Migration
             Schema::table('submissions', function (Blueprint $table) {
                 $table->boolean('is_answered')->default(false)->after('id');                
                 $table->integer('user_id')->default(0)->after('is_answered');
-                $table->string('owner_id')->nullable()->after('is_answered');
+                $table->integer('owner_id')->default(0)->after('is_answered');
                 $table->string('access_code')->nullable()->after('user_id');
             });
         }
