@@ -108,12 +108,6 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
     text-align:center;
 }
-.trickcenter {
-    position: fixed;
-    top: 84%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 .transbox:before {
     content: ' ';
     display: block;

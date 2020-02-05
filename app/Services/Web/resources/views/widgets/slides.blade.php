@@ -10,7 +10,7 @@
     <div class="carousel-inner" role="listbox">
         @foreach($slides as $key => $slide)
             @foreach($slide->media as $i => $media) 
-            <div class="carousel-item transbox {{ !$key ? ' active' : null }}">
+            <div class="carousel-item {{ !$key ? ' active' : null }}">
                 <img class="d-block w-100 img-caruusel" src="{{ asset(\Storage::disk('media')->url($media->file->path)) }}" alt="{{ $slide->short_title }}">
                 <!--
                 <div class="carousel-caption d-none d-md-block text-left">
