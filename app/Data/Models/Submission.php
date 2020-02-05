@@ -20,6 +20,7 @@ class Submission extends Model
         'email',
         'message',
         'visitor',
+        'is_new',
     ];
 
 }

@@ -55,6 +55,12 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link {{ Request::segment(2) == 'submission' ? 'active' : '' }}" href="{{ route('submission.collection') }}">
+                                    <span data-feather="message-square"></span>
+                                    {{ _i('Submission') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link {{ Request::segment(2) == 'users' || Request::segment(2) == 'user' ? 'active' : '' }}" href="{{ route('user.collection') }}">
                                     <span data-feather="users"></span>
                                     {{ _i('Users') }}
