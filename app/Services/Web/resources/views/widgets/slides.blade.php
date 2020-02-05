@@ -1,4 +1,4 @@
-<div id="carousel-indicators" class="carousel slide text-white rounded bg-dark mb-2">
+<div id="carousel-indicators" class="carousel slide text-white rounded bg-dark mt-2">
     <ol class="carousel-indicators">
         @foreach($slides as $key => $slide)
             @foreach($slide->media as $i => $media) 

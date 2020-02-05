@@ -1,6 +1,10 @@
-.header {
+a {
+    color: #002080;
+}
+header {
     line-height: 1;
     border-bottom: 1px solid #e5e5e5;
+    background-color: #012060;
 }
 .header-logo {
     background: url('../images/logo.png');
@@ -12,6 +16,15 @@
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+.text-primary {
+    color: #002080 !important;
+}
+.blockquote-footer {
+    color: #0db896;
+}
+.blockquote {
+    font-size: 1rem;
 }
 .display-4 {
     font-size: 2.5rem;
@@ -32,22 +45,41 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-flex: 0;
     flex: 0 0 auto;
 }
-.h-250 { height: 250px; }
-@media (min-width: 768px) {
-    .h-md-250 { height: 250px; }
+.h-250 { 
+    height: 250px; 
 }
-.border-top { border-top: 1px solid #e5e5e5; }
-.border-bottom { border-bottom: 1px solid #e5e5e5; }
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.border-top { 
+    border-top: 1px solid #e5e5e5; 
+}
+.border-bottom { 
+    border-bottom: 1px solid #e5e5e5; 
+}
+.box-shadow { 
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); 
+}
+.nav a {
+    color: #404040;
+}
+.nav a:hover {
+    color: #000;
+    text-decoration: none;
+}
 .footer {
     padding: 2.5rem 0;
-    color: #999;
+    color: #fff;
     text-align: left;
-    background-color: #f9f9f9;
+    background-color: #262626;
     border-top: .05rem solid #e5e5e5;
 }
-.footer p:last-child {
-    margin-bottom: 0;
+.footer a {    
+    color: #bfbfbf;
+}
+.footer a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.footer p {
+    font-size: 14px;
 }
 .cut-text {
     width : 280px;
@@ -57,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
 }
 .title {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 .children-node {
     list-style: none;
@@ -103,16 +135,16 @@ img.img-caruusel:hover {
     margin-top: 70px;
 }
 .social a {
-    color: #cd201f;
+    color: #6c757d;
 }
 .social a:hover {
-    color: #6c757d;
+    color: #fff;
 }
 .social-footer a {
-    color: #2E8B57;
+    color: #6c757d;
 }
 .social-footer a:hover {
-    color: #6c757d;
+    color: #fff;
 }
 #accordion .btn-link {
     color: #0db896;
@@ -132,10 +164,14 @@ img.img-caruusel:hover {
 }
 #toTop {
     position: absolute; 
-    right: 20px; 
-    padding-bottom: 20px;
+    right: 20px;
     color: #eee;
 }
 #toTop:hover {
     color: #6c757d
+}
+@media (min-width: 768px) {
+    .h-md-250 { 
+        height: 250px; 
+    }
 }

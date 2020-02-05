@@ -4,7 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Artip - @yield('title')</title>
+        <title>{{ _i('ARTIP') }} - @yield('title')</title>
         <link rel="canonical" href="{{ env('APP_URL') }}">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,7 +12,7 @@
         <link href="{{ asset('css/common.css') }}" rel="stylesheet" />
     </head>
     <body>
-        <header class="container{{ config('resolution.fluid') }} header py-1">
+        <header class="container{{ config('resolution.fluid') }} py-2">
             <div class="row flex-nowrap justify-content-between align-items-center">
                 <div class="col-4">
                     @if(isset($page) && isset($page['content']['translation']))
@@ -25,32 +25,33 @@
                 </div>
                 <div class="col-4 text-center">
                     <a href="{{ route('index') }}" title="{{ _i('ARTIP') }}">
-                        <img src="{{ asset('images/logo.png') }}" class="header-logo">
+                        <img src="{{ asset('images/logo.png') }}" class="header-logo"alt="{{ _i('ARTIP') }}">
                     </a>
+                    <p class="mt-1 text-white text-capitalize">{{ _i('ARTIP') }}</p>
                 </div>                
                 <div class="col-4 text-right">
                     @include('web::widgets.social', ['class' => 'social'])
                 </div>
             </div>
         </header>
-        <div class="container-fluid stycki-bar bg-white">
-            <div class="container nav-scroller py-1 mb-2">
-                <nav class="nav d-flex justify-content-between navbar-nav-scroll">
+        <div class="container-fluid stycki-bar bg-white box-shadow">
+            <div class="container nav-scroller py-1">
+                <nav class="nav d-flex justify-content-between">
                     @foreach($categories as $category)
                     @if(!$category['parent_id'])
-                    <a class="p-2 text-muted" href="{{ route('single.by.slug', ['slug' => $category['slug']]) }}">{{ $category['name'] }}</a>
+                    <a class="p-2 text-black" href="{{ route('single.by.slug', ['slug' => $category['slug']]) }}">{{ $category['name'] }}</a>
                     @endif
                     @endforeach
-                    <a class="p-2 text-muted" href="{{ route('contacts') }}">{{ _i('Contacts') }}</a>
+                    <a class="py-2" href="{{ route('contacts') }}">{{ _i('Contacts') }}</a>
                 </nav>
             </div>
         </div>
         @if(isset($slides ))
-        <div class="container{{ config('resolution.fluid') }}{{ config('resolution.fluid') ? ' px-0' : null }}">
+        <div class="container">
             @include('web::widgets.slides')
         </div>
         @endif
-        <section class="container" style="min-height: 100vh;">
+        <section class="container">
             @if ($__env->yieldContent('content'))
             @yield('content')
             @endif

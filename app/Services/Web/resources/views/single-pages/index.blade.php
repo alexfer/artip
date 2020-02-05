@@ -1,7 +1,7 @@
 @extends('web::index')
 @section('title', isset($page['content']['short_title']) ? $page['content']['translation'] && count(request()->segments()) > 1 ? $page['content']['translation']['title'] : $page['content']['short_title'] : $page['name'])
 @section('content')
-<h2 class="title mb-3">{{ isset($page['content']['short_title']) ? $page['content']['translation'] && count(request()->segments()) > 1 ? $page['content']['translation']['title'] : $page['content']['short_title'] : $page['name'] }}</h2>
+<h2 class="title my-3">{{ isset($page['content']['short_title']) ? $page['content']['translation'] && count(request()->segments()) > 1 ? $page['content']['translation']['title'] : $page['content']['short_title'] : $page['name'] }}</h2>
 <div class="row h-100">
     @if(count($children))
     <div class="col-3">

@@ -1,7 +1,7 @@
 @extends('web::index')
 @section('title', $page['short_title'])
 @section('content')
-<h2 class="title mb-3">{{ $page['short_title'] }}</h2>
+<h2 class="title my-3">{{ $page['short_title'] }}</h2>
 <div class="row h-100">    
     <div class="col-3">        
         <div class="p-2">

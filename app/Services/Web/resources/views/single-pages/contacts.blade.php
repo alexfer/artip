@@ -1,7 +1,7 @@
 @extends('web::index')
 @section('title', _i('Contacts'))
 @section('content')
-<div class="row mb-2">
+<div class="row my-2">
     <div class="col-4">
         <div class="card">
             <div class="card-header">
