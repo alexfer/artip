@@ -1,11 +1,11 @@
 <?php
 
-namespace Artip\Domains\Action\Jobs;
+namespace Artip\Domains\Submission\Jobs;
 
 use Lucid\Foundation\Job;
 use Artip\Data\Models\Submission;
 
-class SubmissionJob extends Job
+class CreateJob extends Job
 {
 
     /**

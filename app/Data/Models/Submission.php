@@ -35,5 +35,14 @@ class Submission extends Model
     {
         return $this->hasOne(Submission::class, 'owner_id');
     }
+    
+    /**
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\hasOne
+     */
+    public function question()
+    {
+        return $this->hasOne(Submission::class, 'id', 'owner_id');
+    }
 
 }

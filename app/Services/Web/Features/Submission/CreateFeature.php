@@ -1,16 +1,16 @@
 <?php
 
-namespace Artip\Services\Web\Features\Action;
+namespace Artip\Services\Web\Features\Submission;
 
 use Lucid\Foundation\Feature;
 use Illuminate\Http\Request;
-use Artip\Domains\Action\Jobs\{
-    SubmissionJob,
-    SubmissionValidateJob
+use Artip\Domains\Submission\Jobs\{
+    CreateJob,
+    ValidateJob,
+    SendMailJob
 };
-use Artip\Domains\Submission\Jobs\SendMailJob;
 
-class SubmissionFeature extends Feature
+class CreateFeature extends Feature
 {
 
     /**
@@ -21,10 +21,10 @@ class SubmissionFeature extends Feature
     public function handle(Request $request)
     {
         try {
-            $this->run(SubmissionValidateJob::class, [
+            $this->run(ValidateJob::class, [
                 'input' => $request->input(),
             ]);
-            $submission = $this->run(SubmissionJob::class, [
+            $submission = $this->run(CreateJob::class, [
                 'input' => $request->only([
                     'name',
                     'email',

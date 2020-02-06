@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MultilanguageLaravelApplication\n"
-"POT-Creation-Date: 2020-02-06 09:34+0200\n"
-"PO-Revision-Date: 2020-02-06 09:35+0200\n"
+"POT-Creation-Date: 2020-02-06 14:18+0200\n"
+"PO-Revision-Date: 2020-02-06 14:21+0200\n"
 "Last-Translator: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language-Team: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language: uk_UA\n"
@@ -86,6 +86,17 @@ msgstr "Storage link успішно створено."
 msgid "Files uploaded  successfully."
 msgstr "Файл(и) завантажено успішно."
 
+#: ../app/Services/Admin/Features/Submission/AnswerFeature.php:34
+#: ../storage/framework/messages/c2723cbdfb11606a32970a0c9b0d1ad584ed34c0.php.php:34
+msgid "Answer on your submission."
+msgstr "Відповідь на ваше подання."
+
+#: ../app/Services/Admin/Features/Submission/AnswerFeature.php:36
+#: ../storage/framework/messages/c2723cbdfb11606a32970a0c9b0d1ad584ed34c0.php.php:36
+#, php-format
+msgid "Hello %s, You can review answer on your submission on the page %s"
+msgstr "Привіт %s, Ви можете переглянути відповідь на своє подання на сторінці %s"
+
 #: ../app/Services/Admin/Features/User/CreateFeature.php:30
 #: ../storage/framework/messages/3d025d418267a8ef9ada976e5ce58b11555a0d1c.php.php:30
 msgid "User created successfully."
@@ -101,8 +112,19 @@ msgstr "Пароль успішно змінено"
 msgid "User updated successfully."
 msgstr "Користувача  успішно оновлено."
 
-#: ../app/Services/Web/Features/Action/SubmissionFeature.php:40
-#: ../storage/framework/messages/74cd7ce01ce703d9851451e39fb9d5f16fcf6108.php.php:40
+#: ../app/Services/Web/Features/Action/SubmissionFeature.php:42
+#: ../storage/framework/messages/74cd7ce01ce703d9851451e39fb9d5f16fcf6108.php.php:42
+msgid "You have got new submission."
+msgstr "Ви отримали нове подання."
+
+#: ../app/Services/Web/Features/Action/SubmissionFeature.php:44
+#: ../storage/framework/messages/74cd7ce01ce703d9851451e39fb9d5f16fcf6108.php.php:44
+#, php-format
+msgid "You have got new submission. To review go to the page %s"
+msgstr "Ви отримали нове подання. Для огляду перейдіть на сторінку %s"
+
+#: ../app/Services/Web/Features/Action/SubmissionFeature.php:55
+#: ../storage/framework/messages/74cd7ce01ce703d9851451e39fb9d5f16fcf6108.php.php:55
 msgid "Your message has been sent succesfully."
 msgstr "Ваше повідомлення успішно надіслано!"
 
@@ -154,18 +176,23 @@ msgstr "Створити новий запис"
 
 #: ../storage/framework/messages/1ff1ff694fe4b10fd7c63f55ba0aad1cf60c75f8.php.php:4
 #: ../storage/framework/messages/35a1c9a2a80d33a91e0090bdab0eff5d179fc087.php.php:65
+#: ../storage/framework/messages/da4adf592c274be5a037b330469e15b2fac201f7.php.php:4
 msgid "Submission"
 msgstr "Звернення"
 
 #: ../storage/framework/messages/1ff1ff694fe4b10fd7c63f55ba0aad1cf60c75f8.php.php:11
 #: ../storage/framework/messages/714c2bc0fbf22d9d8d040b86d91cdeda57b5e526.php.php:14
 #: ../storage/framework/messages/809cc28980fc78494e8e4f4a332c1c28974a05bf.php.php:14
+#: ../storage/framework/messages/da4adf592c274be5a037b330469e15b2fac201f7.php.php:19
+#: ../storage/framework/messages/da4adf592c274be5a037b330469e15b2fac201f7.php.php:41
 msgid "Created"
 msgstr "Створено"
 
 #: ../storage/framework/messages/1ff1ff694fe4b10fd7c63f55ba0aad1cf60c75f8.php.php:12
 #: ../storage/framework/messages/714c2bc0fbf22d9d8d040b86d91cdeda57b5e526.php.php:15
 #: ../storage/framework/messages/da21463345aeae22a78ebae1b5c5f91da2c7b711.php.php:13
+#: ../storage/framework/messages/da4adf592c274be5a037b330469e15b2fac201f7.php.php:27
+#: ../storage/framework/messages/da4adf592c274be5a037b330469e15b2fac201f7.php.php:49
 #: ../storage/framework/messages/ef7a6db9d7252812575708cb5818c7d31720e064.php.php:13
 msgid "Name"
 msgstr "І'мя"
@@ -555,6 +582,25 @@ msgstr ""
 #: ../storage/framework/messages/da21463345aeae22a78ebae1b5c5f91da2c7b711.php.php:107
 msgid "Register"
 msgstr ""
+
+#: ../storage/framework/messages/da4adf592c274be5a037b330469e15b2fac201f7.php.php:23
+#: ../storage/framework/messages/da4adf592c274be5a037b330469e15b2fac201f7.php.php:45
+msgid "IP address"
+msgstr "IP адреса"
+
+#: ../storage/framework/messages/da4adf592c274be5a037b330469e15b2fac201f7.php.php:29
+#: ../storage/framework/messages/da4adf592c274be5a037b330469e15b2fac201f7.php.php:51
+msgid "Message"
+msgstr "Повідомлення"
+
+#: ../storage/framework/messages/da4adf592c274be5a037b330469e15b2fac201f7.php.php:34
+#: ../storage/framework/messages/da4adf592c274be5a037b330469e15b2fac201f7.php.php:39
+msgid "Answer"
+msgstr "Відповідь"
+
+#: ../storage/framework/messages/da4adf592c274be5a037b330469e15b2fac201f7.php.php:62
+msgid "Send"
+msgstr "Надіслати"
 
 #: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:8
 #: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:34

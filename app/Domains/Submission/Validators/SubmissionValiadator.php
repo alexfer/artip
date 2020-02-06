@@ -1,6 +1,6 @@
 <?php
 
-namespace Artip\Domains\Action\Validators;
+namespace Artip\Domains\Submission\Validators;
 
 use Lucid\Foundation\InvalidInputException;
 use Lucid\Foundation\Validator as LucidValidator;
