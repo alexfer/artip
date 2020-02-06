@@ -19,7 +19,7 @@ class DownloadJob extends Job
     {
         $file = $media->find($this->id)->toArray();
         return \Storage::disk('media')->download($file['path'], $file['name'], [
-            'Content-type' => $file['mime']
+                    'Content-type' => $file['mime']
         ]);
     }
 

@@ -36,13 +36,13 @@ class UpdateJob extends Job
     public function handle(Content $entry): bool
     {
         $this->input['slug'] = SlugService::createSlug(Content::class, 'slug', $this->input['short_title'], ['unique' => true]);
-        
+
         if (isset($this->input['category_id'])) {
             CategoryContent::updateOrCreate(['content_id' => $this->input['id']], [
                 'category_id' => $this->input['category_id'],
-            ]);            
+            ]);
         }
-        
+
         unset($this->input['category_id']);
 
         try {

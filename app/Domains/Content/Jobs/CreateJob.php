@@ -37,9 +37,9 @@ class CreateJob extends Job
     {
         $categoryId = $this->input['category_id'];
         unset($this->input['category_id']);
-        
+
         $this->input['slug'] = SlugService::createSlug(Content::class, 'slug', $this->input['short_title'], ['unique' => true]);
-        
+
         try {
             $entry = $entry->create($this->input);
         } catch (\Exception $ex) {

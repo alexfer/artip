@@ -21,6 +21,18 @@ class Submission extends Model
         'message',
         'visitor',
         'is_new',
+        'owner_id',
+        'is_answered',
+        'user_id',
     ];
+
+    /**
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\hasOne
+     */
+    public function answer()
+    {
+        return $this->hasOne(Submission::class, 'owner_id');
+    }
 
 }

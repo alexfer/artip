@@ -54,7 +54,7 @@ class CropJob extends Job
 
         foreach ($this->images as $image) {
             if (in_array($storage->mimeType($image), $this->allowed)) {
-                
+
                 $path = $storage->path($image);
                 $parts = pathinfo($path);
 

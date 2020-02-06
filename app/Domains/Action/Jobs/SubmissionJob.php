@@ -7,6 +7,7 @@ use Artip\Data\Models\Submission;
 
 class SubmissionJob extends Job
 {
+
     /**
      *
      * @var array
@@ -23,7 +24,6 @@ class SubmissionJob extends Job
         $this->input = $input;
     }
 
-
     /**
      * 
      * @param Submission $submision
@@ -33,4 +33,5 @@ class SubmissionJob extends Job
         $this->input['visitor'] = request()->ip();
         return $submision->create($this->input);
     }
+
 }
