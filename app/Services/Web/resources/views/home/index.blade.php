@@ -1,9 +1,8 @@
 @extends('web::index')
 @section('title', _i('Home'))
 @section('content')
-@if(isset($annonce))
-    @include('web::widgets.annonce', ['annonce' => $annonce])
-@endif    
+@include('web::widgets.home-text')
+    
 <div class="row mb-2">
     @foreach($news as $item)
     <div class="col-6">

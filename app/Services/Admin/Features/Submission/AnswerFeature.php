@@ -37,7 +37,9 @@ class AnswerFeature extends Feature
                 ],
             ],
         ]);
-
+        
+        \Session::flash('alert-success', _i('Your message successfully sent. For review go to the <a href="%s">page</a>', sprintf("%s/submission/%s", env('APP_URL'), $submission->access_code)));
+        
         return redirect(route('submission.form', [
             'id' => $request->input('id'),
         ]));

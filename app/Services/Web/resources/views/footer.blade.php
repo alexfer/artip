@@ -3,6 +3,7 @@
         <div class="row mb-3">
             <div class="col-3">
                 @include('web::widgets.social', ['class' => 'social-footer'])
+                <p>{!! _i('Footer text') !!}</p>
             </div>
             <div class="col-3">
                 <h5>{{ _i('Quick Links') }}</h5>
