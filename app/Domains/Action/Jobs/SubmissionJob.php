@@ -12,14 +12,13 @@ class SubmissionJob extends Job
      *
      * @var array
      */
-    private $input = [];
+    private $input;
 
     /**
-     * Create a new job instance.
-     *
-     * @return void
+     * 
+     * @param array $input
      */
-    public function __construct($input = [])
+    public function __construct(array $input)
     {
         $this->input = $input;
     }
@@ -27,8 +26,9 @@ class SubmissionJob extends Job
     /**
      * 
      * @param Submission $submision
+     * @return object
      */
-    public function handle(Submission $submision)
+    public function handle(Submission $submision): object
     {
         $this->input['visitor'] = request()->ip();
         return $submision->create($this->input);

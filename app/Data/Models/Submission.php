@@ -24,6 +24,7 @@ class Submission extends Model
         'owner_id',
         'is_answered',
         'user_id',
+        'access_code'
     ];
 
     /**

@@ -56,5 +56,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function
     // Submission section
     Route::get('/submission', 'SubmissionController@collection')->name('submission.collection');
     Route::get('/submission/{id}', 'SubmissionController@form')->name('submission.form');
-    Route::post('/submission', 'SubmissionController@answer')->name('submission.answer');
+    Route::post('/submission', 'SubmissionController@answer')->name('submission.answer');    
 });

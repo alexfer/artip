@@ -10,6 +10,8 @@
     <form method="post" action="{{ route('submission.answer') }}">
         @csrf
         <input name="id" type="hidden" value="{{ $submission['id'] }}">
+        <input name="name" type="hidden" value="{{ $submission['name'] }}">
+        <input name="email" type="hidden" value="{{ $submission['email'] }}">
         <div class="row">
             <div class="col-12">
                 <div class="card mt-3 h-100">
@@ -31,11 +33,11 @@
                         @if(!isset($submission['answer']))
                         <div class="form-group">
                             <label for="answer">{{ _i('Answer') }}</label>
-                            <textarea name="answer" id="answer" rows="5" class="form-control" required="required">{{ old('answer') }}</textarea>                            
+                            <textarea name="answer" id="answer" rows="5" class="form-control" required="required">{{ old('answer') }}</textarea>
                         </div>
                         @else
                             <hr>
-                            <h5 class="text-center">{{ _i('Answer') }}</h5>                            
+                            <h5 class="text-center">{{ _i('Answer') }}</h5>
                             <dl class="row">
                                 <dt class="col-sm-2">{{ _i('Created') }}</dt>
                                 <dd class="col-sm-10">
@@ -60,7 +62,7 @@
             <div class="col-12 text-right">
                 <button type="submit" class="btn btn-primary">{{ _i('Send') }}</button>
             </div>
-        </div> 
+        </div>
         @endif
     </form>
 </div>

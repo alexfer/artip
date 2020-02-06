@@ -4,6 +4,8 @@ namespace Artip\Domains\Submission\Jobs;
 
 use Lucid\Foundation\Job;
 use Artip\Data\Models\Submission;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 class AnswerJob extends Job
 {
@@ -25,7 +27,7 @@ class AnswerJob extends Job
 
     /**
      * 
-     * @return bool
+     * @return object
      */
     public function handle(): object
     {
@@ -41,6 +43,7 @@ class AnswerJob extends Job
                     'visitor' => request()->ip(),
                     'message' => $this->input['answer'],
                     'owner_id' => $this->input['id'],
+                    'access_code' => Str::random(36),
         ]);
     }
 

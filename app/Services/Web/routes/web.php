@@ -18,7 +18,8 @@ Route::get('/{slug}.html', 'ContentController@single')->name('single.by.slug');
 Route::get('/news/{id}-{slug}.html', 'ContentController@news')->where('id', '[0-9]+')->name('news.by.slug');
 Route::get('/{locale}/{slug}.html', 'ContentController@single')->name('single-translation.by.slug');
 Route::get('/download/{id}', 'MediaController@download')->where('id', '[0-9]+')->name('download');
-Route::group(['prefix' => 'web', 'middleware' => 'throttle:3,10'], function () {
+Route::get('/submission/{code}', 'SubmissionController@review')->name('submission.review');
+Route::group(['prefix' => 'web', 'middleware' => 'throttle:300,10'], function () {
     Route::post('/submission.html', 'SubmissionController@send')->name('submission');
 });
 
