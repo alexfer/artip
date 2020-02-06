@@ -17,7 +17,8 @@ Route::post('logout', '\Framework\Http\Controllers\Auth\LoginController@logout')
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function() {
 
-    Route::get('/', 'DashboardController@index')->name('dashboard');    
+    Route::get('/', 'DashboardController@index')->name('dashboard');
+    Route::get('/storage-link', 'DashboardController@storageLink')->name('storage-link');
 
     // Categories section
     Route::get('/categories', 'CategoryController@collection')->name('category.collection');
@@ -51,7 +52,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function
     Route::get('/media', 'MediaController@collection')->name('media.collection');
     Route::post('/media', 'MediaController@upload')->name('media.upload');
     Route::get('/media-files', 'MediaController@index')->name('media.content');
-    
+
     // Submission section
     Route::get('/submission', 'SubmissionController@collection')->name('submission.collection');
+    Route::get('/submission/{id}', 'SubmissionController@form')->name('submission.form');
+    Route::post('/submission', 'SubmissionController@answer')->name('submission.answer');    
 });

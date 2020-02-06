@@ -1,36 +1,37 @@
 <?php
 
-namespace Artip\Domains\Action\Jobs;
+namespace Artip\Domains\Submission\Jobs;
 
 use Lucid\Foundation\Job;
 use Artip\Data\Models\Submission;
 
-class SubmissionJob extends Job
+class CreateJob extends Job
 {
+
     /**
      *
      * @var array
      */
-    private $input = [];
+    private $input;
 
     /**
-     * Create a new job instance.
-     *
-     * @return void
+     * 
+     * @param array $input
      */
-    public function __construct($input = [])
+    public function __construct(array $input)
     {
         $this->input = $input;
     }
 
-
     /**
      * 
      * @param Submission $submision
+     * @return object
      */
-    public function handle(Submission $submision)
+    public function handle(Submission $submision): object
     {
         $this->input['visitor'] = request()->ip();
         return $submision->create($this->input);
     }
+
 }

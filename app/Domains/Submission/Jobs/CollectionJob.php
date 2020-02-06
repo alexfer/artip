@@ -15,7 +15,7 @@ class CollectionJob extends Job
      */
     public function handle(Submission $submission): object
     {
-        return $submission->orderBy('id', 'desc')->paginate(env('PAGINATE_LIMIT'));
+        return $submission->where('user_id', 0)->orderBy('id', 'desc')->paginate(env('PAGINATE_LIMIT'));
     }
 
 }

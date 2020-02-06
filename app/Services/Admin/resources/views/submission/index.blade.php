@@ -1,4 +1,3 @@
-
 @extends('admin::index')
 @section('content')
 <div class="row">
@@ -23,7 +22,7 @@
                 <td>{{ $row->name }}</td>
                 <td>{{ !$row->is_answered ? _i('New') : _i('Answered') }}</td>
                 <td>
-                    <a href="#">
+                    <a href="{{ route('submission.form', ['id' => $row->id]) }}">
                         <span class="text-primary" data-feather="send"></span>
                     </a>
                 </td>
