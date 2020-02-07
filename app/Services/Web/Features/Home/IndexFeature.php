@@ -23,7 +23,7 @@ class IndexFeature extends Feature
     {
         return $this->run(new RespondWithViewJob(self::TEMPLATE, [
                             'news' => $this->run(LatestJob::class),
-                            'annonce' => $this->run(AnnonceJob::class),
+                            //'annonce' => $this->run(AnnonceJob::class),
                             'slides' => $this->run(SlidesJob::class),
         ]));
     }
