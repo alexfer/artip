@@ -47,9 +47,11 @@ class Handler extends ExceptionHandler
     public function render($request, Exception $exception)
     {
         if ($exception instanceof TooManyRequestsHttpException) {
-            return response()->json([
-                        'errors' => [$exception->getMessage()],
-                            ]);
+            if (request()->expectsJson()) {
+                return response()->json([
+                            'errors' => [$exception->getMessage()],
+                                ], 429);
+            }            
         }
         return parent::render($request, $exception);
     }
