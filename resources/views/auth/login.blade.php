@@ -2,9 +2,11 @@
 @section('content')
 <div class="container mt-4">
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-7">
             <div class="card shadow">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">
+                    <strong>{{ __('Login') }}</strong>
+                </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -44,7 +46,7 @@
                         <div class="form-group row mb-4">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
+                                    {{ __('Sign Up') }}
                                 </button>
                             </div>
                         </div>
