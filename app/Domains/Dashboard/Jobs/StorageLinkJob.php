@@ -16,8 +16,7 @@ class StorageLinkJob extends Job
     public function handle(): void
     {
         try {
-            //Artisan::call('storage:link', []);
-            symlink('/home/alex2178/domains/artip.com.ua/storage/app/public/media', '/home/alex2178/domains/artip.com.ua/public_html/storage/media');
+            Artisan::call('storage:link', []);            
         } catch (\Exception $ex) {
             throw new \Exception($ex->getMessage());
         }

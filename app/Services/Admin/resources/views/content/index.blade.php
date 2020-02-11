@@ -44,7 +44,7 @@
             </tr>
             @empty
             <tr>
-                <td colspan="4" class="bg-grey text-center">{{ _i('No Content Available') }}</td>
+                <td colspan="5" class="bg-grey text-center">{{ _i('No Content Available') }}</td>
             </tr>
             @endforelse
         </tbody>

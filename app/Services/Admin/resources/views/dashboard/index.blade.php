@@ -21,7 +21,7 @@
         </div>
         <div class="row mt-4">
             <div class="col-12 text-right">            
-                <button type="submit" id="storage-link" class="btn btn-primary">{{ _i('Storage Link') }}</button>            
+                <button type="submit" class="btn btn-primary">{{ _i('Storage Link') }}</button>            
             </div>
         </div>
     </div>
