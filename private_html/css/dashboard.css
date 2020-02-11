@@ -9,6 +9,17 @@ body {
 .h2 {
     padding-left: 15px;
 }
+.header {
+    background-color: #012060;
+}
+.header-logo {
+    background: url('../images/logo.png');
+    width: 65px;
+    height: 50px;
+}
+.header-logo:hover {
+    text-decoration: none;
+}
 .sidebar {
     position: fixed;  
     bottom: 0;
