@@ -26,7 +26,7 @@
                     </div>
                     <div class="col-4 text-center">
                         <a href="{{ route('index') }}" title="{{ _i('ARTIP') }}">
-                            <img src="{{ asset('images/logo.png') }}" class="header-logo"alt="{{ _i('ARTIP') }}">
+                            <img src="{{ asset('images/logo.png') }}" class="header-logo" alt="{{ _i('ARTIP') }}">
                         </a>
                         <p class="mt-1 text-white text-capitalize">{{ _i('ARTIP') }}</p>
                     </div>                
