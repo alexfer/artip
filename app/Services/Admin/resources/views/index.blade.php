@@ -66,6 +66,12 @@
                                     {{ _i('Users') }}
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ Request::segment(2) == 'activity-log' ? 'active' : '' }}" href="{{ route('activity.log') }}">
+                                    <span data-feather="users"></span>
+                                    {{ _i('Activity Log') }}
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>

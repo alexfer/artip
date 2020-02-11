@@ -12,7 +12,7 @@
  */
 
 Route::get('login', '\Framework\Http\Controllers\Auth\LoginController@showLoginForm')->name('login');
-Route::post('login', '\Framework\Http\Controllers\Auth\LoginController@login');
+Route::post('login', '\Framework\Http\Controllers\Auth\LoginController@login')->middleware('throttle:3,10');
 Route::post('logout', '\Framework\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function() {
@@ -56,5 +56,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function
     // Submission section
     Route::get('/submission', 'SubmissionController@collection')->name('submission.collection');
     Route::get('/submission/{id}', 'SubmissionController@form')->name('submission.form');
-    Route::post('/submission', 'SubmissionController@answer')->name('submission.answer');    
+    Route::post('/submission', 'SubmissionController@answer')->name('submission.answer');
+    
+    //Activity log section
+    Route::post('/activity-log', 'ActivityLogController@collection')->name('activity.log');
 });
