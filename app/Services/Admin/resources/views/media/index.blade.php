@@ -7,6 +7,7 @@
     <div class="col-6 text-right">
         <label class="btn btn-success" for="file-selector">
             <input id="file-selector" type="file" class="d-none" name="files" multiple="multiple">
+            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>            
             {{ _i('Upload') }}
         </label>
     </div>
@@ -81,6 +82,8 @@ $(function () {
         for (let i = 0; i < self[0].files.length; ++i) {
             formData.append('files[]', self[0].files[i]);
         }
+        
+        $('.spinner-border').removeClass('d-none');
 
         $.ajax({
             url: url,
