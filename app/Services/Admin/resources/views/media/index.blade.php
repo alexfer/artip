@@ -7,7 +7,7 @@
     <div class="col-6 text-right">
         <label class="btn btn-success" for="file-selector">
             <input id="file-selector" type="file" class="d-none" name="files" multiple="multiple">
-            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>            
+            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
             {{ _i('Upload') }}
         </label>
     </div>
@@ -35,11 +35,11 @@
     </div>
 </div>
 <div class="mt-3">
-    {{ $collection->links() }}    
+    {{ $collection->links() }}
 </div>
 <div class="modal fade" id="preview" tabindex="-1" role="dialog" aria-labelledby="preview" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">        
-        <div class="modal-content">            
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">{{ _i('File Preview') }}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -64,14 +64,14 @@
 $(function () {
     $(".display-image-data").on("click", function (e) {
         e.preventDefault();
-        if($(this).children().hasClass('fi')) {
+        if($(this).children().hasClass('fi-content')) {
             $('#imagepreview').attr('src', null);
             $('#url').attr('value', $(this).attr('href').replace('240-thump-', null));
         } else{
             $('#imagepreview').attr('src', $(this).attr('href').replace('240', '800'));
             $('#url').attr('value', $(this).attr('href'));
-        }       
-        
+        }
+
         $('#preview').modal('toggle');
     });
     $('#file-selector').on("change", function () {
@@ -82,7 +82,7 @@ $(function () {
         for (let i = 0; i < self[0].files.length; ++i) {
             formData.append('files[]', self[0].files[i]);
         }
-        
+
         $('.spinner-border').removeClass('d-none');
 
         $.ajax({
