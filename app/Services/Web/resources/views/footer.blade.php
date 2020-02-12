@@ -81,6 +81,6 @@
         <a href="#" id="toTop">
             <i class="fa fa-4x fa-caret-square-o-up"></i>
         </a>
-        <p class="text-center">© <a href="{{ route('index') }}">{{ parse_url(env('APP_URL'), PHP_URL_HOST) }}</a> — {{ _i('ARTIP') }} </p>
+        <p class="text-center">© <a href="{{ route('index') }}">{{ parse_url(env('APP_URL'), PHP_URL_HOST) }}</a> — {{ _i('ARTIP Header') }} </p>
     </div>
 </footer>

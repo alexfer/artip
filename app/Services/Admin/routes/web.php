@@ -57,7 +57,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function
     Route::get('/submission', 'SubmissionController@collection')->name('submission.collection');
     Route::get('/submission/{id}', 'SubmissionController@form')->name('submission.form');
     Route::post('/submission', 'SubmissionController@answer')->name('submission.answer');
-    
+
     //Activity log section
     Route::post('/activity-log', 'ActivityLogController@collection')->name('activity.log');
 });

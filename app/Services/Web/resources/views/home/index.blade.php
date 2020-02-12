@@ -17,7 +17,7 @@
                 <a href="{{ route('news.by.slug', ['id' => $item->id, 'slug' => $item->slug]) }}">{{ _i('Continue reading') }}</a>
             </div>
             @foreach($item->media as $key => $media)
-            <div class="card-img-right flex-auto d-none d-md-block img-responsive" style="width: 200px; height: 248px;background: url({{ asset(\Storage::disk('media')->url(sprintf("240-thumb-%s", $media->file->path))) }})"></div>
+            <div class="card-img-right flex-auto d-none d-md-block img-responsive" style="width: 200px; height: 242px;background: url({{ asset(\Storage::disk('media')->url(sprintf("240-thumb-%s", $media->file->path))) }}) center no-repeat;"></div>
             @if(!$key) @break @endif
             @endforeach
         </div>
