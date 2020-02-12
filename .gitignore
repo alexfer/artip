@@ -7,4 +7,4 @@ composer.lock
 /storage/*.key
 _ide_helper.php
 _ide_helper_models.php
-/public/storage
+/private_html/storage
