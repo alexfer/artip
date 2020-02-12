@@ -31,8 +31,8 @@
                                     <img src="{{ asset('images/logo.png') }}" class="header-logo" alt="{{ _i('ARTIP Header') }}">
                                 </a>
                             </div>
-                            <div class="col-6 text-white text-left">
-                                {!! _i('ARTIP') !!}
+                            <div class="col-6 text-white text-left">                                
+                                <div class="header-separator">{!! _i('ARTIP') !!}</div>
                             </div>
                         </div>
                     </div>
@@ -63,6 +63,7 @@
             @if ($__env->yieldContent('content'))
             @yield('content')
             @endif
+            <div class="mt-4"></div>
             @include('web::widgets.submission-form')
         </section>
         @include('web::footer')

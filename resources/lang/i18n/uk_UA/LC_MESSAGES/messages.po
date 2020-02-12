@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MultilanguageLaravelApplication\n"
 "POT-Creation-Date: 2020-02-12 09:07+0200\n"
-"PO-Revision-Date: 2020-02-12 09:09+0200\n"
+"PO-Revision-Date: 2020-02-12 14:11+0200\n"
 "Last-Translator: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language-Team: Alexander Sh <alexandershtyher@gmail.com>\n"
 "Language: uk_UA\n"
@@ -427,9 +427,8 @@ msgstr "Академія рекреаційних технологій і пра
 #: ../storage/framework/messages/e9f9bd54dea6bacbbecc94cca8103d37d53126f2.php.php:84
 msgid "ARTIP"
 msgstr ""
-"<p class=\"mb-1\">А | Академія </p><p class=\"mb-1\">Р | рекреаційних </p><p "
-"class=\"mb-1\">Т | технологій </p><p class=\"mb-1\">І | і </p><p class="
-"\"mb-1\">П | права</p>"
+"<p class=\"mb-1 mt-3\">Академія </p><p class=\"mb-1\">рекреаційних </p><p "
+"class=\"mb-1\">технологій </p><p class=\"mb-1\">і права</p>"
 
 #: ../storage/framework/messages/61160a1acf112aa5517ece27687fc1dde2e3b234.php.php:54
 #: ../storage/framework/messages/c0ed31af036a4606d8d8a0b17e4a3489131cd90c.php.php:1
