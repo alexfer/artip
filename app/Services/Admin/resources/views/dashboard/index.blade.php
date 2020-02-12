@@ -21,7 +21,7 @@
         </div>
         <div class="row mt-4">
             <div class="col-12 text-right">            
-                <button type="submit" class="btn btn-primary">{{ _i('Storage Link') }}</button>            
+                <button type="submit" id="db-migrate" class="btn btn-primary">{{ _i('Migrate') }}</button>            
             </div>
         </div>
     </div>
@@ -31,6 +31,11 @@
     $(function() {
         $('#storage-link').on('click', function() {
             $.get("{{ route('storage-link') }}", function(response) {
+                alert(response.message);
+            });
+        });
+        $('#db-migrate').on('click', function() {
+            $.get("{{ route('db-migrate') }}", function(response) {
                 alert(response.message);
             });
         });

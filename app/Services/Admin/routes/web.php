@@ -19,6 +19,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function
 
     Route::get('/', 'DashboardController@index')->name('dashboard');
     Route::get('/storage-link', 'DashboardController@storageLink')->name('storage-link');
+    Route::get('/db-migrate', 'DashboardController@dbMigrate')->name('db-migrate');
 
     // Categories section
     Route::get('/categories', 'CategoryController@collection')->name('category.collection');
