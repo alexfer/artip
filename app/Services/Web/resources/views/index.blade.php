@@ -12,10 +12,34 @@
         <link href="{{ asset('css/common.css') }}" rel="stylesheet" />
     </head>
     <body>
+        <div class="social-icons">            
+            <a target="_blank" class="instagram mb-2" href="{{ route('redirect.to.instagram') }}">
+                <i class="fa fa-lg fa-instagram"></i>
+            </a>
+            <a target="_blank" class="facebook mb-2" href="{{ route('redirect.to.facebook') }}">
+                <i class="fa fa-lg fa-facebook"></i>
+            </a>
+            <a target="_blank" class="youtube mb-2" href="{{ route('redirect.to.youtube') }}">
+                <i class="fa fa-lg fa-youtube"></i>
+            </a>
+        </div>
         <header class="container-fluid py-1">
             <div class="container">
                 <div class="row flex-nowrap justify-content-between align-items-center">
-                    <div class="col-4">
+                    <div class="col-8">
+                        <div class="row py-1">
+                            <div class="col-6 text-right">
+                                <a href="{{ route('index') }}" title="{{ _i('ARTIP Header') }}">
+                                    <img src="{{ asset('images/logo.png') }}" class="header-logo" alt="{{ _i('ARTIP Header') }}">
+                                </a>
+                            </div>
+                            <div class="col-6 text-white text-left pt-2">
+                                <div class="d-inline-block text-center vericaltext-separator align-top">{{  _i('A') }}<br>{{  _i('R') }}<br>{{  _i('T') }}<br>{{  _i('I') }}<br>{{  _i('P') }}</div>
+                                <div class="d-inline-block ml-2">{!! _i('ARTIP') !!}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 text-right">
                         @if(isset($page) && isset($page['content']['translation']))
                         <div class="locale">
                             <a href="{{ route('single-translation.by.slug', ['locale' => $page['content']['translation']['locale'], 'slug' => $page['slug']]) }}">
@@ -24,24 +48,9 @@
                         </div>
                         @endif
                     </div>
-                    <div class="col-4 text-right">
-                        <div class="row">
-                            <div class="col-6">
-                                <a href="{{ route('index') }}" title="{{ _i('ARTIP Header') }}">
-                                    <img src="{{ asset('images/logo.png') }}" class="header-logo" alt="{{ _i('ARTIP Header') }}">
-                                </a>
-                            </div>
-                            <div class="col-6 text-white text-left">                                
-                                <div class="header-separator">{!! _i('ARTIP') !!}</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 text-right">
-                        @include('web::widgets.social', ['class' => 'social'])
-                    </div>
                 </div>
             </div>
-        </header>
+        </header>        
         <div class="container-fluid stycki-bar bg-white box-shadow">
             <div class="container nav-scroller py-1">
                 <nav class="nav d-flex justify-content-between">
@@ -66,7 +75,7 @@
             <div class="mt-4"></div>
             @include('web::widgets.submission-form')
         </section>
-        @include('web::footer')
+        @include('web::footer')        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
