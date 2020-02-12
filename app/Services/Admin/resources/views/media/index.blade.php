@@ -38,7 +38,7 @@
     {{ $collection->links() }}    
 </div>
 <div class="modal fade" id="preview" tabindex="-1" role="dialog" aria-labelledby="preview" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">        
+    <div class="modal-dialog modal-dialog-centered modal-xl">        
         <div class="modal-content">            
             <div class="modal-header">
                 <h5 class="modal-title">{{ _i('File Preview') }}</h5>
@@ -48,7 +48,7 @@
             </div>
             <div class="modal-body text-center">
                 <div class="container-fluid">
-                    <img src="" id="imagepreview" style="width: 400px; height: 100%;">
+                    <img src="" id="imagepreview" style="height: auto;">
                     <hr>
                     <input id="url" type="text" class="form-control" value="">
                 </div>
@@ -66,10 +66,10 @@ $(function () {
         e.preventDefault();
         if($(this).children().hasClass('fi')) {
             $('#imagepreview').attr('src', null);
-            $('#url').attr('value', $(this).attr('href').replace('240-thump-', null));
+            $('.modal').find('#url').attr('value', $(this).attr('href').replace('240-thumb-', ''));            
         } else{
-            $('#imagepreview').attr('src', $(this).attr('href').replace('240', '800'));
-            $('#url').attr('value', $(this).attr('href'));
+            $('#imagepreview').attr('src', $(this).attr('href').replace('240', '800'));            
+            $('.modal').find('#url').attr('value', $(this).attr('href'));
         }       
         
         $('#preview').modal('toggle');

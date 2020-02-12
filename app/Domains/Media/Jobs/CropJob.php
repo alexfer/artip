@@ -63,9 +63,18 @@ class CropJob extends Job
                     $storage->copy($image, $thumbnail);
                     $thumbnail = sprintf("%s/%s", $parts['dirname'], $thumbnail);
                     $img = \Image::make($thumbnail);
-                    $img->fit($width, $height, function ($constraint) {
-                        $constraint->upsize();
-                    });
+
+                    if ($width == 800) {
+                        $img->resize($width, $height, function ($constraint) {
+                            $constraint->aspectRatio();
+                            $constraint->upsize();
+                        });
+                    } else {
+                        $img->fit($width, $height, function ($constraint) {
+                            $constraint->upsize();
+                        });
+                    }
+
                     $img->save($thumbnail);
                 }
             }

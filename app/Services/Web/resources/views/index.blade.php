@@ -4,7 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{ _i('ARTIP') }} - @yield('title')</title>
+        <title>{{ _i('ARTIP Header') }} - @yield('title')</title>
         <link rel="canonical" href="{{ env('APP_URL') }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,7 +12,7 @@
         <link href="{{ asset('css/common.css') }}" rel="stylesheet" />
     </head>
     <body>
-        <header class="container-fluid py-2">
+        <header class="container-fluid py-1">
             <div class="container">
                 <div class="row flex-nowrap justify-content-between align-items-center">
                     <div class="col-4">
@@ -24,12 +24,18 @@
                         </div>
                         @endif
                     </div>
-                    <div class="col-4 text-center">
-                        <a href="{{ route('index') }}" title="{{ _i('ARTIP') }}">
-                            <img src="{{ asset('images/logo.png') }}" class="header-logo" alt="{{ _i('ARTIP') }}">
-                        </a>
-                        <p class="mt-1 text-white text-capitalize">{{ _i('ARTIP') }}</p>
-                    </div>                
+                    <div class="col-4 text-right">
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="{{ route('index') }}" title="{{ _i('ARTIP Header') }}">
+                                    <img src="{{ asset('images/logo.png') }}" class="header-logo" alt="{{ _i('ARTIP Header') }}">
+                                </a>
+                            </div>
+                            <div class="col-6 text-white text-left">
+                                {!! _i('ARTIP') !!}
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-4 text-right">
                         @include('web::widgets.social', ['class' => 'social'])
                     </div>

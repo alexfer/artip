@@ -170,7 +170,7 @@ iframe.location {
 }
 @media (min-width: 768px) {
     .h-md-250 { 
-        height: 250px; 
+        height: 242px; 
     }
 }
 @media (max-width: 768px) {
