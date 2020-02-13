@@ -28,15 +28,16 @@
                 <div class="row flex-nowrap justify-content-between align-items-center">
                     <div class="col-8">
                         <div class="row py-1">
-                            <div class="col-6 text-right">
+                            <div class="col-2">
                                 <a href="{{ route('index') }}" title="{{ _i('ARTIP Header') }}">
                                     <img src="{{ asset('images/logo.png') }}" class="header-logo" alt="{{ _i('ARTIP Header') }}">
                                 </a>
                             </div>
-                            <div class="col-6 text-white text-left pt-2">
+                            <div class="col-4 text-white text-left pt-2">
                                 <div class="d-inline-block text-center vericaltext-separator align-top">{{  _i('A') }}<br>{{  _i('R') }}<br>{{  _i('T') }}<br>{{  _i('I') }}<br>{{  _i('P') }}</div>
                                 <div class="d-inline-block ml-2">{!! _i('ARTIP') !!}</div>
                             </div>
+                            <div class="col-6"></div>
                         </div>
                     </div>
                     <div class="col-4 text-right">
