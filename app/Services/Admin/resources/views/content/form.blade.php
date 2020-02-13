@@ -8,6 +8,13 @@
     @csrf
     <div class="card mt-3 h-100">
         <div class="card-body">
+            @if(isset($entry))
+            <div class="form-group">
+                <label for="preview">{{ _i('URL') }}</label>
+                <input name="preview" id="preview" type="text" class="form-control" value="{{ route('single.by.slug', ['slug' => $entry['slug']]) }}" disabled="disabled">
+                <a href="{{ route('single.by.slug', ['slug' => $entry['slug']]) }}" class="form-text" target="_blank">{{ _i('Preview') }}</a>
+            </div>
+            @endif
             <div class="form-group">
                 <label for="short_title">{{ _i('Short Title') }}</label>
                 <input name="short_title" id="short_title" type="text" class="form-control" value="{{ isset($entry) ? $entry['short_title'] : old('short_title') }}" required="required">
