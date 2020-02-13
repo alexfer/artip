@@ -27,7 +27,7 @@ class LogFailedLogin
      */
     public function handle(Failed $event)
     {
-        activity('access')->log(sprintf("Login failed. IP address: %s", request()->ip()));
+        activity('failed')->log(sprintf("Login failed. IP address: %s", request()->ip()));
     }
 
 }

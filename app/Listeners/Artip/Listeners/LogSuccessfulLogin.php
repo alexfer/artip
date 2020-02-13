@@ -27,7 +27,7 @@ class LogSuccessfulLogin
      */
     public function handle(Login $event)
     {
-        activity('access')->log(sprintf("Login successfully. IP address: %s", request()->ip()));
+        activity('success')->log(sprintf("Login successfully. IP address: %s", request()->ip()));
     }
 
 }

@@ -27,7 +27,7 @@ class LogAuthenticationAttempt
      */
     public function handle(Attempting $event)
     {
-        activity('access')->log(sprintf("Login attempt. IP address: %s", request()->ip()));
+        activity('attempt')->log(sprintf("Login attempt. IP address: %s", request()->ip()));
     }
 
 }
