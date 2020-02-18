@@ -68,7 +68,7 @@ $(function () {
             });
             $.ajax({
                 url: "{{ route('categories.rebuild-tree') }}",
-                type: 'PATCH',
+                type: 'POST',
                 dataType: 'json',
                 async: false,
                 data: JSON.stringify(jsonData),

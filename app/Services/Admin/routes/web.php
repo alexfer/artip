@@ -28,7 +28,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'locale']], function
     Route::get('/category/{id}', 'CategoryController@edit')->name('category.edit');
     Route::put('/category/{id}', 'CategoryController@update')->name('category.update');
     Route::delete('/category/{id}', 'CategoryController@delete')->name('category.delete');
-    Route::patch('/categories/rebuild-tree', 'CategoryController@rebuildTree')->name('categories.rebuild-tree');
+    Route::post('/categories/rebuild-tree', 'CategoryController@rebuildTree')->name('categories.rebuild-tree');
 
     // User section
     Route::get('/users', 'UserController@collection')->name('user.collection');
