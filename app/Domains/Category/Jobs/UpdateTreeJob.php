@@ -26,13 +26,18 @@ class UpdateTreeJob extends Job
     }
 
     /**
-     * Execute the job.
-     *
-     * @return mixed
+     * 
+     * @param Category $category
+     * @return void
      */
-    public function handle()
+    public function handle(Category $category): void
     {
-        return Category::rebuildTree($this->tree);
+        foreach ($this->tree as $order => $id) {
+            $category->where('id', $id)
+                    ->update([
+                        'order' => $order,
+            ]);
+        }
     }
 
 }

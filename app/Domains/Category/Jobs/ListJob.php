@@ -10,11 +10,16 @@ class ListJob extends Job
 
     /**
      * 
+     * @param Category $category
      * @return array
      */
-    public function handle(): array
+    public function handle(Category $category): array
     {
-        return Category::with('ancestors')->get()->toTree()->toArray();
+        return $category->with('ancestors')
+                        ->orderBy('order')
+                        ->get()
+                        ->toTree()
+                        ->toArray();
     }
 
 }

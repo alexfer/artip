@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CategoryOrder extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -13,7 +14,11 @@ class CategoryOrder extends Migration
      */
     public function up()
     {
-        //
+        if (!Schema::hasColumns('category', ['order'])) {
+            Schema::table('category', function (Blueprint $table) {
+                $table->integer('order')->default(0)->after('slug');
+            });
+        }
     }
 
     /**
@@ -23,6 +28,11 @@ class CategoryOrder extends Migration
      */
     public function down()
     {
-        //
+        if (Schema::hasColumns('category', ['order'])) {
+            Schema::table('category', function (Blueprint $table) {
+                $table->dropColumn('order');
+            });
+        }
     }
+
 }
