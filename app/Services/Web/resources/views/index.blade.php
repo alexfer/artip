@@ -65,7 +65,7 @@
             </div>
         </div>
         @if(isset($slides ))
-        <div class="container">
+        <div class="container-fluid px-0">
             @include('web::widgets.slides')
         </div>
         @endif

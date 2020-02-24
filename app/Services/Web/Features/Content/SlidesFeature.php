@@ -18,7 +18,7 @@ class SlidesFeature extends Feature
     public function handle()
     {
         return $this->run(new RespondWithViewJob(self::TEMPLATE, [
-                            'slides' => $this->run(SlidesJob::class),
+                            //'slides' => $this->run(SlidesJob::class),
         ]));
     }
 
