@@ -6,7 +6,8 @@ use Lucid\Foundation\Http\Controller;
 use Artip\Services\Web\Features\Content\{
     SingleFeature,
     NewsFeature,
-    SlidesFeature
+    SlidesFeature,
+    AnnoncesFeature
 };
 
 class ContentController extends Controller
@@ -28,6 +29,15 @@ class ContentController extends Controller
     public function news()
     {
         return $this->serve(NewsFeature::class);
+    }
+
+    /**
+     * 
+     * @return mixed
+     */
+    public function annonce()
+    {
+        return $this->serve(AnnoncesFeature::class);
     }
 
     /**

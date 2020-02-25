@@ -5,7 +5,7 @@ namespace Artip\Domains\Content\Jobs;
 use Lucid\Foundation\Job;
 use Artip\Data\Models\Content;
 
-class NewsPageJob extends Job
+class AnnoncePageJob extends Job
 {
 
     /**
@@ -30,10 +30,7 @@ class NewsPageJob extends Job
      */
     public function handle(Content $content): array
     {
-        $entry = $content->with(['media' => function($query) {
-                        $query->with(['file']);
-                    }])
-                ->where('content_type_id', config('content-types.news'))
+        $entry = $content->where('content_type_id', config('content-types.annonces'))
                 ->where('is_published', true)
                 ->find($this->id);
 

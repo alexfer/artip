@@ -34,8 +34,7 @@
             <div class="form-group">
                 <label for="date">{{ _i('Date') }}</label>
                 <input name="date" id="date" type="text" class="form-control" value="{{ isset($entry) ? $entry['date'] : old('date') }}">
-            </div>
-            @if(config('content-types.annonces') !=  (isset($entry) ? $entry['content_type_id'] : null))
+            </div>            
             <div class="form-group category_id_block">
                 <label for="category_id">{{ _i('Category') }}</label>
                 <select name="category_id" id="category_id" class="form-control">
@@ -48,8 +47,7 @@
             <div class="form-group">
                 <label for="content">{{ _i('Content') }}</label>
                 <textarea rows="12" name="content" id="content" class="form-control">{{ isset($entry) ? $entry['content'] : old('content') }}</textarea>
-            </div>
-            @endif
+            </div>            
         </div>
     </div>
     @if(isset($entry) && $entry['content_type_id'] == config('content-types.single-pages'))
