@@ -1,5 +1,6 @@
 @extends('web::index')
 @section('title', $page['short_title'])
+@section('description', $page['long_title'])
 @section('content')
 <h2 class="title my-3">{{ $page['short_title'] }}</h2>
 <div class="row h-100">    
@@ -14,7 +15,9 @@
             @if(count($page['media']))
                 @foreach($page['media'] as $key => $media)
                     @if(in_array($media['file']['extension'], ['png', 'jpg', 'jpeg', 'gif']))
-                    <img class="rounded mb-3 img-fluid img-responsive" src="{{ asset(\Storage::disk('media')->url(sprintf("800-thumb-%s", $media['file']['path']))) }}" alt="{{ $page['short_title'] }}" title="{{ $page['short_title'] }}">
+                    <div class="mx-auto text-center">
+                        <img class="rounded mb-3 img-fluid img-responsive img-scalable" src="{{ asset(\Storage::disk('media')->url(sprintf("800-thumb-%s", $media['file']['path']))) }}" alt="{{ $page['short_title'] }}" title="{{ $page['short_title'] }}">
+                    </div>    
                     @endif
                 @if(!$key) @break @endif
                 @endforeach

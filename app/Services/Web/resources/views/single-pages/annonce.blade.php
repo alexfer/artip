@@ -1,5 +1,6 @@
 @extends('web::index')
 @section('title', $annonce['short_title'])
+@section('description', $annonce['long_title'])
 @section('content')
 <h2 class="title my-3">{{ $annonce['short_title'] }}</h2>
 <div class="row h-100">    

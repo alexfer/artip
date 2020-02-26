@@ -208,6 +208,10 @@ iframe.location {
     width: 100%;
     height: 450px;
 }
+.img-scalable {
+    width: 100%; 
+    height: auto;
+}
 @media (min-width: 768px) {
     .h-md-250 { 
         height: 242px; 

@@ -189,10 +189,10 @@
             {title: 'Rounded', value: 'rounded'},
             {title: 'Fluid', value: 'img-fluid'},
             {title: 'Responsive', value: 'img-responsive'},
-            {title: 'All', value: 'rounded img-fluid img-responsive'},
+            {title: 'All', value: 'rounded img-fluid img-responsive img-scalable'},
         ],
         plugins: 'print preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help code',
-        toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | removeformat | code',
+        toolbar1: 'removeformat | formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | removeformat | code',
         setup: function (editor) {
             editor.on('change', function () {
                 tinymce.triggerSave();
