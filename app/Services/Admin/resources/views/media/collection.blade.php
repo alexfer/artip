@@ -5,7 +5,7 @@
         @if(in_array($file->extension, ['gif', 'jpg', 'jpeg', 'png']))
         <img class="img-thumbnail mr-2" src="{{ asset("storage/media/50-thumb-$file->path") }}" alt="{{ $file->name }}" title="{{ $file->name }}">
         @else
-        <div class="mr-2 fi-size-md fi fi-{{ $file->extension }}">
+        <div class="mr-2 fi-size-md fi fi-{{ $file->extension }}" style="float: left">
             <div class="fi-content">{{ $file->extension }}</div>
         </div>
         @endif
@@ -19,7 +19,6 @@
 $(function () {
     $('.insert-media').on('click', function (e) {
         e.preventDefault();
-        $(this).removeClass('insert-media').addClass('remove-media');
         $('#media-content').append($(this));
     });
     $('.page-link').on('click', function (e) {
