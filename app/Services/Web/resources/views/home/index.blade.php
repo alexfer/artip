@@ -12,7 +12,7 @@
                 <h3 class="mb-0">
                     <a class="text-dark cut-text" title="{{ $item->short_title }}" href="{{ route('news.by.slug', ['id' => $item->id, 'slug' => $item->slug]) }}">{{ $item->short_title }}</a>
                 </h3>
-                <div class="mb-1 text-muted">{{ date('F d', strtotime($item->created_at)) }}</div>
+                <div class="mb-1 text-muted">{{ date('d.m', strtotime($item->created_at)) }}</div>
                 <p class="card-text mb-auto" title="{{ $item->long_title }}">{{ mb_strimwidth($item->long_title, 0, 100, '...') }}</p>
                 <a href="{{ route('news.by.slug', ['id' => $item->id, 'slug' => $item->slug]) }}">{{ _i('Continue reading') }}</a>
             </div>
