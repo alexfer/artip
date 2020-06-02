@@ -11,7 +11,7 @@
     </div>    
     <div class="col-9">
         @if($annonce['content'])
-        <div class="text-muted ml-2 mb-2">{{ date('m.d.Y'), strtotime(isset($annonce['date']) ? $annonce['date'] : $annonce['created_at']) }}</div>
+        <div class="text-muted ml-2 mb-2">{{ date('d.m.Y'), strtotime(isset($annonce['date']) ? $annonce['date'] : $annonce['created_at']) }}</div>
             {!! $annonce['content'] !!}
         @else
             @include('web::single-pages.coming-soon')

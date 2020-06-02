@@ -64,8 +64,7 @@
             </div>
         </div>
     </div>    
-    @endif
-    @if(config('content-types.annonces') != (isset($entry) ? $entry['content_type_id'] : null))
+    @endif    
     <div class="card mt-3 h-100 urls">
         <div class="card-header">{{ _i('URL') }}</div>
         <div class="card-body">
@@ -114,7 +113,6 @@
             </div>
         </div>
     </div>
-    @endif
     <div class="row mt-4">
         <div class="col-12 text-right">
             @if(isset($entry) && $entry['deleted_at'])
